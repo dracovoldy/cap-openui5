@@ -1,7 +1,7 @@
 {
   "name": "dlims1812",
   "version": "1.0.0",
-  "description": "Heroku Deploy UI5",
+  "description": "AWS Deploy UI5",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -20,12 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dracovoldy/DLIMS1812.git"
+    "url": "git+https://github.com/dracovoldy/cap-openui5.git"
   },
   "author": "dracovoldy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dracovoldy/DLIMS1812/issues"
+    "url": "https://github.com/dracovoldy/cap-openui5/issues"
   },
-  "homepage": "https://github.com/dracovoldy/DLIMS1812#readme"
+  "homepage": "https://github.com/dracovoldy/cap-openui5#readme"
 }
