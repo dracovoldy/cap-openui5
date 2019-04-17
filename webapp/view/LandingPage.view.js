@@ -1,11 +1,11 @@
-sap.ui.jsview("com.limscloud.app.view.LandingPage", {
+sap.ui.jsview("cap.estimate.view.LandingPage", {
 
 	/** Specifies the Controller belonging to this View. 
 	* In the case that it is not implemented, or that "null" is returned, this View does not have a Controller.
 	* @memberOf views.LandingPage
 	*/ 
 	getControllerName : function() {
-		return "com.limscloud.app.controller.LandingPage";
+		return "cap.estimate.controller.LandingPage";
 	},
 
 	/** Is initially called once after the Controller has been instantiated. It is the place where the UI is constructed. 

@@ -1,4 +1,4 @@
-sap.ui.controller("com.limscloud.app.controller.LandingPage", {
+sap.ui.controller("cap.estimate.controller.LandingPage", {
 
 /**
 * Called when a controller is instantiated and its View controls (if available) are already created.

@@ -1,11 +1,11 @@
-sap.ui.jsview("com.limscloud.app.view.App", {
+sap.ui.jsview("cap.estimate.view.App", {
 
 	/** Specifies the Controller belonging to this View. 
 	 * In the case that it is not implemented, or that "null" is returned, this View does not have a Controller.
 	 * @memberOf views.App
 	 */
 	getControllerName: function () {
-		return "com.limscloud.app.controller.App";
+		return "cap.estimate.controller.App";
 	},
 
 	/** Is initially called once after the Controller has been instantiated. It is the place where the UI is constructed. 

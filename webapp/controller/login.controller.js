@@ -7,7 +7,7 @@ sap.ui.define([
 ], function (jQuery, Controller, Popover, Button, MessageToast) {
 	"use strict";
 
-	return Controller.extend("com.limscloud.app.controller.login", {
+	return Controller.extend("cap.estimate.controller.login", {
 
 		onInit: function () {
 
@@ -70,7 +70,7 @@ sap.ui.define([
 			/* UI references */
 
 			/* LoginPage */
-			var loginHeader = this.getView().byId("loginHeader");
+			
 			var loginFlex = this.getView().byId("loginBoxFlex");
 			var loginBox = this.getView().byId("loginBox");
 			var signinButton = this.getView().byId("signButton");
@@ -78,7 +78,7 @@ sap.ui.define([
 			var loginFooter = this.getView().byId("loginFooter");
 
 			/* Login CSS  */
-			loginHeader.addStyleClass("loginHeader");
+			
 			loginFlex.addStyleClass("shellCustom-BG");
 			loginBox.addStyleClass("shellCustom");
 			signinButton.addStyleClass("buttonLoginBox");

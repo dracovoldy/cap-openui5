@@ -9,7 +9,7 @@ sap.ui.define([
 ], function (jQuery, Fragment, Controller, JSONModel, Popover, Button, MessageToast) {
 	"use strict";
 
-	var CController = Controller.extend("com.limscloud.app.controller.dashboard", {
+	var CController = Controller.extend("cap.estimate.controller.dashboard", {
 
 		toLogout: function () {
 			/* Logout */

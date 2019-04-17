@@ -7,7 +7,7 @@ sap.ui.define([
 ], function (jQuery, Controller, Popover, Button, History) {
 	"use strict";
 
-	return Controller.extend("com.limscloud.app.controller.CreateTasks", {
+	return Controller.extend("cap.estimate.controller.CreateTasks", {
 
 		onInit: function () {
 			// alert("Im alive: View");

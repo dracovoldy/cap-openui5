@@ -1,8 +1,12 @@
 <mvc:View xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
-	controllerName="com.limscloud.app.controller.login">
+	controllerName="cap.estimate.controller.login">
 	<VBox id="loginBoxFlex" renderType="Bare">
 		<VBox id="loginBox">
-			<Label id="loginHeader" text="Capgemini Branding Here"></Label>
+			<Image src="../webapp/images/logo.svg" densityAware="true">
+				<layoutData>
+					<FlexItemData growFactor="1"/>
+				</layoutData>
+			</Image>
 			<Input id="inUser" placeholder="Username" value="" type="Text"/>
 			<Input id="inPass" placeholder="Password" value="" type="Password"/>
 			<HBox width="100%">

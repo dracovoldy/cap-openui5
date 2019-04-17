@@ -1,4 +1,4 @@
-<mvc:View controllerName="com.limscloud.app.controller.dashboardTasks" displayBlock="true" height="100%" xmlns="sap.m"
+<mvc:View controllerName="cap.estimate.controller.dashboardTasks" displayBlock="true" height="100%" xmlns="sap.m"
 	xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
 	<App id="dashboardTasksApp">
 		<pages>

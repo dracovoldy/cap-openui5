@@ -1,11 +1,11 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"com/limscloud/app/model/models"
+	"cap/estimate/model/models"
 ], function(UIComponent, Device, models) {
 	"use strict";
 
-	return UIComponent.extend("com.limscloud.app.Component", {
+	return UIComponent.extend("cap.estimate.Component", {
 
 		metadata: {
 			manifest: "json"
@@ -20,7 +20,7 @@ sap.ui.define([
 		
 		var appView = new sap.ui.view('idappView',{
 			id: 'idappView',
-			viewName:'com.limscloud.app.view.App',
+			viewName:'cap.estimate.view.App',
 			type:sap.ui.core.mvc.ViewType.JS
 		});
 		

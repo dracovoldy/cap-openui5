@@ -6,7 +6,7 @@ sap.ui.define([
 ], function(jQuery, Controller, Popover, Button) {
 	"use strict";
 
-	return Controller.extend("com.limscloud.app.controller.dashboardTiles", {
+	return Controller.extend("cap.estimate.controller.dashboardTiles", {
 
 		onInit: function () {
            // alert("Im alive: View");

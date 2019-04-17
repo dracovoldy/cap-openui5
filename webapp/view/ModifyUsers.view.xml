@@ -1,4 +1,4 @@
-<mvc:View controllerName="com.limscloud.app.controller.ModifyUsers" displayBlock="true" height="100%" xmlns="sap.m"
+<mvc:View controllerName="cap.estimate.controller.ModifyUsers" displayBlock="true" height="100%" xmlns="sap.m"
 	xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
 	<App id="ModifyUsers">
 		<pages>
