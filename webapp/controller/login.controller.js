@@ -33,29 +33,29 @@ sap.ui.define([
 			var weHaveSuccess = false;
 			this.accessToken = "";
 
-			// $.ajax({
-			// 	type: "POST",
-			// 	url: someurl,
-			// 	dataType: "json",
-			// 	crossDomain: true,
-			// 	data: somedata,
+			$.ajax({
+				type: "POST",
+				url: someurl,
+				dataType: "json",
+				crossDomain: true,
+				data: somedata,
 				
-			// 	success: function (result) {
-			// 		that.accessToken = result.accessToken;
-			// 		MessageToast.show(that.accessToken);
-			// 		weHaveSuccess = true;
-			// 		that.getOwnerComponent().getRouter().navTo("Dashboard", { itemId: that.accessToken });
+				success: function (result) {
+					that.accessToken = result.accessToken;
+					MessageToast.show(that.accessToken);
+					weHaveSuccess = true;
+					that.getOwnerComponent().getRouter().navTo("Dashboard", { itemId: that.accessToken });
 					
-			// 	},
-			// 	error: function (response) {
-			// 		MessageToast.show("Error!  " + response.status);
-			// 	},
-			// 	complete: function () {
-			// 		if (!weHaveSuccess) {
-			// 			MessageToast.show("Your username/password seems to be incorrect!");
-			// 		}
-			// 	}
-			// });
+				},
+				error: function (response) {
+					MessageToast.show("Error!  " + response.status);
+				},
+				complete: function () {
+					if (!weHaveSuccess) {
+						MessageToast.show("Your username/password seems to be incorrect!");
+					}
+				}
+			});
 		},
 		toDashboard: function () {
 			this.getOwnerComponent().getRouter().navTo("Dashboard");
