@@ -2,7 +2,7 @@
 	controllerName="cap.estimate.controller.login">
 	<VBox id="loginBoxFlex" renderType="Bare">
 		<VBox id="loginBox">
-			<Image src="../webapp/images/logo.svg" densityAware="true">
+			<Image src="../images/logo.svg" densityAware="true">
 				<layoutData>
 					<FlexItemData growFactor="1"/>
 				</layoutData>
