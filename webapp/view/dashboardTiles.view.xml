@@ -1,72 +1,86 @@
-<mvc:View controllerName="cap.estimate.controller.dashboardTiles" displayBlock="true" height="100%" xmlns="sap.m"
-	xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
+<mvc:View controllerName="cap.estimate.controller.dashboardTiles" displayBlock="true" height="100%" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
 	<App id="dashboardTilesApp">
 		<pages>
 			<Page id="page2" showHeader="false" class="sapUiSizeCompact">
 				<content>
-					<MessageStrip showIcon="true"
-						  type="Information"
-						  text="Quick access to tiles by T-Code, use searchbar to run Tiles with T-Code"
-						  class="sapUiTinyMargin"/>
-					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Create New System User" subheader="Singe creation"
-						press="_navSU01">
-						<TileContent footer="SU01">
-							<ImageContent src="sap-icon://create"/>
-						</TileContent>
-					</GenericTile>
-					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Maintain System Users" subheader="Mass View/Modify"
-						press="_navSU05">
-						<TileContent footer="SU05">
-							<ImageContent src="sap-icon://user-edit"/>
-						</TileContent>
-					</GenericTile>
-					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Create Customer" subheader="Single creation" press="_navCU01">
-						<TileContent footer="CU01">
-							<ImageContent src="sap-icon://home-share"/>
-						</TileContent>
-					</GenericTile>
-					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Maintain Customers" subheader="Mass View/Modify" press="_navCU05">
-						<TileContent footer="CU05">
-							<ImageContent src="sap-icon://customer"/>
-						</TileContent>
-					</GenericTile>
-					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Receive Materials from Customer" subheader="Mass Transfer"
-						press="_navMM01">
-						<TileContent footer="MM01">
-							<ImageContent src="sap-icon://dimension"/>
-						</TileContent>
-					</GenericTile>
-					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Create Task Unassigned" subheader="Unitary task"
-						press="_navTT01">
-						<TileContent footer="TT01">
-							<ImageContent src="sap-icon://activity-items"/>
-						</TileContent>
-					</GenericTile>
-					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Create Task for User" subheader="Unitary task"
-						press="_navTT02">
-						<TileContent footer="TT02">
-							<ImageContent src="sap-icon://activity-individual"/>
-						</TileContent>
-					</GenericTile>
-					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Assign Task to User" subheader="Unitary task"
-						press="_navTT03">
-						<TileContent footer="TT03">
-							<ImageContent src="sap-icon://activity-assigned-to-goal"/>
-						</TileContent>
-					</GenericTile>
-					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Launch Task" subheader="Tasks for user" 
-					press="_navTL01">
-						<TileContent footer="TL01">
-							<ImageContent src="sap-icon://physical-activity"/>
-						</TileContent>
-					</GenericTile>
-					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Monitor Tasks" subheader="All tasks"
-					press="_navTM01">
-						<TileContent footer="TM01">
-							<ImageContent src="sap-icon://electrocardiogram"/>
-						</TileContent>
-					</GenericTile>
+					<!--	<VBox>-->
+					<Panel width="auto" class="sapUiResponsiveMargin">
+						<headerToolbar>
+							<Toolbar height="3rem">
+								<Title text="Company Details"/>
+								<ToolbarSpacer/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<f:SimpleForm id="CompanyForm" editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12"
+								adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+								singleContainerFullSize="false">
+								<f:content>
+									<Label text="Company Name"/>
+									<Input id="name" value="{SupplierName}"/>
+									<Label text="Sector / Market Unit"/>
+									<Select id="Sector" selectedKey="{Sector}">
+										<items>
+											<core:Item text="England" key="England"/>
+											<core:Item text="Germany" key="Germany"/>
+											<core:Item text="USA" key="USA"/>
+										</items>
+									</Select>
+									<Label text="Primary Region"/>
+									<Select id="Region" selectedKey="{Region}">
+										<items>
+											<core:Item text="England" key="England"/>
+											<core:Item text="Germany" key="Germany"/>
+											<core:Item text="USA" key="USA"/>
+										</items>
+									</Select>
+								</f:content>
+							</f:SimpleForm>
+						</content>
+					</Panel>
+					<!--	<HBox>-->
+					<Panel width="auto" class="sapUiResponsiveMargin">
+						<headerToolbar>
+							<Toolbar height="3rem">
+								<Title />
+								<ToolbarSpacer/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<f:SimpleForm id="SimpleFormChange480_12120" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+								labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
+								columnsL="2" columnsM="1" singleContainerFullSize="false">
+								<f:content>
+									<core:Title text="Client Contact Name (s)"/>
+									<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+									<core:Title text="Contact Details (Email)"/>
+									<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+								</f:content>
+							</f:SimpleForm>
+							<!--	<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>-->
+						</content>
+					</Panel>
+					<!--	<Panel width="auto" class="sapUiResponsiveMargin">
+								<headerToolbar>
+									<Toolbar height="3rem">
+										<Title text="Contact Details (Email)"/>
+										<ToolbarSpacer/>
+									</Toolbar>
+								</headerToolbar>
+								<content>
+									<TextArea value="" growingMaxLines="7" width="100%"/>
+								</content>
+							</Panel>
+						</HBox>-->
+					<!--	</VBox>-->
 				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button text="Next" type="Emphasized"/>
+					</Toolbar>
+				</footer>
 			</Page>
 		</pages>
 	</App>

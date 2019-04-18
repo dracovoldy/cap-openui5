@@ -1,0 +1,87 @@
+<mvc:View controllerName="cap.estimate.controller.dashboardTasks" displayBlock="true" height="100%" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
+	<App id="DevelopmentApp">
+		<pages>
+			<Page id="page2" showHeader="false" class="sapUiSizeCompact">
+				<content>
+					<Panel width="auto" class="sapUiResponsiveMargin">
+						<headerToolbar>
+							<Toolbar height="3rem">
+								<Title text="Development"/>
+								<ToolbarSpacer/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<!--	<VBox>
+								<Panel width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar height="3rem">
+											<Title text="Key Change Management Considerations"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</headerToolbar>
+									<content>-->
+							<f:SimpleForm id="SimpleFormChangeColumn_threeGroups234" editable="true" layout="ColumnLayout" columnsM="2" columnsL="3" columnsXL="4">
+								<f:content>
+									<core:Title/>
+									<Label text="Number of EDI subsystems"/>
+									<Select id="EDI" selectedKey="{EDI}">
+										<items>
+											<core:Item text="England" key="England"/>
+											<core:Item text="Germany" key="Germany"/>
+											<core:Item text="USA" key="USA"/>
+										</items>
+									</Select>
+									<core:Title/>
+									<Label text="Current Middleware platform"/>
+									<Select id="Middleware" selectedKey="{Middleware}">
+										<items>
+											<core:Item text="England" key="England"/>
+											<core:Item text="Germany" key="Germany"/>
+											<core:Item text="USA" key="USA"/>
+										</items>
+									</Select>
+									<core:Title/>
+									<Label text="RICEFW matrix"/>
+									<Select id="RICEFW" selectedKey="{RICEFW}">
+										<items>
+											<core:Item text="England" key="England"/>
+											<core:Item text="Germany" key="Germany"/>
+											<core:Item text="USA" key="USA"/>
+										</items>
+									</Select>
+									<core:Title text="Key Applications in Landscape (SAP, SAP Bolt-ons)"/>
+									<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+								</f:content>
+							</f:SimpleForm>
+							<!--	</content>
+								</Panel>-->
+							<!--	<Panel width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar height="3rem">
+											<Title text="Key Applications in Landscape (SAP, SAP Bolt-ons)"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+									</content>
+								</Panel>
+							</VBox>-->
+						</content>
+					</Panel>
+				</content>
+				<footer>
+					<Bar>
+						<contentLeft>
+							<Button text="Back"/>
+						</contentLeft>
+						<contentRight>
+							<Button text="Next" type="Emphasized"/>
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

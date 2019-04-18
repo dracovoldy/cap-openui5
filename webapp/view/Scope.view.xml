@@ -1,0 +1,246 @@
+<mvc:View controllerName="cap.estimate.controller.dashboardTasks" displayBlock="true" height="100%" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
+	<App id="ScopeApp">
+		<pages>
+			<Page id="page2" showHeader="false" class="sapUiSizeCompact">
+				<content>
+					<Panel width="auto" class="sapUiResponsiveMargin">
+						<headerToolbar>
+							<Toolbar height="3rem">
+								<Title text="Scope"/>
+								<ToolbarSpacer/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<!--<VBox>-->
+							<Panel width="auto" class="sapUiResponsiveMargin">
+								<headerToolbar>
+									<Toolbar height="3rem">
+										<Title text="Regions"/>
+										<ToolbarSpacer/>
+									</Toolbar>
+								</headerToolbar>
+								<content>
+									<HBox>
+										<CheckBox text="APAC" selected=""/>
+										<CheckBox text="EU" selected=""/>
+										<CheckBox text="NA" selected=""/>
+										<CheckBox text="LATNAM" selected=""/>
+									</HBox>
+								</content>
+							</Panel>
+							<Panel expandable="true" expanded="false" headerText="Panel with a header text" width="auto" class="sapUiResponsiveMargin">
+								<headerToolbar>
+									<Toolbar height="3rem">
+										<Title text="APAC"/>
+										<ToolbarSpacer/>
+									</Toolbar>
+								</headerToolbar>
+								<content>
+									<!--	<VBox>-->
+									<!--<headerToolbar>
+										<Toolbar height="3rem">
+											<Title/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</headerToolbar>-->
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text=""/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+									<f:SimpleForm id="SimpleFormChangeColumn_threeGroups234" editable="true" layout="ColumnLayout" columnsM="2" columnsL="3" columnsXL="4">
+										<f:content>
+											<core:Title/>
+											<Label text="Back Office"/>
+											<Select id="Office" selectedKey="{Instances}">
+												<items>
+													<core:Item text="England" key="England"/>
+													<core:Item text="Germany" key="Germany"/>
+													<core:Item text="USA" key="USA"/>
+												</items>
+											</Select>
+											<core:Title/>
+											<Label text="Distribution Centre"/>
+											<Select id="Distribution" selectedKey="{Instances}">
+												<items>
+													<core:Item text="England" key="England"/>
+													<core:Item text="Germany" key="Germany"/>
+													<core:Item text="USA" key="USA"/>
+												</items>
+											</Select>
+											<core:Title/>
+											<Label text="Sales"/>
+											<Select id="Sales" selectedKey="{Instances}">
+												<items>
+													<core:Item text="England" key="England"/>
+													<core:Item text="Germany" key="Germany"/>
+													<core:Item text="USA" key="USA"/>
+												</items>
+											</Select>
+											<core:Title/>
+											<Label text="Plants"/>
+											<Select id="Plants" selectedKey="{Instances}">
+												<items>
+													<core:Item text="England" key="England"/>
+													<core:Item text="Germany" key="Germany"/>
+													<core:Item text="USA" key="USA"/>
+												</items>
+											</Select>
+										</f:content>
+									</f:SimpleForm>
+									</content>
+									</Panel>
+										
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text="Line of Business"/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+											<!--	<HBox>-->
+											<f:SimpleForm id="SimpleFormChange4806" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
+												labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1"
+												singleContainerFullSize="false">
+												<f:content>
+													<core:Title text=""/>
+													<Label text=""/>
+													<CheckBox text="Finance"/>
+													<Label text=""/>
+													<CheckBox text="Procure to Pay"/>
+													<Label text=""/>
+													<CheckBox text="Maintenance"/>
+													<Label text=""/>
+													<CheckBox text="Order to Cash"/>
+													<core:Title text=""/>
+													<Label text=""/>
+													<CheckBox text="Manufacturing"/>
+													<Label text=""/>
+													<CheckBox text="Others"/>
+													<Label text=""/>
+													<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+												</f:content>
+											</f:SimpleForm>
+										</content>
+									</Panel>
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text=""/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+											<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
+												labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1"
+												singleContainerFullSize="false">
+												<f:content>
+													<Label text="Number of Integration Test Scenarios"/>
+													<Select id="Scenarios" selectedKey="{Instances}">
+														<items>
+															<core:Item text="England" key="England"/>
+															<core:Item text="Germany" key="Germany"/>
+															<core:Item text="USA" key="USA"/>
+														</items>
+													</Select>
+													<Label text="Number of Unit Test Scripts"/>
+													<Select id="Scripts" selectedKey="{Instances}">
+														<items>
+															<core:Item text="England" key="England"/>
+															<core:Item text="Germany" key="Germany"/>
+															<core:Item text="USA" key="USA"/>
+														</items>
+													</Select>
+													<Label text="Number of Users"/>
+													<Select id="Users" selectedKey="{Instances}">
+														<items>
+															<core:Item text="England" key="England"/>
+															<core:Item text="Germany" key="Germany"/>
+															<core:Item text="USA" key="USA"/>
+														</items>
+													</Select>
+												</f:content>
+											</f:SimpleForm>
+											<!--													</HBox>-->
+										</content>
+									</Panel>
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<content>
+											<f:SimpleForm id="SimpleFormChange480_12120" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
+												labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1"
+												singleContainerFullSize="false">
+												<f:content>
+													<core:Title text="No. of Users"/>
+													<Select id="Number" selectedKey="{Country}">
+														<items>
+															<core:Item text="0-100" key="England"/>
+															<core:Item text="101 – 250" key="Germany"/>
+															<core:Item text="251-500" key="USA"/>
+															<core:Item text=">500" key="USA"/>
+															</items>
+														</Select>
+														<core:Title text="Languages"/>
+														<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+													</f:content>
+												</f:SimpleForm>
+											</content>
+										</Panel>
+										<!--</VBox>-->
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="Panel with a header text" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar height="3rem">
+											<Title text="EU"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="Panel with a header text" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar height="3rem">
+											<Title text="NA"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+									</content>
+								</Panel>
+								<Panel expandable="true" expanded="false" headerText="Panel with a header text" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar height="3rem">
+											<Title text="LATNAM"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+									</content>
+								</Panel>
+								<!--</VBox>-->
+							</content>
+						</Panel>
+					</content>
+					<footer>
+						<Bar>
+							<contentLeft>
+								<Button text="Back"/>
+							</contentLeft>
+							<contentRight>
+								<Button text="Next" type="Emphasized"/>
+							</contentRight>
+						</Bar>
+					</footer>
+				</Page>
+			</pages>
+		</App>
+	</mvc:View>

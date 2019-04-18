@@ -1,0 +1,123 @@
+<mvc:View controllerName="cap.estimate.controller.dashboardTasks" displayBlock="true" height="100%" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
+	<App id="DataApp">
+		<pages>
+			<Page id="page2" showHeader="false" class="sapUiSizeCompact">
+				<content>
+					<Panel width="auto" class="sapUiResponsiveMargin">
+						<headerToolbar>
+							<Toolbar height="3rem">
+								<Title text="Data(Optional)"/>
+								<ToolbarSpacer/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+						<!--	<VBox>-->
+								<Panel width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar height="3rem">
+											<Title text="Number and Quality of Master Data"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<Select id="Sector" selectedKey="{Sector}">
+											<items>
+												<core:Item text="England" key="England"/>
+												<core:Item text="Germany" key="Germany"/>
+												<core:Item text="USA" key="USA"/>
+											</items>
+										</Select>
+									</content>
+								</Panel>
+							<!--	<HBox>-->
+									
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+										<f:SimpleForm id="SimpleFormChange480_12120Dual" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+										labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
+										columnsL="2" columnsM="2" singleContainerFullSize="false">
+										<f:content>
+											<core:Title text="Data Quality Comments"/>
+											<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+											<core:Title text="Other Data Considerations"/>
+											<TextArea value="" growingMaxLines="7" width="100%"/>
+											
+										</f:content>
+									</f:SimpleForm>
+									
+									
+										<f:SimpleForm id="SimpleFormChange480" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+										labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
+										columnsL="2" columnsM="2" singleContainerFullSize="false">
+										<f:content>
+											<core:Title text="Data Archival Status and requirements"/>
+											<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+											<core:Title text="Comments"/>
+											<TextArea value="" growingMaxLines="7" width="100%"/>
+										</f:content>
+									</f:SimpleForm>
+										</content>
+									</Panel>
+									<!--<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text="Other Data Considerations"/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+											<TextArea value="" growingMaxLines="7" width="100%"/>
+										</content>
+									</Panel>-->
+							<!--	</HBox>-->
+								
+							<!--	<HBox>-->
+									
+									<!--<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text="Data Archival Status and requirements"/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+											<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+										</content>
+									</Panel>
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text="Comments"/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+											<TextArea value="" growingMaxLines="7" width="100%"/>
+										</content>
+									</Panel>-->
+							<!--	</HBox>-->
+							<!--</VBox>-->
+						</content>
+					</Panel>
+				</content>
+				<footer>
+					<Bar>
+						<contentLeft>
+							<Button text="Back"/>
+						</contentLeft>
+						<contentRight>
+							<Button text="Next" type="Emphasized"/>
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

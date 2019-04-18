@@ -1,0 +1,80 @@
+<mvc:View controllerName="cap.estimate.controller.dashboardTasks" displayBlock="true" height="100%" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
+	<App id="POCMApp">
+		<pages>
+			<Page id="page2" showHeader="false" class="sapUiSizeCompact">
+				<content>
+					<Panel width="auto" class="sapUiResponsiveMargin">
+						<headerToolbar>
+							<Toolbar height="3rem">
+								<Title text="PCM and OCM(Optional)"/>
+								<ToolbarSpacer/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<!--	<VBox>
+								<HBox>
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text="Key Change Management Considerations"/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+											<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+										</content>
+									</Panel>
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text="Key Inputs such as timeline constraints etc."/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+											<TextArea value="" growingMaxLines="7" width="100%"/>
+										</content>
+									</Panel>
+								</HBox>
+								<Panel width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar height="3rem">
+											<Title text="Other key programs in progress, to be taken up"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+									</content>
+								</Panel>
+							</VBox>-->
+							<f:SimpleForm id="SimpleFormChange480_Trial" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+								labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3"
+								columnsL="2" columnsM="2" singleContainerFullSize="false">
+								<f:content>
+									<core:Title text="Key Change Management Considerations"/>
+									<TextArea value="" growingMaxLines="7" width="100%"/>
+									<core:Title text="Key Inputs such as timeline constraints etc."/>
+									<TextArea value="" growingMaxLines="7" width="100%"/>
+									<core:Title text="Other key programs in progress, to be taken up"/>
+									<TextArea value="" growingMaxLines="7" width="100%"/>
+								</f:content>
+							</f:SimpleForm>
+						</content>
+					</Panel>
+				</content>
+				<footer>
+					<Bar>
+						<contentLeft>
+							<Button text="Back"/>
+						</contentLeft>
+						<contentRight>
+							<Button text="Next" type="Emphasized"/>
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

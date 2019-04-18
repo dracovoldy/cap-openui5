@@ -1,0 +1,104 @@
+<mvc:View controllerName="cap.estimate.controller.dashboardTasks" displayBlock="true" height="100%" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
+	<App id="InfrastructureApp">
+		<pages>
+			<Page id="page2" showHeader="false" class="sapUiSizeCompact">
+				<content>
+					<Panel width="auto" class="sapUiResponsiveMargin">
+						<headerToolbar>
+							<Toolbar height="3rem">
+								<Title text="Infrastructure"/>
+								<ToolbarSpacer/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<!--<VBox>
+								<Panel width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar height="3rem">
+											<Title text="Key Change Management Considerations"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</headerToolbar>
+									<content>-->
+							<f:SimpleForm id="SimpleFormDisplay480_12120" editable="false" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4"
+								labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
+								singleContainerFullSize="false">
+								<f:content>
+									<core:Title/>
+									<Label text="Number of Productive SAP instances"/>
+									<Select id="Instances" selectedKey="{Instances}">
+										<items>
+											<core:Item text="England" key="England"/>
+											<core:Item text="Germany" key="Germany"/>
+											<core:Item text="USA" key="USA"/>
+										</items>
+									</Select>
+									<Label text="Current SAP Enhancement Pack level"/>
+									<Select id="Enhancement" selectedKey="{Enhancement}">
+										<items>
+											<core:Item text="England" key="England"/>
+											<core:Item text="Germany" key="Germany"/>
+											<core:Item text="USA" key="USA"/>
+										</items>
+									</Select>
+									<Label text="Nos of connected systems"/>
+									<Select id="Systems" selectedKey="{Systems}">
+										<items>
+											<core:Item text="England" key="England"/>
+											<core:Item text="Germany" key="Germany"/>
+											<core:Item text="USA" key="USA"/>
+										</items>
+									</Select>
+									<core:Title/>
+									<Label text="Key SAP Applications in Landscape"/>
+									<Select id="Landscape" selectedKey="{Landscape}">
+										<items>
+											<core:Item text="England" key="England"/>
+											<core:Item text="Germany" key="Germany"/>
+											<core:Item text="USA" key="USA"/>
+										</items>
+									</Select>
+									<Label text="Size of systems"/>
+									<Select id="Size" selectedKey="{Size}">
+										<items>
+											<core:Item text="England" key="England"/>
+											<core:Item text="Germany" key="Germany"/>
+											<core:Item text="USA" key="USA"/>
+										</items>
+									</Select>
+									<core:Title text="Key Applications in Landscape (SAP, SAP Bolt-ons)"/>
+									<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+								</f:content>
+							</f:SimpleForm>
+							<!--</content>
+								</Panel>-->
+							<!--	<Panel width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar height="3rem">
+											<Title text="Key Applications in Landscape (SAP, SAP Bolt-ons)"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+									</content>
+								</Panel>-->
+							<!--	</VBox>-->
+						</content>
+					</Panel>
+				</content>
+				<footer>
+					<Bar>
+						<contentLeft>
+							<Button text="Back"/>
+						</contentLeft>
+						<contentRight>
+							<Button text="Next" type="Emphasized"/>
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

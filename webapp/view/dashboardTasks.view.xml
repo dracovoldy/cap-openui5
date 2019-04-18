@@ -1,44 +1,122 @@
-<mvc:View controllerName="cap.estimate.controller.dashboardTasks" displayBlock="true" height="100%" xmlns="sap.m"
-	xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
+<mvc:View controllerName="cap.estimate.controller.dashboardTasks" displayBlock="true" height="100%" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
 	<App id="dashboardTasksApp">
 		<pages>
 			<Page id="page2" showHeader="false" class="sapUiSizeCompact">
 				<content>
-					<MessageStrip showIcon="true"
-						  type="Information"
-						  text="Quick access to tiles by T-Code, use searchbar to run Tiles with T-Code"
-						  class="sapUiTinyMargin"/>
-					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Create Task Unassigned" subheader="Unitary task"
-						press="_navTT01">
-						<TileContent footer="TT01">
-							<ImageContent src="sap-icon://activity-items"/>
-						</TileContent>
-					</GenericTile>
-					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Create Task for User" subheader="Unitary task"
-						press="_navTT02">
-						<TileContent footer="TT02">
-							<ImageContent src="sap-icon://activity-individual"/>
-						</TileContent>
-					</GenericTile>
-					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Assign Task to User" subheader="Unitary task"
-						press="_navTT03">
-						<TileContent footer="TT03">
-							<ImageContent src="sap-icon://activity-assigned-to-goal"/>
-						</TileContent>
-					</GenericTile>
-					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Launch Task" subheader="Tasks for user" 
-					press="_navTL01">
-						<TileContent footer="TL01">
-							<ImageContent src="sap-icon://physical-activity"/>
-						</TileContent>
-					</GenericTile>
-					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Monitor Tasks" subheader="All tasks"
-					press="_navTL01">
-						<TileContent footer="TL01">
-							<ImageContent src="sap-icon://electrocardiogram"/>
-						</TileContent>
-					</GenericTile>
+					<Panel width="auto" class="sapUiResponsiveMargin">
+						<headerToolbar>
+							<Toolbar height="3rem">
+								<Title text="Background"/>
+								<ToolbarSpacer/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<!--	<VBox>
+								<HBox>-->
+							<!--	<Panel width="auto" class="sapUiResponsiveMargin">
+								<headerToolbar>
+									<Toolbar height="3rem">
+										<Title/>
+										<ToolbarSpacer/>
+									</Toolbar>
+								</headerToolbar>
+								<content>-->
+							<f:SimpleForm id="SimpleFormChange480_12120" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
+								labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1"
+								singleContainerFullSize="false">
+								<f:content>
+									<core:Title text="Program Objective"/>
+									<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+									<core:Title text="Business Drivers"/>
+									<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+								</f:content>
+							</f:SimpleForm>
+						</content>
+					</Panel>
+					<Panel width="auto" class="sapUiResponsiveMargin">
+						<headerToolbar>
+							<Toolbar height="3rem">
+								<Title/>
+								<ToolbarSpacer/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<!--	<f:SimpleForm id="SimpleFormChange480_12120" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+								labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
+								columnsL="2" columnsM="1" singleContainerFullSize="false">
+								<f:content>
+									<core:Title text="IT Drivers"/>
+									<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+									<core:Title text="Key Business Pain Points"/>
+									<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+								</f:content>
+							</f:SimpleForm>
+							-->
+							<f:SimpleForm id="SimpleFormChange480_Trial" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+								labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3"
+								columnsL="2" columnsM="2" singleContainerFullSize="false">
+								<f:content>
+									<core:Title text="IT Drivers"/>
+									<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+									<core:Title text="Key Business Pain Points"/>
+									<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+									<core:Title text="Business Case status and Additional Capabilities Required"/>
+									<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+								</f:content>
+							</f:SimpleForm>
+						</content>
+					</Panel>
+					<!--</HBox>
+								<HBox>
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text=""/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+											<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+										</content>
+									</Panel>
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text="Key Business Pain Points"/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+											<TextArea value="" growingMaxLines="7" width="100%"/>
+										</content>
+									</Panel>
+								</HBox>-->
+					<!--	<Panel width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar height="3rem">
+											<Title text="Business Case status and Additional Capabilities Required"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+									</content>
+								</Panel>-->
+					<!--	</VBox>-->
+					<!--		</content>
+				</Panel>-->
 				</content>
+				<footer>
+					<Bar>
+						<contentLeft>
+							<Button text="Back"/>
+						</contentLeft>
+						<contentRight>
+							<Button text="Next" type="Emphasized"/>
+						</contentRight>
+					</Bar>
+				</footer>
 			</Page>
 		</pages>
 	</App>
