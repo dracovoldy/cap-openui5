@@ -52,9 +52,9 @@
 											</Toolbar>
 										</headerToolbar>
 										<content>
-									<f:SimpleForm id="SimpleFormChangeColumn_threeGroups234" editable="true" layout="ColumnLayout" columnsM="2" columnsL="3" columnsXL="4">
+									<f:SimpleForm id="SimpleFormChangeColumn_threeGroups234" editable="true" layout="ColumnLayout" columnsM="2" columnsL="2" columnsXL="2">
 										<f:content>
-											<core:Title/>
+											<!--<core:Title/>-->
 											<Label text="Back Office"/>
 											<Select id="Office" selectedKey="{Instances}">
 												<items>
@@ -63,7 +63,7 @@
 													<core:Item text="USA" key="USA"/>
 												</items>
 											</Select>
-											<core:Title/>
+											<!--<core:Title/>-->
 											<Label text="Distribution Centre"/>
 											<Select id="Distribution" selectedKey="{Instances}">
 												<items>
@@ -72,7 +72,7 @@
 													<core:Item text="USA" key="USA"/>
 												</items>
 											</Select>
-											<core:Title/>
+											<!--<core:Title/>-->
 											<Label text="Sales"/>
 											<Select id="Sales" selectedKey="{Instances}">
 												<items>
@@ -81,7 +81,7 @@
 													<core:Item text="USA" key="USA"/>
 												</items>
 											</Select>
-											<core:Title/>
+											<!--<core:Title/>-->
 											<Label text="Plants"/>
 											<Select id="Plants" selectedKey="{Instances}">
 												<items>
@@ -105,7 +105,7 @@
 										<content>
 											<!--	<HBox>-->
 											<f:SimpleForm id="SimpleFormChange4806" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
-												labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1"
+												labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="3"
 												singleContainerFullSize="false">
 												<f:content>
 													<core:Title text=""/>
@@ -124,24 +124,10 @@
 													<CheckBox text="Others"/>
 													<Label text=""/>
 													<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
-												</f:content>
-											</f:SimpleForm>
-										</content>
-									</Panel>
-									<Panel width="auto" class="sapUiResponsiveMargin">
-										<headerToolbar>
-											<Toolbar height="3rem">
-												<Title text=""/>
-												<ToolbarSpacer/>
-											</Toolbar>
-										</headerToolbar>
-										<content>
-											<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
-												labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1"
-												singleContainerFullSize="false">
-												<f:content>
-													<Label text="Number of Integration Test Scenarios"/>
-													<Select id="Scenarios" selectedKey="{Instances}">
+													
+														<core:Title text=""/>
+														<Label text="Number of Integration Test Scenarios"/>
+													<Select id="Scenarios1" selectedKey="{Instances}">
 														<items>
 															<core:Item text="England" key="England"/>
 															<core:Item text="Germany" key="Germany"/>
@@ -149,7 +135,7 @@
 														</items>
 													</Select>
 													<Label text="Number of Unit Test Scripts"/>
-													<Select id="Scripts" selectedKey="{Instances}">
+													<Select id="Scripts1" selectedKey="{Instances}">
 														<items>
 															<core:Item text="England" key="England"/>
 															<core:Item text="Germany" key="Germany"/>
@@ -157,22 +143,22 @@
 														</items>
 													</Select>
 													<Label text="Number of Users"/>
-													<Select id="Users" selectedKey="{Instances}">
+													<Select id="Users1" selectedKey="{Instances}">
 														<items>
 															<core:Item text="England" key="England"/>
 															<core:Item text="Germany" key="Germany"/>
 															<core:Item text="USA" key="USA"/>
 														</items>
 													</Select>
+													
 												</f:content>
 											</f:SimpleForm>
-											<!--													</HBox>-->
 										</content>
 									</Panel>
 									<Panel width="auto" class="sapUiResponsiveMargin">
 										<content>
 											<f:SimpleForm id="SimpleFormChange480_12120" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
-												labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1"
+												labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
 												singleContainerFullSize="false">
 												<f:content>
 													<core:Title text="No. of Users"/>
@@ -201,7 +187,138 @@
 										</Toolbar>
 									</headerToolbar>
 									<content>
-										<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+											<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text=""/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+									<f:SimpleForm id="SimpleFormChangeColumn_threeGroups2345" editable="true" layout="ColumnLayout" columnsM="2" columnsL="2" columnsXL="2">
+										<f:content>
+											<!--<core:Title/>-->
+											<Label text="Back Office"/>
+											<Select id="Office1" selectedKey="{Instances}">
+												<items>
+													<core:Item text="England" key="England"/>
+													<core:Item text="Germany" key="Germany"/>
+													<core:Item text="USA" key="USA"/>
+												</items>
+											</Select>
+											<!--<core:Title/>-->
+											<Label text="Distribution Centre"/>
+											<Select id="Distribution1" selectedKey="{Instances}">
+												<items>
+													<core:Item text="England" key="England"/>
+													<core:Item text="Germany" key="Germany"/>
+													<core:Item text="USA" key="USA"/>
+												</items>
+											</Select>
+											<!--<core:Title/>-->
+											<Label text="Sales"/>
+											<Select id="Sales1" selectedKey="{Instances}">
+												<items>
+													<core:Item text="England" key="England"/>
+													<core:Item text="Germany" key="Germany"/>
+													<core:Item text="USA" key="USA"/>
+												</items>
+											</Select>
+											<!--<core:Title/>-->
+											<Label text="Plants"/>
+											<Select id="Plants1" selectedKey="{Instances}">
+												<items>
+													<core:Item text="England" key="England"/>
+													<core:Item text="Germany" key="Germany"/>
+													<core:Item text="USA" key="USA"/>
+												</items>
+											</Select>
+										</f:content>
+									</f:SimpleForm>
+									</content>
+									</Panel>
+										
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text="Line of Business"/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+											<!--	<HBox>-->
+											<f:SimpleForm id="SimpleFormChange48067" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
+												labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="3"
+												singleContainerFullSize="false">
+												<f:content>
+													<core:Title text=""/>
+													<Label text=""/>
+													<CheckBox text="Finance"/>
+													<Label text=""/>
+													<CheckBox text="Procure to Pay"/>
+													<Label text=""/>
+													<CheckBox text="Maintenance"/>
+													<Label text=""/>
+													<CheckBox text="Order to Cash"/>
+													<core:Title text=""/>
+													<Label text=""/>
+													<CheckBox text="Manufacturing"/>
+													<Label text=""/>
+													<CheckBox text="Others"/>
+													<Label text=""/>
+													<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+													
+														<core:Title text=""/>
+														<Label text="Number of Integration Test Scenarios"/>
+													<Select id="Scenarios2" selectedKey="{Instances}">
+														<items>
+															<core:Item text="England" key="England"/>
+															<core:Item text="Germany" key="Germany"/>
+															<core:Item text="USA" key="USA"/>
+														</items>
+													</Select>
+													<Label text="Number of Unit Test Scripts"/>
+													<Select id="Scripts2" selectedKey="{Instances}">
+														<items>
+															<core:Item text="England" key="England"/>
+															<core:Item text="Germany" key="Germany"/>
+															<core:Item text="USA" key="USA"/>
+														</items>
+													</Select>
+													<Label text="Number of Users"/>
+													<Select id="Users2" selectedKey="{Instances}">
+														<items>
+															<core:Item text="England" key="England"/>
+															<core:Item text="Germany" key="Germany"/>
+															<core:Item text="USA" key="USA"/>
+														</items>
+													</Select>
+													
+												</f:content>
+											</f:SimpleForm>
+										</content>
+									</Panel>
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<content>
+											<f:SimpleForm id="SimpleFormChange480_121201" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
+												labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
+												singleContainerFullSize="false">
+												<f:content>
+													<core:Title text="No. of Users"/>
+													<Select id="Number1" selectedKey="{Country}">
+														<items>
+															<core:Item text="0-100" key="England"/>
+															<core:Item text="101 – 250" key="Germany"/>
+															<core:Item text="251-500" key="USA"/>
+															<core:Item text=">500" key="USA"/>
+															</items>
+														</Select>
+														<core:Title text="Languages"/>
+														<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+													</f:content>
+												</f:SimpleForm>
+											</content>
+										</Panel>
 									</content>
 								</Panel>
 								<Panel expandable="true" expanded="false" headerText="Panel with a header text" width="auto" class="sapUiResponsiveMargin">
@@ -212,7 +329,138 @@
 										</Toolbar>
 									</headerToolbar>
 									<content>
-										<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+											<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text=""/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+									<f:SimpleForm id="SimpleFormChangeColumn_threeGroups23456" editable="true" layout="ColumnLayout" columnsM="2" columnsL="2" columnsXL="2">
+										<f:content>
+											<!--<core:Title/>-->
+											<Label text="Back Office"/>
+											<Select id="Office2" selectedKey="{Instances}">
+												<items>
+													<core:Item text="England" key="England"/>
+													<core:Item text="Germany" key="Germany"/>
+													<core:Item text="USA" key="USA"/>
+												</items>
+											</Select>
+											<!--<core:Title/>-->
+											<Label text="Distribution Centre"/>
+											<Select id="Distribution2" selectedKey="{Instances}">
+												<items>
+													<core:Item text="England" key="England"/>
+													<core:Item text="Germany" key="Germany"/>
+													<core:Item text="USA" key="USA"/>
+												</items>
+											</Select>
+											<!--<core:Title/>-->
+											<Label text="Sales"/>
+											<Select id="Sales2" selectedKey="{Instances}">
+												<items>
+													<core:Item text="England" key="England"/>
+													<core:Item text="Germany" key="Germany"/>
+													<core:Item text="USA" key="USA"/>
+												</items>
+											</Select>
+											<!--<core:Title/>-->
+											<Label text="Plants"/>
+											<Select id="Plants2" selectedKey="{Instances}">
+												<items>
+													<core:Item text="England" key="England"/>
+													<core:Item text="Germany" key="Germany"/>
+													<core:Item text="USA" key="USA"/>
+												</items>
+											</Select>
+										</f:content>
+									</f:SimpleForm>
+									</content>
+									</Panel>
+										
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text="Line of Business"/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+											<!--	<HBox>-->
+											<f:SimpleForm id="SimpleFormChange480678" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
+												labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="3"
+												singleContainerFullSize="false">
+												<f:content>
+													<core:Title text=""/>
+													<Label text=""/>
+													<CheckBox text="Finance"/>
+													<Label text=""/>
+													<CheckBox text="Procure to Pay"/>
+													<Label text=""/>
+													<CheckBox text="Maintenance"/>
+													<Label text=""/>
+													<CheckBox text="Order to Cash"/>
+													<core:Title text=""/>
+													<Label text=""/>
+													<CheckBox text="Manufacturing"/>
+													<Label text=""/>
+													<CheckBox text="Others"/>
+													<Label text=""/>
+													<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+													
+														<core:Title text=""/>
+														<Label text="Number of Integration Test Scenarios"/>
+													<Select id="Scenarios3" selectedKey="{Instances}">
+														<items>
+															<core:Item text="England" key="England"/>
+															<core:Item text="Germany" key="Germany"/>
+															<core:Item text="USA" key="USA"/>
+														</items>
+													</Select>
+													<Label text="Number of Unit Test Scripts"/>
+													<Select id="Scripts3" selectedKey="{Instances}">
+														<items>
+															<core:Item text="England" key="England"/>
+															<core:Item text="Germany" key="Germany"/>
+															<core:Item text="USA" key="USA"/>
+														</items>
+													</Select>
+													<Label text="Number of Users"/>
+													<Select id="Users3" selectedKey="{Instances}">
+														<items>
+															<core:Item text="England" key="England"/>
+															<core:Item text="Germany" key="Germany"/>
+															<core:Item text="USA" key="USA"/>
+														</items>
+													</Select>
+													
+												</f:content>
+											</f:SimpleForm>
+										</content>
+									</Panel>
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<content>
+											<f:SimpleForm id="SimpleFormChange480_1212012" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
+												labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
+												singleContainerFullSize="false">
+												<f:content>
+													<core:Title text="No. of Users"/>
+													<Select id="Number2" selectedKey="{Country}">
+														<items>
+															<core:Item text="0-100" key="England"/>
+															<core:Item text="101 – 250" key="Germany"/>
+															<core:Item text="251-500" key="USA"/>
+															<core:Item text=">500" key="USA"/>
+															</items>
+														</Select>
+														<core:Title text="Languages"/>
+														<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+													</f:content>
+												</f:SimpleForm>
+											</content>
+										</Panel>
 									</content>
 								</Panel>
 								<Panel expandable="true" expanded="false" headerText="Panel with a header text" width="auto" class="sapUiResponsiveMargin">
@@ -223,7 +471,138 @@
 										</Toolbar>
 									</headerToolbar>
 									<content>
-										<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+											<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text=""/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+									<f:SimpleForm id="SimpleFormChangeColumn_threeGroups234567" editable="true" layout="ColumnLayout" columnsM="2" columnsL="2" columnsXL="2">
+										<f:content>
+											<!--<core:Title/>-->
+											<Label text="Back Office"/>
+											<Select id="Office3" selectedKey="{Instances}">
+												<items>
+													<core:Item text="England" key="England"/>
+													<core:Item text="Germany" key="Germany"/>
+													<core:Item text="USA" key="USA"/>
+												</items>
+											</Select>
+											<!--<core:Title/>-->
+											<Label text="Distribution Centre"/>
+											<Select id="Distribution3" selectedKey="{Instances}">
+												<items>
+													<core:Item text="England" key="England"/>
+													<core:Item text="Germany" key="Germany"/>
+													<core:Item text="USA" key="USA"/>
+												</items>
+											</Select>
+											<!--<core:Title/>-->
+											<Label text="Sales"/>
+											<Select id="Sales3" selectedKey="{Instances}">
+												<items>
+													<core:Item text="England" key="England"/>
+													<core:Item text="Germany" key="Germany"/>
+													<core:Item text="USA" key="USA"/>
+												</items>
+											</Select>
+											<!--<core:Title/>-->
+											<Label text="Plants"/>
+											<Select id="Plants3" selectedKey="{Instances}">
+												<items>
+													<core:Item text="England" key="England"/>
+													<core:Item text="Germany" key="Germany"/>
+													<core:Item text="USA" key="USA"/>
+												</items>
+											</Select>
+										</f:content>
+									</f:SimpleForm>
+									</content>
+									</Panel>
+										
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text="Line of Business"/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+											<!--	<HBox>-->
+											<f:SimpleForm id="SimpleFormChange4806789" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
+												labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="3"
+												singleContainerFullSize="false">
+												<f:content>
+													<core:Title text=""/>
+													<Label text=""/>
+													<CheckBox text="Finance"/>
+													<Label text=""/>
+													<CheckBox text="Procure to Pay"/>
+													<Label text=""/>
+													<CheckBox text="Maintenance"/>
+													<Label text=""/>
+													<CheckBox text="Order to Cash"/>
+													<core:Title text=""/>
+													<Label text=""/>
+													<CheckBox text="Manufacturing"/>
+													<Label text=""/>
+													<CheckBox text="Others"/>
+													<Label text=""/>
+													<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+													
+														<core:Title text=""/>
+														<Label text="Number of Integration Test Scenarios"/>
+													<Select id="Scenarios4" selectedKey="{Instances}">
+														<items>
+															<core:Item text="England" key="England"/>
+															<core:Item text="Germany" key="Germany"/>
+															<core:Item text="USA" key="USA"/>
+														</items>
+													</Select>
+													<Label text="Number of Unit Test Scripts"/>
+													<Select id="Scripts4" selectedKey="{Instances}">
+														<items>
+															<core:Item text="England" key="England"/>
+															<core:Item text="Germany" key="Germany"/>
+															<core:Item text="USA" key="USA"/>
+														</items>
+													</Select>
+													<Label text="Number of Users"/>
+													<Select id="Users4" selectedKey="{Instances}">
+														<items>
+															<core:Item text="England" key="England"/>
+															<core:Item text="Germany" key="Germany"/>
+															<core:Item text="USA" key="USA"/>
+														</items>
+													</Select>
+													
+												</f:content>
+											</f:SimpleForm>
+										</content>
+									</Panel>
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<content>
+											<f:SimpleForm id="SimpleFormChange480_12120123" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
+												labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
+												singleContainerFullSize="false">
+												<f:content>
+													<core:Title text="No. of Users"/>
+													<Select id="Number3" selectedKey="{Country}">
+														<items>
+															<core:Item text="0-100" key="England"/>
+															<core:Item text="101 – 250" key="Germany"/>
+															<core:Item text="251-500" key="USA"/>
+															<core:Item text=">500" key="USA"/>
+															</items>
+														</Select>
+														<core:Title text="Languages"/>
+														<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+													</f:content>
+												</f:SimpleForm>
+											</content>
+										</Panel>
 									</content>
 								</Panel>
 								<!--</VBox>-->
