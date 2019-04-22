@@ -6,12 +6,17 @@ sap.ui.define([
 	return Controller.extend("cap.estimate.controller.FinalDashBoard", {
 
 		onInit: function () {
-			var that = this;
+			
 			this.router = this.getOwnerComponent().getRouter();
 			var globalModel = this.getOwnerComponent().getModel("init_data");
 			this.getView().setModel(globalModel);
 			
-			var estimateId = globalModel.getProperty("/estimateId");
+			
+		},
+		
+		onAfterRendering: function(){
+			var that = this;
+			var estimateId = this.getView().getModel().getProperty("/estimateId");
 			
 			var url = "http://10.154.52.73:3000/api/data/" + estimateId;  
 			
