@@ -6,6 +6,7 @@ sap.ui.define([
 	return Controller.extend("cap.estimate.controller.FinalDashBoard", {
 
 		onInit: function () {
+			var that = this;
 			this.router = this.getOwnerComponent().getRouter();
 			var globalModel = this.getOwnerComponent().getModel("init_data");
 			this.getView().setModel(globalModel);
