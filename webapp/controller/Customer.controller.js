@@ -17,7 +17,8 @@ sap.ui.define([
 		},
 		nextPress: function () {
 			// console.log(this.getView().getModel().getProperty("/Customer"));
-
+			
+			
 			var sector = this.getView().byId("Sector_Select").getSelectedKey();
 			this.getView().getModel().setProperty("/posting/comp_sector", sector);
 

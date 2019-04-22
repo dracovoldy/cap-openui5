@@ -1,0 +1,31 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="cap.estimate.controller.FinalDashBoard"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page>
+				<content>
+					<Panel width="auto" class="sapUiTinyMargin">
+						<headerToolbar>
+							<Toolbar height="2rem">
+								<Title text="Estimation Dashboard"/>
+								<ToolbarSpacer/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<VBox>
+								<HBox>
+									<Text text="As Short as 4 Months"></Text>
+									<Text text="As Long as 12 Months"></Text>
+									<Text text="Average 8 Months"></Text>
+								</HBox>
+								<Text
+									text="Duration of projects is largely determined by customer complexity (degree of change) and implementing partner preferences / tools / methodologies "></Text>
+							</VBox>
+						</content>
+					</Panel>
+					<Button text="Back" type="Emphasized" press="onBack"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

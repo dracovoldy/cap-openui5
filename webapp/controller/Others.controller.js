@@ -1,6 +1,7 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+	"sap/ui/core/mvc/Controller",
+	"sap/m/MessageBox"
+], function (Controller, MessageBox) {
 	"use strict";
 
 	return Controller.extend("cap.estimate.controller.Others", {
@@ -12,10 +13,13 @@ sap.ui.define([
 		},
 		nextPress: function () {
 			console.log(this.getView().getModel().getProperty("/posting"));
-			
+
 			var payload = this.getView().getModel().getProperty("/posting");
 			//prepare post
-			var url = "http://10.154.52.73:3000/api/estimate"
+			var url = "http://10.154.52.73:3000/api/estimate";
+			
+			var Company = this.getView().getModel().getProperty("/posting/comp_name");
+			var CapgContact = this.getView().getModel().getProperty("/posting/cap_name");
 
 			$.ajax({
 				url: url,
@@ -25,6 +29,14 @@ sap.ui.define([
 				contentType: 'application/x-www-form-urlencoded',
 				success: function (data) {
 					console.log(data);
+					
+					MessageBox.success("Estimate created for: " + Company + "\nCapgemini PoC: " + CapgContact, {
+						title: "Success", // default
+						onClose: null, // default
+						styleClass: "", // default
+						initialFocus: null, // default
+						textDirection: sap.ui.core.TextDirection.Inherit // default
+					});
 				},
 				error: function (e) {
 					console.log(e);

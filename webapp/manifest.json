@@ -157,7 +157,14 @@
 				"target": [
 					"Others"
 				]
-			}, 
+			}, 	{
+				"name": "FinalDashBoard",
+				"pattern": "FinalDashBoard",
+				"greedy": false,
+				"target": [
+					"FinalDashBoard"
+				]
+			},
 			{
 				"name": "Infrastructure",
 				"pattern": "Infrastructure",
@@ -244,6 +251,15 @@
 					"transition": "show",
 					"clearAggregation": true,
 					"viewName": "Development",
+					"viewLevel": 2
+				},
+				"FinalDashBoard": {
+					"viewType": "XML",
+					"parent": "Dashboard",
+					"controlId": "pageContainer",
+					"transition": "show",
+					"clearAggregation": true,
+					"viewName": "FinalDashBoard",
 					"viewLevel": 2
 				},
 				"LoginPage": {
