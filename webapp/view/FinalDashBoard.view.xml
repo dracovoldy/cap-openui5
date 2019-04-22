@@ -14,9 +14,15 @@
 						<content>
 							<VBox>
 								<HBox>
-									<Text text="As Short as 4 Months"></Text>
-									<Text text="As Long as 12 Months"></Text>
-									<Text text="Average 8 Months"></Text>
+									<VBox>
+										<Text text="As Short as {/estimate/LowPersonMonths}"></Text>
+									</VBox>
+									<VBox>
+										<Text text="As Long as {/estimate/HighPersonMonths}"></Text>
+									</VBox>
+									<VBox>
+										<Text text="Average {/estimate/PersonMonths}"></Text>
+									</VBox>
 								</HBox>
 								<Text
 									text="Duration of projects is largely determined by customer complexity (degree of change) and implementing partner preferences / tools / methodologies "></Text>
