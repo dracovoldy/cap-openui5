@@ -15,13 +15,16 @@
 							<VBox>
 								<HBox>
 									<VBox>
-										<Text text="As Short as {/estimate/LowPersonMonths}"></Text>
+										<Title text="As Short as"/>
+										<Title id="short" text="{/estimate/LowPersonMonths}"/>
 									</VBox>
 									<VBox>
-										<Text text="As Long as {/estimate/HighPersonMonths}"></Text>
+										<Title text="As Long as"/>
+										<Title id="long" text="{/estimate/HighPersonMonths}"/>
 									</VBox>
 									<VBox>
-										<Text text="Average {/estimate/PersonMonths}"></Text>
+										<Title text="Average"/>
+										<Title id="avg" text="{/estimate/PersonMonths}"/>
 									</VBox>
 								</HBox>
 								<Text
