@@ -31,7 +31,7 @@ sap.ui.define([
 				success: function (data) {
 					console.log(data);
 					
-					that.getView.getModel().setProperty("/estimateId", data.insertId);
+					that.getView().getModel().setProperty("/estimateId", data.insertId);
 					MessageBox.success("Estimate Generated for: " + Customer + "\n Capgemini PoC: " + CapgContact, {
 						title: "Success", // default
 						onClose: function () {
