@@ -50,12 +50,10 @@
 							<Label text="Assets"/>
 							<Select id="Data_Assets_Select" selectedKey="1">
 								<items>
-									<core:Item text="Less than 50" key="1"/>
-									<core:Item text="50 - 125" key="3"/>
-									<core:Item text="126 - 200" key="4"/>
-									<core:Item text="201 - 300" key="5"/>
-									<core:Item text="301 - 500" key="7"/>
-									<core:Item text="Greater than 500" key="8"/>
+									<core:Item text="Less than 5000" key="1"/>
+									<core:Item text="5001 - 50,000" key="2"/>
+									<core:Item text="50,001 - 500,000" key="3"/>
+									<core:Item text="500,000+" key="4"/>
 								</items>
 							</Select>
 						</f:content>

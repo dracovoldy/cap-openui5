@@ -12,14 +12,15 @@ sap.ui.define([
 			this.getView().setModel(globalModel);
 		},
 		nextPress: function () {
+			var that = this;
 			console.log(this.getView().getModel().getProperty("/posting"));
+			
+			var Customer = this.getView().getModel().getProperty("/posting/comp_name");
+			var CapgContact = this.getView().getModel().getProperty("/posting/cap_name");
 
 			var payload = this.getView().getModel().getProperty("/posting");
 			//prepare post
 			var url = "http://10.154.52.73:3000/api/estimate";
-			
-			var Company = this.getView().getModel().getProperty("/posting/comp_name");
-			var CapgContact = this.getView().getModel().getProperty("/posting/cap_name");
 
 			$.ajax({
 				url: url,
@@ -29,10 +30,9 @@ sap.ui.define([
 				contentType: 'application/x-www-form-urlencoded',
 				success: function (data) {
 					console.log(data);
-					
-					MessageBox.success("Estimate created for: " + Company + "\nCapgemini PoC: " + CapgContact, {
+					MessageBox.success("Estimate Generated for: " + Customer + "\n Capgemini PoC: " + CapgContact, {
 						title: "Success", // default
-						onClose: null, // default
+						onClose: that.onSubmit, // default
 						styleClass: "", // default
 						initialFocus: null, // default
 						textDirection: sap.ui.core.TextDirection.Inherit // default
@@ -43,6 +43,10 @@ sap.ui.define([
 				}
 			});
 
+		},
+
+		onSubmit: function () {
+			this.router.navTo("FinalDashBoard");
 		}
 
 	});

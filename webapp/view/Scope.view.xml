@@ -11,7 +11,7 @@
 				</headerToolbar>
 				<content>
 					<VBox>
-						<Carousel class="sapUiNoContentPadding" arrowsPlacement="PageIndicator" pageIndicatorPlacement="Top">
+						<Carousel class="sapUiNoContentPadding" arrowsPlacement="PageIndicator" pageIndicatorPlacement="Bottom">
 							<pages>
 								<VBox class="sapUiTinyMarginBegin sapUiTinyMarginEnd">
 									<f:SimpleForm editable="true" layout="ColumnLayout" columnsM="2" columnsL="3" columnsXL="4">

@@ -1,45 +1,43 @@
 <mvc:View controllerName="cap.estimate.controller.Others" displayBlock="true" height="100%" xmlns="sap.m" xmlns:core="sap.ui.core"
 	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
-
-			<Page id="page2" showHeader="false" class="sapUiSizeCompact">
-				<content>
-					<Panel width="auto" class="sapUiTinyMargin">
-						<headerToolbar>
-							<Toolbar height="2rem">
-								<Title text="Others(Optional)"/>
-								<ToolbarSpacer/>
-							</Toolbar>
-						</headerToolbar>
-						<content>
-							<f:SimpleForm id="SimpleFormChange480_Trial" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4"
-								labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
-								singleContainerFullSize="false">
-								<f:content>
-									<core:Title text="Fiori/UX Requirements"/>
-									<TextArea value="" growingMaxLines="7" width="100%"/>
-									<core:Title text="Govt. and Regulatory Requirements (FDA, ITAR, etc.)"/>
-									<TextArea value="" growingMaxLines="7" width="100%"/>
-									<core:Title text="Has any assessment study been done so far? Highlights of the same"/>
-									<TextArea value="" growingMaxLines="7" width="100%"/>
-								</f:content>
-							</f:SimpleForm>
-						</content>
-					</Panel>
-					<Button text="Next" type="Emphasized" press="nextPress"/>
-					<Button text="Submit" type="Emphasized" press="OnSubmit"/>
-				</content>
-				<footer>
-					<Toolbar height="1.5em">
+	<Page id="page2" showHeader="false" class="sapUiSizeCompact">
+		<content>
+			<Panel width="auto" class="sapUiTinyMargin">
+				<headerToolbar>
+					<Toolbar height="2rem">
+						<Title text="Others(Optional)"/>
 						<ToolbarSpacer/>
-						<Label text="The information contained in this document is proprietary. Copyright © 2019 Capgemini. All rights reserved." class="labelFont">
-							<layoutData>
-								<ToolbarLayoutData shrinkable="true" minWidth="200px"/>
-							</layoutData>
-						</Label>
-						<ToolbarSpacer/>
-						<!--<Button text="Next" type="Emphasized" press="nextPress"/>-->
 					</Toolbar>
-				</footer>
-			</Page>
-	
+				</headerToolbar>
+				<content>
+					<f:SimpleForm id="SimpleFormChange480_Trial" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4"
+						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
+						singleContainerFullSize="false">
+						<f:content>
+							<core:Title text="Fiori/UX Requirements"/>
+							<TextArea value="" growingMaxLines="7" width="100%"/>
+							<core:Title text="Govt. and Regulatory Requirements (FDA, ITAR, etc.)"/>
+							<TextArea value="" growingMaxLines="7" width="100%"/>
+							<core:Title text="Has any assessment study been done so far? Highlights of the same"/>
+							<TextArea value="" growingMaxLines="7" width="100%"/>
+						</f:content>
+					</f:SimpleForm>
+				</content>
+			</Panel>
+			<Button text="Previous" type="Emphasized"/>
+			<Button text="Submit" type="Emphasized" press="nextPress"/>
+		</content>
+		<footer>
+			<Toolbar height="1.5em">
+				<ToolbarSpacer/>
+				<Label text="The information contained in this document is proprietary. Copyright © 2019 Capgemini. All rights reserved." class="labelFont">
+					<layoutData>
+						<ToolbarLayoutData shrinkable="true" minWidth="200px"/>
+					</layoutData>
+				</Label>
+				<ToolbarSpacer/>
+				<!--<Button text="Next" type="Emphasized" press="nextPress"/>-->
+			</Toolbar>
+		</footer>
+	</Page>
 </mvc:View>
