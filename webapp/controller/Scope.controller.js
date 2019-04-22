@@ -109,6 +109,8 @@ sap.ui.define([
 					initialFocus: null, // default
 					textDirection: sap.ui.core.TextDirection.Inherit // default
 				});
+				
+				return;
 			}
 
 			var Scenarios1 = parseInt(this.getView().byId("Scenarios1").getSelectedKey(), 10);
@@ -122,7 +124,8 @@ sap.ui.define([
 
 			var Lang_Select = parseInt(this.getView().byId("Lang_Select").getSelectedKey(), 10);
 			this.getView().getModel().setProperty("/posting/sc_lang_v", Lang_Select);
-
+			
+			this.router.navTo("Infrastructure");
 		}
 
 	});
