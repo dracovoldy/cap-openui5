@@ -11,7 +11,9 @@ sap.ui.define([
 			var globalModel = this.getOwnerComponent().getModel("init_data");
 			this.getView().setModel(globalModel);
 			
-			var url = "http://10.154.52.73:3000/api/data/" + this.getView().getModel().getProperty("/estimateId");
+			var estimateId = this.getView().getModel().getProperty("/estimateId");
+			
+			var url = "http://10.154.52.73:3000/api/data/" + estimateId;  
 			
 			$.ajax({
 				url: url,
