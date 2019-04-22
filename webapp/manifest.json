@@ -13,6 +13,12 @@
 		"sourceTemplate": {
 			"id": "ui5template.basicSAPUI5ApplicationProject",
 			"version": "1.32.0"
+		},
+		"dataSources": {
+			"init_data_alias": {
+				"uri": "jsonstore/data.json",
+				"type": "JSON"
+			}
 		}
 	},
 	"sap.ui": {
@@ -56,6 +62,10 @@
 				"settings": {
 					"bundleName": "cap.estimate.i18n.i18n"
 				}
+			},
+			"init_data": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "init_data_alias"
 			}
 		},
 		"resources": {
@@ -94,18 +104,18 @@
 					"Dashboard"
 				]
 			}, {
-				"name": "dashboardTiles",
-				"pattern": "dashboardTiles",
+				"name": "Customer",
+				"pattern": "Customer",
 				"greedy": false,
 				"target": [
-					"dashboardTiles"
+					"Customer"
 				]
 			}, {
-				"name": "dashboardTasks",
-				"pattern": "dashboardTasks",
+				"name": "Background",
+				"pattern": "Background",
 				"greedy": false,
 				"target": [
-					"dashboardTasks"
+					"Background"
 				]
 			},
 			{
@@ -155,89 +165,8 @@
 				"target": [
 					"Infrastructure"
 				]
-			}, 
-			{
-				"name": "CU01",
-				"pattern": "CU01",
-				"greedy": false,
-				"target": [
-					"CU01"
-				]
-			}, {
-				"name": "CU05",
-				"pattern": "CU05",
-				"greedy": false,
-				"target": [
-					"CU05"
-				]
-			}, {
-				"name": "SU01",
-				"pattern": "SU01",
-				"greedy": false,
-				"target": [
-					"SU01"
-				]
-			}, {
-				"name": "SU05",
-				"pattern": "SU05",
-				"greedy": false,
-				"target": [
-					"SU05"
-				]
-			}, {
-				"name": "TT01",
-				"pattern": "TT01",
-				"greedy": false,
-				"target": [
-					"TT01"
-				]
 			}],
 			"targets": {
-				"TT01": {
-					"viewType": "XML",
-					"parent": "Dashboard",
-					"controlId": "pageContainer",
-					"transition": "slide",
-					"clearAggregation": true,
-					"viewName": "CreateTasks",
-					"viewLevel": 3
-				},
-				"SU01": {
-					"viewType": "XML",
-					"parent": "Dashboard",
-					"controlId": "pageContainer",
-					"transition": "slide",
-					"clearAggregation": true,
-					"viewName": "CreateUsers",
-					"viewLevel": 3
-				},
-				"SU05": {
-					"viewType": "XML",
-					"parent": "Dashboard",
-					"controlId": "pageContainer",
-					"transition": "slide",
-					"clearAggregation": true,
-					"viewName": "ModifyUsers",
-					"viewLevel": 3
-				},
-				"CU01": {
-					"viewType": "XML",
-					"parent": "Dashboard",
-					"controlId": "pageContainer",
-					"transition": "slide",
-					"clearAggregation": true,
-					"viewName": "CreateCustomers",
-					"viewLevel": 3
-				},
-				"CU05": {
-					"viewType": "XML",
-					"parent": "Dashboard",
-					"controlId": "pageContainer",
-					"transition": "slide",
-					"clearAggregation": true,
-					"viewName": "ModifyCustomers",
-					"viewLevel": 3
-				},
 				"Dashboard": {
 					"viewType": "XML",
 					"transition": "slide",
@@ -245,29 +174,29 @@
 					"viewName": "dashboard",
 					"viewLevel": 1
 				},
-				"dashboardTiles": {
+				"Background": {
 					"viewType": "XML",
 					"parent": "Dashboard",
 					"controlId": "pageContainer",
-					"transition": "slide",
+					"transition": "show",
 					"clearAggregation": true,
-					"viewName": "dashboardTiles",
+					"viewName": "Background",
 					"viewLevel": 2
 				},
-				"dashboardTasks": {
+				"Customer": {
 					"viewType": "XML",
 					"parent": "Dashboard",
 					"controlId": "pageContainer",
-					"transition": "slide",
+					"transition": "show",
 					"clearAggregation": true,
-					"viewName": "dashboardTasks",
+					"viewName": "Customer",
 					"viewLevel": 2
 				},
 				"Others": {
 					"viewType": "XML",
 					"parent": "Dashboard",
 					"controlId": "pageContainer",
-					"transition": "slide",
+					"transition": "show",
 					"clearAggregation": true,
 					"viewName": "Others",
 					"viewLevel": 2
@@ -276,7 +205,7 @@
 					"viewType": "XML",
 					"parent": "Dashboard",
 					"controlId": "pageContainer",
-					"transition": "slide",
+					"transition": "show",
 					"clearAggregation": true,
 					"viewName": "POCM",
 					"viewLevel": 2
@@ -285,7 +214,7 @@
 					"viewType": "XML",
 					"parent": "Dashboard",
 					"controlId": "pageContainer",
-					"transition": "slide",
+					"transition": "show",
 					"clearAggregation": true,
 					"viewName": "Scope",
 					"viewLevel": 2
@@ -294,7 +223,7 @@
 					"viewType": "XML",
 					"parent": "Dashboard",
 					"controlId": "pageContainer",
-					"transition": "slide",
+					"transition": "show",
 					"clearAggregation": true,
 					"viewName": "Data",
 					"viewLevel": 2
@@ -303,7 +232,7 @@
 					"viewType": "XML",
 					"parent": "Dashboard",
 					"controlId": "pageContainer",
-					"transition": "slide",
+					"transition": "show",
 					"clearAggregation": true,
 					"viewName": "Infrastructure",
 					"viewLevel": 2
@@ -312,7 +241,7 @@
 					"viewType": "XML",
 					"parent": "Dashboard",
 					"controlId": "pageContainer",
-					"transition": "slide",
+					"transition": "show",
 					"clearAggregation": true,
 					"viewName": "Development",
 					"viewLevel": 2

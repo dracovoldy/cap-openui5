@@ -3,43 +3,98 @@ sap.ui.define([
 ], function (Controller) {
 	"use strict";
 
-	return Controller.extend("com.limscloud.app.controller.Infrastructure", {
+	return Controller.extend("cap.estimate.controller.Infrastructure", {
 
-		/**
-		 * Called when a controller is instantiated and its View controls (if available) are already created.
-		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
-		 * @memberOf com.limscloud.app.view.Infrastructure
-		 */
-		onInit: function () {
- this.router = this.getOwnerComponent().getRouter();
+		
+		onInit: function (){
+			this.router = this.getOwnerComponent().getRouter();
+			var globalModel = this.getOwnerComponent().getModel("init_data");
+			this.getView().setModel(globalModel);
 		},
+		nextPress: function (oEvent){
+			var that = this;
+			
+			var Instance_Select = parseInt(this.getView().byId("Instance_Select").getSelectedKey(),10);
+			this.getView().getModel().setProperty("/posting/if_psap_v", Instance_Select);
+			
+			var Enhancement_Select = parseInt(this.getView().byId("Enhancement_Select").getSelectedKey(),10);
+			this.getView().getModel().setProperty("/posting/if_plvl_v", Enhancement_Select);
+			
+			var Systems_Select = parseInt(this.getView().byId("Systems_Select").getSelectedKey(),10);
+			this.getView().getModel().setProperty("/posting/if_syscon_v", Systems_Select);
+			
+			var aSapKeys = this.getView().byId("KeySap_Multi").getSelectedKeys();
+			aSapKeys.map(function(key){
+				if(key === "1"){
+					that.getView().getModel().setProperty("/posting/if_key_arib_v", 1);
+				}else if(key === "2"){
+					that.getView().getModel().setProperty("/posting/if_key_conc_v", 1);
+				}else if(key === "3"){
+					that.getView().getModel().setProperty("/posting/if_key_fiel_v", 1);
+				}else if(key === "4"){
+					that.getView().getModel().setProperty("/posting/if_key_sf_v", 1);
+				}else if(key === "5"){
+					that.getView().getModel().setProperty("/posting/if_key_solm_v", 1);
+				}else if(key === "6"){
+					that.getView().getModel().setProperty("/posting/if_key_ewm_v", 1);
+				}else if(key === "7"){
+					that.getView().getModel().setProperty("/posting/if_key_gts_v", 1);
+				}else if(key === "8"){
+					that.getView().getModel().setProperty("/posting/if_key_attp_v", 1);
+				}else if(key === "9"){
+					that.getView().getModel().setProperty("/posting/if_key_tms_v", 1);
+				}else if(key === "10"){
+					that.getView().getModel().setProperty("/posting/if_key_apo_v", 1);
+				}else if(key === "11"){
+					that.getView().getModel().setProperty("/posting/if_key_vistx_v", 1);
+				}else if(key === "12"){
+					that.getView().getModel().setProperty("/posting/if_key_mdg_v", 1);
+				}else if(key === "13"){
+					that.getView().getModel().setProperty("/posting/if_key_optx_v", 1);
+				}else if(key === "14"){
+					that.getView().getModel().setProperty("/posting/if_key_others_v", 1);
+				}
+			});
+			
+			var Size_Select = parseInt(this.getView().byId("Size_Select").getSelectedKey(),10);
+			this.getView().getModel().setProperty("/posting/if_sysize_v", Size_Select);
+			
+			// console.log(this.getView().getModel().getProperty("/posting"));
+			
+			if (this.validate()) {
+				this.router.navTo("Development");
+				
+			}
+		},
+		validate: function () {
+			//validate
+			var count = 0;
+			if (this.getView().byId("KeySap_Multi").getSelectedKeys().length === 0) {
+				this.getView().byId("KeySap_Multi").setValueState("Information");
+				this.getView().byId("KeySap_Multi").setValueStateText("Input Required");
+				this.getView().byId("KeySap_Multi").focus();
+				count++;
+				// return false;
+			}
+			if (this.getView().byId("non_sap").getValue().trim() === "") {
+				this.getView().byId("non_sap").setValueState("Information");
+				this.getView().byId("non_sap").setValueStateText("Input Required");
+				this.getView().byId("non_sap").focus();
+				count++;
+				// return false;
+			}
+			
+			
+			if(count > 0){
+				return false;
+			}
+			this.getView().byId("KeySap_Multi").setValueState("None");
+			this.getView().byId("non_sap").setValueState("None");
+			
+			return true;
+		}
 
-		/**
-		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
-		 * (NOT before the first rendering! onInit() is used for that one!).
-		 * @memberOf com.limscloud.app.view.Infrastructure
-		 */
-		//	onBeforeRendering: function() {
-		//
-		//	},
-
-		/**
-		 * Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.
-		 * This hook is the same one that SAPUI5 controls get after being rendered.
-		 * @memberOf com.limscloud.app.view.Infrastructure
-		 */
-		//	onAfterRendering: function() {
-		//
-		//	},
-
-		/**
-		 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
-		 * @memberOf com.limscloud.app.view.Infrastructure
-		 */
-		//	onExit: function() {
-		//
-		//	}
-
+	
 	});
 
 });

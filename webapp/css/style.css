@@ -54,3 +54,7 @@ html.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
     color: #000046;
     padding-top: 15px;
 }
+
+.labelFont{
+	font-size:10px !important;
+}

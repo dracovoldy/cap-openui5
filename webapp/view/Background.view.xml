@@ -1,0 +1,76 @@
+<mvc:View controllerName="cap.estimate.controller.Background" displayBlock="true" height="100%" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
+
+			<Page id="page2" showHeader="false" class="sapUiSizeCompact">
+				<content>
+					<Panel width="auto" class="sapUiTinyMargin">
+						<headerToolbar>
+							<Toolbar height="2rem">
+								<Title text="Background"/>
+								<ToolbarSpacer/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<f:SimpleForm id="BackgroundForm1" editable="true" layout="ColumnLayout" columnsXL="3" columnsL="3" columnsM="1"
+								singleContainerFullSize="false">
+								<f:content>
+									<!--<core:Title text="Program Objective"/>-->
+									<Label text="Program Objective" design="Bold" required="true"/>
+									<TextArea id="prog" value="{/posting/bg_prog_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250"></TextArea>
+									<!--<core:Title text="Business Drivers"/>-->
+									<Label text="Business Drivers" design="Bold" required="true"/>
+									<TextArea id="biz" value="{/posting/bg_bizd_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250"/>
+								</f:content>
+							</f:SimpleForm>
+							<f:SimpleForm id="BackgroundForm2" editable="true" layout="ColumnLayout" columnsXL="3" columnsL="3" columnsM="1"
+								singleContainerFullSize="false">
+								<f:content>
+									<!--<core:Title text="IT Drivers"/>-->
+									<Label text="IT Drivers" design="Bold" required="true"/>
+									<TextArea id="drive" value="{/posting/bg_itdr_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">
+										<dependents>
+											<ResponsivePopover id="popover_it" title="Information" class="sapUiPopupWithPadding" placement="Bottom">
+												<content>
+													<MessageStrip text="Information with default icon." type="Information" showIcon="true" class="sapUiMediumMarginBottom"></MessageStrip>
+													<Text text="Hover Text"></Text>
+												</content>
+											</ResponsivePopover>
+										</dependents>
+									</TextArea>
+									<!--<core:Title text="Key Business Pain Points"/>-->
+									<Label text="Key Business Pain Points" design="Bold" required="true"/>
+									<TextArea id="pain" value="{/posting/bg_bizp_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">
+										<dependents>
+											<ResponsivePopover id="popover_pain" title="Information" class="sapUiPopupWithPadding" placement="Bottom">
+												<content>
+													<MessageStrip text="Information with default icon." type="Information" showIcon="true" class="sapUiMediumMarginBottom"></MessageStrip>
+													<Text text="Hover Text"></Text>
+												</content>
+											</ResponsivePopover>
+										</dependents>
+									</TextArea>
+									<!--<core:Title text="Business Case status and Additional Capabilities Required"/>-->
+									<Label text="Business Case status and Additional Required Capabilities" design="Bold" required="true"/>
+									<TextArea id="case" value="{/posting/bg_bcad_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250"/>
+								</f:content>
+							</f:SimpleForm>
+						</content>
+					</Panel>
+					<Button text="Previous" type="Emphasized" press="nextPress"/>
+					<Button text="Next" type="Emphasized" press="nextPress"/>
+				</content>
+				<footer>
+					<Toolbar height="1.5em">
+						<ToolbarSpacer/>
+						<Label text="The information contained in this document is proprietary. Copyright © 2019 Capgemini. All rights reserved." class="labelFont">
+							<layoutData>
+								<ToolbarLayoutData shrinkable="true" minWidth="200px"/>
+							</layoutData>
+						</Label>
+						<ToolbarSpacer/>
+						<!--<Button text="Next" type="Emphasized" press="nextPress"/>-->
+					</Toolbar>
+				</footer>
+			</Page>
+	
+</mvc:View>

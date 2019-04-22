@@ -1,87 +1,70 @@
-<mvc:View controllerName="cap.estimate.controller.dashboardTasks" displayBlock="true" height="100%" xmlns="sap.m" xmlns:core="sap.ui.core"
+<mvc:View controllerName="cap.estimate.controller.Development" displayBlock="true" height="100%" xmlns="sap.m" xmlns:core="sap.ui.core"
 	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
-	<App id="DevelopmentApp">
-		<pages>
-			<Page id="page2" showHeader="false" class="sapUiSizeCompact">
+	<Page id="page2" showHeader="false" class="sapUiSizeCompact">
+		<content>
+			<Panel width="auto" class="sapUiTinyMargin">
+				<headerToolbar>
+					<Toolbar height="2rem">
+						<Title text="Development"/>
+						<ToolbarSpacer/>
+					</Toolbar>
+				</headerToolbar>
 				<content>
-					<Panel width="auto" class="sapUiResponsiveMargin">
-						<headerToolbar>
-							<Toolbar height="3rem">
-								<Title text="Development"/>
-								<ToolbarSpacer/>
-							</Toolbar>
-						</headerToolbar>
-						<content>
-							<!--	<VBox>
-								<Panel width="auto" class="sapUiResponsiveMargin">
-									<headerToolbar>
-										<Toolbar height="3rem">
-											<Title text="Key Change Management Considerations"/>
-											<ToolbarSpacer/>
-										</Toolbar>
-									</headerToolbar>
-									<content>-->
-							<f:SimpleForm id="SimpleFormChangeColumn_threeGroups234" editable="true" layout="ColumnLayout" columnsM="2" columnsL="3" columnsXL="4">
-								<f:content>
-									<core:Title/>
-									<Label text="Number of EDI subsystems"/>
-									<Select id="EDI" selectedKey="{EDI}">
-										<items>
-											<core:Item text="England" key="England"/>
-											<core:Item text="Germany" key="Germany"/>
-											<core:Item text="USA" key="USA"/>
-										</items>
-									</Select>
-									<core:Title/>
-									<Label text="Current Middleware platform"/>
-									<Select id="Middleware" selectedKey="{Middleware}">
-										<items>
-											<core:Item text="England" key="England"/>
-											<core:Item text="Germany" key="Germany"/>
-											<core:Item text="USA" key="USA"/>
-										</items>
-									</Select>
-									<core:Title/>
-									<Label text="RICEFW matrix"/>
-									<Select id="RICEFW" selectedKey="{RICEFW}">
-										<items>
-											<core:Item text="England" key="England"/>
-											<core:Item text="Germany" key="Germany"/>
-											<core:Item text="USA" key="USA"/>
-										</items>
-									</Select>
-									<core:Title text="Key Applications in Landscape (SAP, SAP Bolt-ons)"/>
-									<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
-								</f:content>
-							</f:SimpleForm>
-							<!--	</content>
-								</Panel>-->
-							<!--	<Panel width="auto" class="sapUiResponsiveMargin">
-									<headerToolbar>
-										<Toolbar height="3rem">
-											<Title text="Key Applications in Landscape (SAP, SAP Bolt-ons)"/>
-											<ToolbarSpacer/>
-										</Toolbar>
-									</headerToolbar>
-									<content>
-										<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
-									</content>
-								</Panel>
-							</VBox>-->
-						</content>
-					</Panel>
+					<f:SimpleForm id="DevForm1" editable="true" layout="ColumnLayout" columnsM="2" columnsL="3" columnsXL="4">
+						<f:content>
+							<!--<core:Title/>-->
+							<Label text="Number of EDI subsystems"/>
+							<Select id="EDI_Select" selectedKey="1">
+								<items>
+									<core:Item text="1" key="1"/>
+									<core:Item text="2" key="2"/>
+									<core:Item text="3" key="3"/>
+									<core:Item text="4+" key="4"/>
+								</items>
+							</Select>
+							<!--<core:Title/>-->
+							<Label text="Current Middleware platform"/>
+							<MultiComboBox id="MIDDL_MultiCombo" selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish"
+								items="{/DevMiddleware}">
+								<core:Item key="{key}" text="{desc}"/>
+							</MultiComboBox>
+							<!--<core:Title/>-->
+							<Label text="RICEFW matrix"/>
+							<Select id="RICEFW_Select" selectedKey="1">
+								<items>
+									<core:Item text="Less than 50" key="1"/>
+									<core:Item text="50 - 125" key="3"/>
+									<core:Item text="126 - 200" key="4"/>
+									<core:Item text="201 - 300" key="5"/>
+									<core:Item text="301 - 500" key="7"/>
+									<core:Item text="Greater than 500" key="8"/>
+								</items>
+							</Select>
+						</f:content>
+					</f:SimpleForm>
+					<f:SimpleForm id="DevForm2" editable="true" layout="ColumnLayout" columnsM="2" columnsL="2" columnsXL="2">
+						<f:content>
+							<core:Title text="Comments :"/>
+							<Label text="Addional Comments on Development/Customizations"/>
+							<TextArea id="dev_comments" value="{/posting/if_dev_comm}" growing="true" growingMaxLines="7" width="100%"/>
+						</f:content>
+					</f:SimpleForm>
 				</content>
-				<footer>
-					<Bar>
-						<contentLeft>
-							<Button text="Back"/>
-						</contentLeft>
-						<contentRight>
-							<Button text="Next" type="Emphasized"/>
-						</contentRight>
-					</Bar>
-				</footer>
-			</Page>
-		</pages>
-	</App>
+			</Panel>
+			<Button text="Previous" type="Emphasized" press="nextPress"/>
+			<Button text="Next" type="Emphasized" press="nextPress"/>
+		</content>
+		<footer>
+			<Toolbar height="1.5em">
+				<ToolbarSpacer/>
+				<Label text="The information contained in this document is proprietary. Copyright © 2019 Capgemini. All rights reserved." class="labelFont">
+					<layoutData>
+						<ToolbarLayoutData shrinkable="true" minWidth="200px"/>
+					</layoutData>
+				</Label>
+				<ToolbarSpacer/>
+				<!--<Button text="Next" type="Emphasized" press="nextPress"/>-->
+			</Toolbar>
+		</footer>
+	</Page>
 </mvc:View>

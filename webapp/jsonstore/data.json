@@ -1,0 +1,151 @@
+{
+	"SectorCollection": [{
+		"key": "CPRD",
+		"desc": "Consumer Products, Retail, Distribution"
+	}, {
+		"key": "EUC",
+		"desc": "Energy, Utilities, Chemicals"
+	}, {
+		"key": "MALS",
+		"desc": "Manufacturing, Auto, Life Sciences"
+	}, {
+		"key": "TMT",
+		"desc": "Telecomm, Media, Entertainment"
+	}],
+	"RegionCollection": [{
+		"key": "NA",
+		"desc": "North America"
+	}, {
+		"key": "LATAM",
+		"desc": "Latin America"
+	}, {
+		"key": "APAC",
+		"desc": "Asia Pacific"
+	}, {
+		"key": "EUR",
+		"desc": "Europe"
+	}],
+	"ScopeRegionSizes": [{
+		"key": "0",
+		"desc": "0"
+	}, {
+		"key": "1",
+		"desc": "1-5"
+	}, {
+		"key": "3",
+		"desc": "6-10"
+	}, {
+		"key": "4",
+		"desc": "11-20"
+	}, {
+		"key": "5",
+		"desc": "21+"
+	}],
+	"LOBS": [{
+		"key": "FTM",
+		"desc": "Finance"
+	}, {
+		"key": "OTC",
+		"desc": "Order To Cash"
+	}, {
+		"key": "PTP",
+		"desc": "Procure To Pay"
+	}, {
+		"key": "DTS",
+		"desc": "Manufacturing"
+	}, {
+		"key": "MTS",
+		"desc": "Maintainence"
+	}],
+	"ScopeITS": [{
+		"key": "1",
+		"desc": "0 - 10"
+	}, {
+		"key": "2",
+		"desc": "11 - 20"
+	}, {
+		"key": "3",
+		"desc": "21 - 30"
+	}, {
+		"key": "4",
+		"desc": "31 - 40"
+	}, {
+		"key": "5",
+		"desc": "41+"
+	}],
+	"NosUser": [{
+		"key": "1",
+		"desc": "0 - 100"
+	}, {
+		"key": "2",
+		"desc": "101 - 250"
+	}, {
+		"key": "3",
+		"desc": "251 - 500"
+	}, {
+		"key": "4",
+		"desc": ">500"
+	}],
+	"KeySAP": [{
+		"key": "1",
+		"desc": "Ariba"
+	}, {
+		"key": "2",
+		"desc": "Concur"
+	}, {
+		"key": "3",
+		"desc": "Fieldglass"
+	}, {
+		"key": "4",
+		"desc": "Success Factors"
+	}, {
+		"key": "5",
+		"desc": "Solution Manager"
+	}, {
+		"key": "6",
+		"desc": "EWM"
+	}, {
+		"key": "7",
+		"desc": "GTS"
+	}, {
+		"key": "8",
+		"desc": "ATTP"
+	}, {
+		"key": "9",
+		"desc": "TMS"
+	}, {
+		"key": "10",
+		"desc": "APO / SCM"
+	}, {
+		"key": "11",
+		"desc": "Vistex"
+	}, {
+		"key": "12",
+		"desc": "MDG"
+	}, {
+		"key": "13",
+		"desc": "OpenText"
+	}, {
+		"key": "14",
+		"desc": "Others"
+	}],
+	"DevMiddleware": [{
+		"key": "1",
+		"desc": "PI/PO"
+	}, {
+		"key": "2",
+		"desc": "Informatica"
+	}, {
+		"key": "3",
+		"desc": "TIBCO"
+	}, {
+		"key": "4",
+		"desc": "BizTalk"
+	}, {
+		"key": "5",
+		"desc": "Other"
+	}],
+	"posting": {
+		
+	}
+}

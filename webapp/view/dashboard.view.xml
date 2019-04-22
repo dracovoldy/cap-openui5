@@ -25,21 +25,22 @@
 		<tnt:sideContent>
 			<tnt:SideNavigation expanded="true" itemSelect="onItemSelect">
 				<tnt:NavigationList id="navListItems">
-					<tnt:NavigationListItem text="Company" icon="sap-icon://home" key="dashboardTiles"/>
-					<tnt:NavigationListItem text="BackGround" icon="sap-icon://home" key="dashboardTasks"/>
-					<tnt:NavigationListItem text="Scope" icon="sap-icon://home" key="Scope"/>
-					<tnt:NavigationListItem text="Infrastructure" icon="sap-icon://home" key="Infrastructure"/>
-					<tnt:NavigationListItem text="Development" icon="sap-icon://home" key="Development"/>
-					<tnt:NavigationListItem text="Data" icon="sap-icon://home" key="Data"/>
-					<tnt:NavigationListItem text="PCMOCM" icon="sap-icon://home" key="POCM"/>
-					<tnt:NavigationListItem text="Others" icon="sap-icon://home" key="Others"/>
+					<tnt:items>
+						<tnt:NavigationListItem id="nav_comp" text="Company" icon="sap-icon://account" key="Customer"/>
+						<tnt:NavigationListItem id="nav_back" text="Backgound" icon="sap-icon://idea-wall" key="Background"/>
+						<tnt:NavigationListItem id="nav_scope" text="Scope" icon="sap-icon://co" key="Scope"/>
+						<tnt:NavigationListItem id="nav_infra" text="Infrastructure" icon="sap-icon://building" key="Infrastructure"/>
+						<tnt:NavigationListItem id="nav_dev" text="Development" icon="sap-icon://developer-settings" key="Development"/>
+						<tnt:NavigationListItem id="nav_data" text="Data" icon="sap-icon://database" key="Data"/>
+						<tnt:NavigationListItem id="nav_mgmt" text="Management" icon="sap-icon://step" key="POCM"/>
+						<tnt:NavigationListItem id="nav_other" text="Others" icon="sap-icon://bbyd-active-sales" key="Others"/>
+					</tnt:items>
 				</tnt:NavigationList>
-				<tnt:fixedItem>
-					<tnt:NavigationList id="fixedNavListItems">
-						<!-- fixed nav items here -->
-						<tnt:NavigationListItem text="Support" icon="sap-icon://headset"/>
-					</tnt:NavigationList>
-				</tnt:fixedItem>
+				<!--<tnt:fixedItem>-->
+				<!--	<tnt:NavigationList id="fixedNavListItems">-->
+				<!-- fixed nav items here -->
+				<!--	</tnt:NavigationList>-->
+				<!--</tnt:fixedItem>-->
 			</tnt:SideNavigation>
 		</tnt:sideContent>
 		<tnt:mainContents>

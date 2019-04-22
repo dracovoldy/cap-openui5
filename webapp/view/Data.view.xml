@@ -1,123 +1,101 @@
-<mvc:View controllerName="cap.estimate.controller.dashboardTasks" displayBlock="true" height="100%" xmlns="sap.m" xmlns:core="sap.ui.core"
+<mvc:View controllerName="cap.estimate.controller.Data" displayBlock="true" height="100%" xmlns="sap.m" xmlns:core="sap.ui.core"
 	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
-	<App id="DataApp">
-		<pages>
-			<Page id="page2" showHeader="false" class="sapUiSizeCompact">
+	<Page id="page2" showHeader="false" class="sapUiSizeCompact">
+		<content>
+			<Panel width="auto" class="sapUiTinyMargin">
+				<headerToolbar>
+					<Toolbar height="2rem">
+						<Title text="Data(Optional)"/>
+						<ToolbarSpacer/>
+					</Toolbar>
+				</headerToolbar>
 				<content>
-					<Panel width="auto" class="sapUiResponsiveMargin">
-						<headerToolbar>
-							<Toolbar height="3rem">
-								<Title text="Data(Optional)"/>
-								<ToolbarSpacer/>
-							</Toolbar>
-						</headerToolbar>
-						<content>
-						<!--	<VBox>-->
-								<Panel width="auto" class="sapUiResponsiveMargin">
-									<headerToolbar>
-										<Toolbar height="3rem">
-											<Title text="Number and Quality of Master Data"/>
-											<ToolbarSpacer/>
-										</Toolbar>
-									</headerToolbar>
-									<content>
-										<Select id="Sector" selectedKey="{Sector}">
-											<items>
-												<core:Item text="England" key="England"/>
-												<core:Item text="Germany" key="Germany"/>
-												<core:Item text="USA" key="USA"/>
-											</items>
-										</Select>
-									</content>
-								</Panel>
-							<!--	<HBox>-->
-									
-									<Panel width="auto" class="sapUiResponsiveMargin">
-										<headerToolbar>
-											<Toolbar height="3rem">
-												<Title/>
-												<ToolbarSpacer/>
-											</Toolbar>
-										</headerToolbar>
-										<content>
-										<f:SimpleForm id="SimpleFormChange480_12120Dual" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
-										labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
-										columnsL="2" columnsM="2" singleContainerFullSize="false">
-										<f:content>
-											<core:Title text="Data Quality Comments"/>
-											<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
-											<core:Title text="Other Data Considerations"/>
-											<TextArea value="" growingMaxLines="7" width="100%"/>
-											
-										</f:content>
-									</f:SimpleForm>
-									
-									
-										<f:SimpleForm id="SimpleFormChange480" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
-										labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
-										columnsL="2" columnsM="2" singleContainerFullSize="false">
-										<f:content>
-											<core:Title text="Data Archival Status and requirements"/>
-											<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
-											<core:Title text="Comments"/>
-											<TextArea value="" growingMaxLines="7" width="100%"/>
-										</f:content>
-									</f:SimpleForm>
-										</content>
-									</Panel>
-									<!--<Panel width="auto" class="sapUiResponsiveMargin">
-										<headerToolbar>
-											<Toolbar height="3rem">
-												<Title text="Other Data Considerations"/>
-												<ToolbarSpacer/>
-											</Toolbar>
-										</headerToolbar>
-										<content>
-											<TextArea value="" growingMaxLines="7" width="100%"/>
-										</content>
-									</Panel>-->
-							<!--	</HBox>-->
-								
-							<!--	<HBox>-->
-									
-									<!--<Panel width="auto" class="sapUiResponsiveMargin">
-										<headerToolbar>
-											<Toolbar height="3rem">
-												<Title text="Data Archival Status and requirements"/>
-												<ToolbarSpacer/>
-											</Toolbar>
-										</headerToolbar>
-										<content>
-											<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
-										</content>
-									</Panel>
-									<Panel width="auto" class="sapUiResponsiveMargin">
-										<headerToolbar>
-											<Toolbar height="3rem">
-												<Title text="Comments"/>
-												<ToolbarSpacer/>
-											</Toolbar>
-										</headerToolbar>
-										<content>
-											<TextArea value="" growingMaxLines="7" width="100%"/>
-										</content>
-									</Panel>-->
-							<!--	</HBox>-->
-							<!--</VBox>-->
-						</content>
-					</Panel>
+					<f:SimpleForm id="DataForm1" editable="true" layout="ColumnLayout" columnsM="2" columnsL="3" columnsXL="4">
+						<f:content>
+							<core:Title text="Number and Quality of Master Data"/>
+							<Label text="Materials"/>
+							<Select id="Data_Material_Select" selectedKey="1">
+								<items>
+									<core:Item text="Less than 5000" key="1"/>
+									<core:Item text="5001 - 50,000" key="2"/>
+									<core:Item text="50,001 - 500,000" key="3"/>
+									<core:Item text="500,000+" key="4"/>
+								</items>
+							</Select>
+							<!--<core:Title/>-->
+							<Label text="Customers"/>
+							<Select id="Data_Cust_Select" selectedKey="1">
+								<items>
+									<core:Item text="Less than 50" key="1"/>
+									<core:Item text="50 - 125" key="3"/>
+									<core:Item text="126 - 200" key="4"/>
+									<core:Item text="201 - 300" key="5"/>
+									<core:Item text="301 - 500" key="7"/>
+									<core:Item text="Greater than 500" key="8"/>
+								</items>
+							</Select>
+							<!--<core:Title/>-->
+							<Label text="Vendors"/>
+							<Select id="Data_Vendor_Select" selectedKey="1">
+								<items>
+									<core:Item text="Less than 50" key="1"/>
+									<core:Item text="50 - 125" key="3"/>
+									<core:Item text="126 - 200" key="4"/>
+									<core:Item text="201 - 300" key="5"/>
+									<core:Item text="301 - 500" key="7"/>
+									<core:Item text="Greater than 500" key="8"/>
+								</items>
+							</Select>
+							<!--<core:Title/>-->
+							<Label text="Assets"/>
+							<Select id="Data_Assets_Select" selectedKey="1">
+								<items>
+									<core:Item text="Less than 50" key="1"/>
+									<core:Item text="50 - 125" key="3"/>
+									<core:Item text="126 - 200" key="4"/>
+									<core:Item text="201 - 300" key="5"/>
+									<core:Item text="301 - 500" key="7"/>
+									<core:Item text="Greater than 500" key="8"/>
+								</items>
+							</Select>
+						</f:content>
+					</f:SimpleForm>
+					<f:SimpleForm id="DataForm2" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"
+						adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
+						singleContainerFullSize="false">
+						<f:content>
+							<core:Title text="Data Quality Comments"/>
+							<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+							<core:Title text="Other Data Considerations"/>
+							<TextArea value="" growingMaxLines="7" width="100%"/>
+						</f:content>
+					</f:SimpleForm>
+					<f:SimpleForm id="DataForm3" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"
+						adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
+						singleContainerFullSize="false">
+						<f:content>
+							<core:Title text="Have you done any Data Archiving?"/>
+							<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+							<core:Title text="Additional Comments on Data"/>
+							<TextArea value="" growingMaxLines="7" width="100%"/>
+						</f:content>
+					</f:SimpleForm>
 				</content>
-				<footer>
-					<Bar>
-						<contentLeft>
-							<Button text="Back"/>
-						</contentLeft>
-						<contentRight>
-							<Button text="Next" type="Emphasized"/>
-						</contentRight>
-					</Bar>
-				</footer>
-			</Page>
-		</pages>
-	</App>
+			</Panel>
+			<Button text="Previous" type="Emphasized" press="nextPress"/>
+			<Button text="Next" type="Emphasized" press="nextPress"/>
+		</content>
+		<footer>
+			<Toolbar height="1.5em">
+				<ToolbarSpacer/>
+				<Label text="The information contained in this document is proprietary. Copyright © 2019 Capgemini. All rights reserved." class="labelFont">
+					<layoutData>
+						<ToolbarLayoutData shrinkable="true" minWidth="200px"/>
+					</layoutData>
+				</Label>
+				<ToolbarSpacer/>
+				<!--<Button text="Next" type="Emphasized" press="nextPress"/>-->
+			</Toolbar>
+		</footer>
+	</Page>
 </mvc:View>

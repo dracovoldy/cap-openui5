@@ -3,43 +3,63 @@ sap.ui.define([
 ], function (Controller) {
 	"use strict";
 
-	return Controller.extend("com.limscloud.app.controller.Development", {
-
-		/**
-		 * Called when a controller is instantiated and its View controls (if available) are already created.
-		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
-		 * @memberOf com.limscloud.app.view.Development
-		 */
+	return Controller.extend("cap.estimate.controller.Development", {
 		onInit: function () {
- this.router = this.getOwnerComponent().getRouter();
+			this.router = this.getOwnerComponent().getRouter();
+			var globalModel = this.getOwnerComponent().getModel("init_data");
+			this.getView().setModel(globalModel);
 		},
-
-		/**
-		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
-		 * (NOT before the first rendering! onInit() is used for that one!).
-		 * @memberOf com.limscloud.app.view.Development
-		 */
-		//	onBeforeRendering: function() {
-		//
-		//	},
-
-		/**
-		 * Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.
-		 * This hook is the same one that SAPUI5 controls get after being rendered.
-		 * @memberOf com.limscloud.app.view.Development
-		 */
-		//	onAfterRendering: function() {
-		//
-		//	},
-
-		/**
-		 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
-		 * @memberOf com.limscloud.app.view.Development
-		 */
-		//	onExit: function() {
-		//
-		//	}
-
+		nextPress: function (oEvent){
+			// var that = this;
+			
+			var EDI_Select = parseInt(this.getView().byId("EDI_Select").getSelectedKey(),10);
+			this.getView().getModel().setProperty("/posting/if_dev_edi_v", EDI_Select);
+			
+			var aMiddlewares = this.getView().byId("MIDDL_MultiCombo").getSelectedItems();
+			this.getView().getModel().setProperty("/posting/if_dev_mdlw_v", aMiddlewares.length);
+			
+			var middleware_desc = "";
+			aMiddlewares.map(function (item){
+				middleware_desc = item.getText() + " ";	
+			});
+			
+			this.getView().getModel().setProperty("/posting/if_dev_mdlw_desc", middleware_desc);
+			
+			var RICEFW_Select = parseInt(this.getView().byId("RICEFW_Select").getSelectedKey(),10);
+			this.getView().getModel().setProperty("/posting/if_dev_ricefw_v", RICEFW_Select);
+			
+			// console.log(this.getView().getModel().getProperty("/posting"));
+			if (this.validate()) {
+				this.router.navTo("Data");
+			}
+		},
+		validate: function () {
+			//validate
+			var count = 0;
+			if (this.getView().byId("MIDDL_MultiCombo").getSelectedKeys().length === 0) {
+				this.getView().byId("MIDDL_MultiCombo").setValueState("Information");
+				this.getView().byId("MIDDL_MultiCombo").setValueStateText("Input Required");
+				this.getView().byId("MIDDL_MultiCombo").focus();
+				count++;
+				// return false;
+			}
+			if (this.getView().byId("dev_comments").getValue().trim() === "") {
+				this.getView().byId("dev_comments").setValueState("Information");
+				this.getView().byId("dev_comments").setValueStateText("Input Required");
+				this.getView().byId("dev_comments").focus();
+				count++;
+				// return false;
+			}
+			
+			
+			if(count > 0){
+				return false;
+			}
+			this.getView().byId("MIDDL_MultiCombo").setValueState("None");
+			this.getView().byId("dev_comments").setValueState("None");
+			
+			return true;
+		}
 	});
 
 });

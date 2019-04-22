@@ -27,7 +27,7 @@ sap.ui.define([
 			MessageToast.show(this.accessToken);
 		},
 		onAfterRendering: function () {
-			this.router.navTo("dashboardTiles");
+			this.router.navTo("Customer");
 		},
 		onItemSelect: function (oEvent) {
 			this.router.navTo(oEvent.getParameter("item").getKey());
