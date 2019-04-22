@@ -30,16 +30,16 @@ sap.ui.define([
 				contentType: 'application/x-www-form-urlencoded',
 				success: function (data) {
 					console.log(data);
-					
+
 					that.getView().getModel().setProperty("/estimateId", data.insertId);
 					MessageBox.success("Estimate Generated for: " + Customer + "\n Capgemini PoC: " + CapgContact, {
-						title: "Success", // default
-						onClose: function () {
+						title: "Success",
+						onClose: function (sAction) {
 							that.router.navTo("FinalDashBoard");
-						}, // default
-						styleClass: "", // default
-						initialFocus: null, // default
-						textDirection: sap.ui.core.TextDirection.Inherit // default
+						},
+						styleClass: "",
+						initialFocus: null,
+						textDirection: sap.ui.core.TextDirection.Inherit
 					});
 				},
 				error: function (e) {
