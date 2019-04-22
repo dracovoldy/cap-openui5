@@ -78,23 +78,23 @@ sap.ui.define([
 			//LOB Checkboxes
 			var selected = 0;
 			if (this.getView().byId("FIN_Check").getSelected()) {
-				this.getView().getModel().setProperty("/posting/sc_bp_ftm", "X");
+				this.getView().getModel().setProperty("/posting/sc_bp_ftm", 1);
 				selected++;
 			}
 			if (this.getView().byId("PTP_Check").getSelected()) {
-				this.getView().getModel().setProperty("/posting/sc_bp_ptp", "X");
+				this.getView().getModel().setProperty("/posting/sc_bp_ptp", 1);
 				selected++;
 			}
 			if (this.getView().byId("MTS_Check").getSelected()) {
-				this.getView().getModel().setProperty("/posting/sc_bp_mts", "X");
+				this.getView().getModel().setProperty("/posting/sc_bp_mts", 1);
 				selected++;
 			}
 			if (this.getView().byId("OTC_Check").getSelected()) {
-				this.getView().getModel().setProperty("/posting/sc_bp_otc", "X");
+				this.getView().getModel().setProperty("/posting/sc_bp_otc", 1);
 				selected++;
 			}
 			if (this.getView().byId("DTS_Check").getSelected()) {
-				this.getView().getModel().setProperty("/posting/sc_bp_dts", "X");
+				this.getView().getModel().setProperty("/posting/sc_bp_dts", 1);
 				selected++;
 			}
 			if (this.getView().byId("OTH_Check").getSelected()) {
