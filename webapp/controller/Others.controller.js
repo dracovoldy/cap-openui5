@@ -34,6 +34,7 @@ sap.ui.define([
 					that.getView().getModel().setProperty("/estimateId", data.insertId);
 					MessageBox.success("Estimate Generated for: " + Customer + "\n Capgemini PoC: " + CapgContact, {
 						title: "Success",
+						actions: [sap.m.MessageBox.Action.OK],
 						onClose: function (sAction) {
 							that.router.navTo("FinalDashBoard");
 						},

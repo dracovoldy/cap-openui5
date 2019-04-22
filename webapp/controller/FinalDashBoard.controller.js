@@ -6,20 +6,19 @@ sap.ui.define([
 	return Controller.extend("cap.estimate.controller.FinalDashBoard", {
 
 		onInit: function () {
-			
+
 			this.router = this.getOwnerComponent().getRouter();
 			var globalModel = this.getOwnerComponent().getModel("init_data");
 			this.getView().setModel(globalModel);
-			
-			
+
 		},
-		
-		onAfterRendering: function(){
+
+		onAfterRendering: function () {
 			var that = this;
 			var estimateId = this.getView().getModel().getProperty("/estimateId");
-			
-			var url = "http://10.154.52.73:3000/api/data/" + estimateId;  
-			
+
+			var url = "http://10.154.52.73:3000/api/data/" + estimateId;
+
 			$.ajax({
 				url: url,
 				type: 'GET',
@@ -28,19 +27,16 @@ sap.ui.define([
 				contentType: 'application/x-www-form-urlencoded',
 				success: function (data) {
 					console.log(data);
-					
+
 					that.getView.getModel().setProperty("/estimate/LowPersonMonths", data.LowPersonMonths);
 					that.getView.getModel().setProperty("/estimate/HighPersonMonths", data.HighPersonMonths);
 					that.getView.getModel().setProperty("/estimate/PersonMonths", data.PersonMonths);
-					
+
 				},
 				error: function (e) {
 					console.log(e);
 				}
-		},
-
-		onBack: function () {
-			this.router.navTo("Others");
+			});
 		}
 
 	});
