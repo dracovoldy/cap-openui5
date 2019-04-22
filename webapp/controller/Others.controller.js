@@ -14,7 +14,7 @@ sap.ui.define([
 		nextPress: function () {
 			var that = this;
 			console.log(this.getView().getModel().getProperty("/posting"));
-			
+
 			var Customer = this.getView().getModel().getProperty("/posting/comp_name");
 			var CapgContact = this.getView().getModel().getProperty("/posting/cap_name");
 
@@ -32,7 +32,9 @@ sap.ui.define([
 					console.log(data);
 					MessageBox.success("Estimate Generated for: " + Customer + "\n Capgemini PoC: " + CapgContact, {
 						title: "Success", // default
-						onClose: that.onSubmit, // default
+						onClose: function () {
+							that.router.navTo("FinalDashBoard");
+						}, // default
 						styleClass: "", // default
 						initialFocus: null, // default
 						textDirection: sap.ui.core.TextDirection.Inherit // default
@@ -43,10 +45,6 @@ sap.ui.define([
 				}
 			});
 
-		},
-
-		onSubmit: function () {
-			this.router.navTo("FinalDashBoard");
 		}
 
 	});
