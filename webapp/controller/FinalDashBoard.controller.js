@@ -22,9 +22,7 @@ sap.ui.define([
 			$.ajax({
 				url: url,
 				type: 'GET',
-				data: payload,
 				dataType: 'json',
-				contentType: 'application/x-www-form-urlencoded',
 				success: function (data) {
 					console.log(data);
 
