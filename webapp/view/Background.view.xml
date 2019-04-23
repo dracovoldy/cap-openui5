@@ -13,10 +13,10 @@
 	<!--				<f:SimpleForm id="BackgroundForm1" editable="true" layout="ColumnLayout" columnsXL="3" columnsL="3" columnsM="1"-->
 	<!--					singleContainerFullSize="false">-->
 	<!--					<f:content>-->
-							<!--<core:Title text="Program Objective"/>-->
+	<!--<core:Title text="Program Objective"/>-->
 	<!--						<Label text="Program Objective" design="Bold" required="true"/>-->
 	<!--						<TextArea id="prog" value="{/posting/bg_prog_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250"></TextArea>-->
-							<!--<core:Title text="Business Drivers"/>-->
+	<!--<core:Title text="Business Drivers"/>-->
 	<!--						<Label text="Business Drivers" design="Bold" required="true"/>-->
 	<!--						<TextArea id="biz" value="{/posting/bg_bizd_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250"/>-->
 	<!--					</f:content>-->
@@ -24,7 +24,7 @@
 	<!--				<f:SimpleForm id="BackgroundForm2" editable="true" layout="ColumnLayout" columnsXL="3" columnsL="3" columnsM="1"-->
 	<!--					singleContainerFullSize="false">-->
 	<!--					<f:content>-->
-							<!--<core:Title text="IT Drivers"/>-->
+	<!--<core:Title text="IT Drivers"/>-->
 	<!--						<Label text="IT Drivers" design="Bold" required="true"/>-->
 	<!--						<TextArea id="drive" value="{/posting/bg_itdr_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">-->
 	<!--							<dependents>-->
@@ -36,7 +36,7 @@
 	<!--								</ResponsivePopover>-->
 	<!--							</dependents>-->
 	<!--						</TextArea>-->
-							<!--<core:Title text="Key Business Pain Points"/>-->
+	<!--<core:Title text="Key Business Pain Points"/>-->
 	<!--						<Label text="Key Business Pain Points" design="Bold" required="true"/>-->
 	<!--						<TextArea id="pain" value="{/posting/bg_bizp_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">-->
 	<!--							<dependents>-->
@@ -48,7 +48,7 @@
 	<!--								</ResponsivePopover>-->
 	<!--							</dependents>-->
 	<!--						</TextArea>-->
-							<!--<core:Title text="Business Case status and Additional Capabilities Required"/>-->
+	<!--<core:Title text="Business Case status and Additional Capabilities Required"/>-->
 	<!--						<Label text="Business Case status and Additional Required Capabilities" design="Bold" required="true"/>-->
 	<!--						<TextArea id="case" value="{/posting/bg_bcad_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250"/>-->
 	<!--					</f:content>-->
@@ -67,24 +67,24 @@
 	<!--				</layoutData>-->
 	<!--			</Label>-->
 	<!--			<ToolbarSpacer/>-->
-				<!--<Button text="Next" type="Emphasized" press="nextPress"/>-->
+	<!--<Button text="Next" type="Emphasized" press="nextPress"/>-->
 	<!--		</Toolbar>-->
 	<!--	</footer>-->
 	<!--</Page>-->
 	<!--<pages>-->
-		<Page id="page2" showHeader="false" class="sapUiSizeCompact detailBg">
-			<content>
-				<Panel width="auto" class="sapUiResponsiveMargin noBorder">
-					<headerToolbar >
-						<Toolbar height="3rem" class="dtlHead">
-							<Title text="Background"/>
-							<!--<Text text="Description 250 characters" class="rightAlignText"/>-->
-						</Toolbar>
-					</headerToolbar>
-					<content>
-						<!--	<VBox>
+	<Page id="page2" showHeader="false" class="sapUiSizeCompact detailBg">
+		<content>
+			<Panel width="auto" class="sapUiResponsiveMargin noBorder">
+				<headerToolbar >
+					<Toolbar height="3rem" class="dtlHead">
+						<Title text="Background"/>
+						<!--<Text text="Description 250 characters" class="rightAlignText"/>-->
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<!--	<VBox>
 								<HBox>-->
-						<!--	<Panel width="auto" class="sapUiResponsiveMargin">
+					<!--	<Panel width="auto" class="sapUiResponsiveMargin">
 								<headerToolbar>
 									<Toolbar height="3rem">
 										<Title/>
@@ -92,27 +92,27 @@
 									</Toolbar>
 								</headerToolbar>
 								<content>-->
-						<f:SimpleForm id="SimpleFormChange480_12120" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
-							labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1"
-							singleContainerFullSize="false">
-							<f:content>
-								<core:Title text="Program Objective"/>
-								<TextArea id="prog" value="{/posting/bg_prog_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250"></TextArea>
-								<core:Title text="Business Drivers"/>
-								<TextArea id="biz" value="{/posting/bg_bizd_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250"/>
-							</f:content>
-						</f:SimpleForm>
-					</content>
-				</Panel>
-				<Panel width="auto" class="sapUiResponsiveMargin noBorder">
-					<!--	<headerToolbar>
+					<f:SimpleForm id="SimpleFormChange480_12120" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
+						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1"
+						singleContainerFullSize="false">
+						<f:content>
+							<core:Title text="Program Objective"/>
+							<TextArea id="prog" value="{/posting/bg_prog_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250"></TextArea>
+							<core:Title text="Business Drivers"/>
+							<TextArea id="biz" value="{/posting/bg_bizd_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250"/>
+						</f:content>
+					</f:SimpleForm>
+				</content>
+			</Panel>
+			<Panel width="auto" class="sapUiResponsiveMargin noBorder">
+				<!--	<headerToolbar>
 							<Toolbar height="3rem" >
 								<Title/>
 								<ToolbarSpacer/>
 							</Toolbar>
 						</headerToolbar>-->
-					<content>
-						<!--	<f:SimpleForm id="SimpleFormChange480_12120" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+				<content>
+					<!--	<f:SimpleForm id="SimpleFormChange480_12120" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
 								labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
 								columnsL="2" columnsM="1" singleContainerFullSize="false">
 								<f:content>
@@ -123,12 +123,12 @@
 								</f:content>
 							</f:SimpleForm>
 							-->
-						<f:SimpleForm id="SimpleFormChange480_Trial" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4"
-							labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
-							singleContainerFullSize="false">
-							<f:content>
-								<core:Title text="IT Drivers"/>
-								<TextArea id="drive" value="{/posting/bg_itdr_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">
+					<f:SimpleForm id="SimpleFormChange480_Trial" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4"
+						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
+						singleContainerFullSize="false">
+						<f:content>
+							<core:Title text="IT Drivers"/>
+							<TextArea id="drive" value="{/posting/bg_itdr_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">
 								<dependents>
 									<ResponsivePopover id="popover_it" title="Information" class="sapUiPopupWithPadding" placement="Bottom">
 										<content>
@@ -138,8 +138,8 @@
 									</ResponsivePopover>
 								</dependents>
 							</TextArea>
-								<core:Title text="Key Business Pain Points"/>
-								<TextArea id="pain" value="{/posting/bg_bizp_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">
+							<core:Title text="Key Business Pain Points"/>
+							<TextArea id="pain" value="{/posting/bg_bizp_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">
 								<dependents>
 									<ResponsivePopover id="popover_pain" title="Information" class="sapUiPopupWithPadding" placement="Bottom">
 										<content>
@@ -149,19 +149,19 @@
 									</ResponsivePopover>
 								</dependents>
 							</TextArea>
-							</f:content>
-						</f:SimpleForm>
-					</content>
-				</Panel>
-				<Panel width="auto" class="sapUiResponsiveMargin noBorder">
-					<!--	<headerToolbar>
+						</f:content>
+					</f:SimpleForm>
+				</content>
+			</Panel>
+			<Panel width="auto" class="sapUiResponsiveMargin noBorder">
+				<!--	<headerToolbar>
 							<Toolbar height="3rem" >
 								<Title/>
 								<ToolbarSpacer/>
 							</Toolbar>
 						</headerToolbar>-->
-					<content>
-						<!--	<f:SimpleForm id="SimpleFormChange480_12120" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+				<content>
+					<!--	<f:SimpleForm id="SimpleFormChange480_12120" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
 								labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
 								columnsL="2" columnsM="1" singleContainerFullSize="false">
 								<f:content>
@@ -172,17 +172,17 @@
 								</f:content>
 							</f:SimpleForm>
 							-->
-						<f:SimpleForm id="SimpleFormChange480_Trial1" editable="true" layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12"
-							labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
-							singleContainerFullSize="false">
-							<f:content>
-								<core:Title text="Business Case status and Additional Capabilities Required"/>
-								<TextArea id="case" value="{/posting/bg_bcad_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250"/>
-							</f:content>
-						</f:SimpleForm>
-					</content>
-				</Panel>
-				<!--</HBox>
+					<f:SimpleForm id="SimpleFormChange480_Trial1" editable="true" layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12"
+						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+						singleContainerFullSize="false">
+						<f:content>
+							<core:Title text="Business Case status and Additional Capabilities Required"/>
+							<TextArea id="case" value="{/posting/bg_bcad_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250"/>
+						</f:content>
+					</f:SimpleForm>
+				</content>
+			</Panel>
+			<!--</HBox>
 								<HBox>
 									<Panel width="auto" class="sapUiResponsiveMargin">
 										<headerToolbar>
@@ -207,7 +207,7 @@
 										</content>
 									</Panel>
 								</HBox>-->
-				<!--	<Panel width="auto" class="sapUiResponsiveMargin">
+			<!--	<Panel width="auto" class="sapUiResponsiveMargin">
 									<headerToolbar>
 										<Toolbar height="3rem">
 											<Title text="Business Case status and Additional Capabilities Required"/>
@@ -218,23 +218,25 @@
 										<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
 									</content>
 								</Panel>-->
-				<!--	</VBox>-->
-				<!--		</content>
+			<!--	</VBox>-->
+			<!--		</content>
 				</Panel>-->
-				<Panel width="auto" class="sapUiResponsiveMargin noBorder">
-					<Button text="Previous" type="Emphasized" class="backBtn"/>
-					<Button text="Next" type="Emphasized" class="nextBtn" press="nextPress"/>
-				</Panel>
-			</content>
-			<footer>
-				<Bar>
-					<contentLeft>
-						<Button text="Back"/>
-					</contentLeft>
-					<contentRight>
-						<Button text="Next" type="Emphasized"/>
-					</contentRight>
-				</Bar>
-			</footer>
-		</Page>
-	</mvc:View>
+			<Panel width="auto" class="sapUiResponsiveMargin noBorder">
+				<Button text="Previous" type="Emphasized" class="backBtn"/>
+				<Button text="Next" type="Emphasized" class="nextBtn" press="nextPress"/>
+			</Panel>
+		</content>
+		<footer>
+			<Toolbar height="1.5em">
+				<ToolbarSpacer/>
+				<Label text="The information contained in this document is proprietary. Copyright © 2019 Capgemini. All rights reserved." class="labelFont">
+					<layoutData>
+						<ToolbarLayoutData shrinkable="true" minWidth="200px"/>
+					</layoutData>
+				</Label>
+				<ToolbarSpacer/>
+				<Button text="Next" type="Emphasized" press="nextPress"/>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>
