@@ -7,7 +7,7 @@
 					<Panel width="auto" class="sapUiResponsiveMargin bgPanel">
 						<headerToolbar>
 							<Toolbar height="3rem" class="dtlHead">
-								<Title text="PCM and OCM(Optional)" class="detailHeader1"/>
+								<Title text="PMO and OCM(Optional)" class="detailHeader1"/>
 								<ToolbarSpacer/>
 							</Toolbar>
 						</headerToolbar>
