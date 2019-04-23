@@ -26,9 +26,9 @@ sap.ui.define([
 				success: function (data) {
 					console.log(data);
 
-					that.getView.getModel().setProperty("/estimate/LowPersonMonths", data.LowPersonMonths);
-					that.getView.getModel().setProperty("/estimate/HighPersonMonths", data.HighPersonMonths);
-					that.getView.getModel().setProperty("/estimate/PersonMonths", data.PersonMonths);
+					console.log(that.getView.getModel().setProperty("/estimate/LowPersonMonths", data.LowPersonMonths));
+					console.log(that.getView.getModel().setProperty("/estimate/HighPersonMonths", data.HighPersonMonths));
+					console.log(that.getView.getModel().setProperty("/estimate/PersonMonths", data.PersonMonths));
 
 				},
 				error: function (e) {
