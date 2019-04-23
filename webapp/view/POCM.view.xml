@@ -1,17 +1,55 @@
 <mvc:View controllerName="cap.estimate.controller.POCM" displayBlock="true" height="100%" xmlns="sap.m" xmlns:core="sap.ui.core"
 	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
-	
-			<Page id="page2" showHeader="false" class="sapUiSizeCompact">
+	<App id="POCMApp">
+		<pages>
+			<Page id="page2" showHeader="false" class="sapUiSizeCompact detailBg">
 				<content>
-					<Panel width="auto" class="sapUiTinyMargin">
+					<Panel width="auto" class="sapUiResponsiveMargin bgPanel">
 						<headerToolbar>
-							<Toolbar height="2rem">
-								<Title text="PCM and OCM(Optional)"/>
+							<Toolbar height="3rem" class="dtlHead">
+								<Title text="PCM and OCM(Optional)" class="detailHeader1"/>
 								<ToolbarSpacer/>
 							</Toolbar>
 						</headerToolbar>
 						<content>
-							<f:SimpleForm id="SimpleFormChange480_Trial" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4"
+							<!--	<VBox>
+								<HBox>
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text="Key Change Management Considerations"/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+											<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+										</content>
+									</Panel>
+									<Panel width="auto" class="sapUiResponsiveMargin">
+										<headerToolbar>
+											<Toolbar height="3rem">
+												<Title text="Key Inputs such as timeline constraints etc."/>
+												<ToolbarSpacer/>
+											</Toolbar>
+										</headerToolbar>
+										<content>
+											<TextArea value="" growingMaxLines="7" width="100%"/>
+										</content>
+									</Panel>
+								</HBox>
+								<Panel width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<Toolbar height="3rem">
+											<Title text="Other key programs in progress, to be taken up"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</headerToolbar>
+									<content>
+										<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+									</content>
+								</Panel>
+							</VBox>-->
+							<f:SimpleForm id="SimpleFormChange480_Trial" editable="true" layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="4" labelSpanM="12"
 								labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
 								singleContainerFullSize="false">
 								<f:content>
@@ -19,14 +57,22 @@
 									<TextArea value="" growingMaxLines="7" width="100%"/>
 									<core:Title text="Key Inputs such as timeline constraints etc."/>
 									<TextArea value="" growingMaxLines="7" width="100%"/>
+								</f:content>
+							</f:SimpleForm>
+							<f:SimpleForm id="SimpleFormChange480_Trial1" editable="true" layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="4" labelSpanM="12"
+								labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="1" columnsM="1"
+								singleContainerFullSize="false">
+								<f:content>
 									<core:Title text="Other key programs in progress, to be taken up"/>
 									<TextArea value="" growingMaxLines="7" width="100%"/>
 								</f:content>
 							</f:SimpleForm>
 						</content>
 					</Panel>
-					<Button text="Previous" type="Emphasized" press="nextPress"/>
-					<Button text="Next" type="Emphasized" press="nextPress"/>
+					<Panel width="auto" class="sapUiResponsiveMargin noBorder">
+						<Button text="Previous" type="Emphasized" class="backBtn"/>
+						<Button text="Next" type="Emphasized" class="nextBtn" press="nextPress"/>
+					</Panel>
 				</content>
 				<footer>
 					<Toolbar height="1.5em">
@@ -37,9 +83,53 @@
 							</layoutData>
 						</Label>
 						<ToolbarSpacer/>
-						<!--<Button text="Next" type="Emphasized" press="nextPress"/>-->
+						
 					</Toolbar>
 				</footer>
 			</Page>
-	
+		</pages>
+	</App>
 </mvc:View>
+<!--<mvc:View controllerName="cap.estimate.controller.POCM" displayBlock="true" height="100%" xmlns="sap.m" xmlns:core="sap.ui.core"-->
+<!--	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">-->
+<!--			<Page id="page2" showHeader="false" class="sapUiSizeCompact">-->
+<!--				<content>-->
+<!--					<Panel width="auto" class="sapUiTinyMargin">-->
+<!--						<headerToolbar>-->
+<!--							<Toolbar height="2rem">-->
+<!--								<Title text="PCM and OCM(Optional)"/>-->
+<!--								<ToolbarSpacer/>-->
+<!--							</Toolbar>-->
+<!--						</headerToolbar>-->
+<!--						<content>-->
+<!--							<f:SimpleForm id="SimpleFormChange480_Trial" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4"-->
+<!--								labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"-->
+<!--								singleContainerFullSize="false">-->
+<!--								<f:content>-->
+<!--									<core:Title text="Key Change Management Considerations"/>-->
+<!--									<TextArea value="" growingMaxLines="7" width="100%"/>-->
+<!--									<core:Title text="Key Inputs such as timeline constraints etc."/>-->
+<!--									<TextArea value="" growingMaxLines="7" width="100%"/>-->
+<!--									<core:Title text="Other key programs in progress, to be taken up"/>-->
+<!--									<TextArea value="" growingMaxLines="7" width="100%"/>-->
+<!--								</f:content>-->
+<!--							</f:SimpleForm>-->
+<!--						</content>-->
+<!--					</Panel>-->
+<!--					<Button text="Previous" type="Emphasized" press="nextPress"/>-->
+<!--					<Button text="Next" type="Emphasized" press="nextPress"/>-->
+<!--				</content>-->
+<!--				<footer>-->
+<!--					<Toolbar height="1.5em">-->
+<!--						<ToolbarSpacer/>-->
+<!--						<Label text="The information contained in this document is proprietary. Copyright © 2019 Capgemini. All rights reserved." class="labelFont">-->
+<!--							<layoutData>-->
+<!--								<ToolbarLayoutData shrinkable="true" minWidth="200px"/>-->
+<!--							</layoutData>-->
+<!--						</Label>-->
+<!--						<ToolbarSpacer/>-->
+<!--<Button text="Next" type="Emphasized" press="nextPress"/>-->
+<!--					</Toolbar>-->
+<!--				</footer>-->
+<!--			</Page>-->
+<!--</mvc:View>-->

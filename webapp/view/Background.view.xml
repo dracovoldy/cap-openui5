@@ -77,7 +77,7 @@
 			<Panel width="auto" class="sapUiResponsiveMargin noBorder">
 				<headerToolbar >
 					<Toolbar height="3rem" class="dtlHead">
-						<Title text="Background"/>
+						<Title text="Background" class="detailHeader1"/>
 						<!--<Text text="Description 250 characters" class="rightAlignText"/>-->
 					</Toolbar>
 				</headerToolbar>
@@ -92,6 +92,27 @@
 									</Toolbar>
 								</headerToolbar>
 								<content>-->
+					<VBox class="sapUiTinyMarginBegin sapUiTinyMarginEnd">
+						<HBox class="sapUiTinyMargin">
+							<RadioButton groupName="GroupA" text="New Customer (No SAP ECC Today)" selected="true"/>
+							<RadioButton groupName="GroupA" text="Existing SAP ECC Customer"/>
+						</HBox>
+						<Title text="Areas of Interest"/>
+						<HBox class="sapUiMediumMarginStart sapUiTinyMarginTop sapUiMediumMarginBottom">
+							<VBox>
+								<CheckBox text="SAP S/4 New/Greenfield"/>
+								<CheckBox text="Ariba/IBP"/>
+							</VBox>
+							<VBox>
+								<CheckBox text="Success Factors"/>
+								<CheckBox text="SAP S/4 Conversion"/>
+							</VBox>
+							<VBox>
+								<CheckBox text="C/4H"/>
+								<CheckBox text="Other – Analytics, Infra, Digital, Etc"/>
+							</VBox>
+						</HBox>
+					</VBox>
 					<f:SimpleForm id="SimpleFormChange480_12120" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
 						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1"
 						singleContainerFullSize="false">
