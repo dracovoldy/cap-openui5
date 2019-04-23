@@ -58,3 +58,199 @@ html.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
 .labelFont{
 	font-size:10px !important;
 }
+
+/******************* css for header****************/
+
+.headerBG {
+    background-color: rgba(149, 230, 22, 1)!important;
+}
+
+.headerBG * {
+    color: #333!important;
+    text-shadow: none;
+}
+
+.logoImage {
+    margin-top: 6px !important;
+}
+
+.headerBG .sapMBarChild.sapMText.sapMTextMaxWidth.sapUiSelectable {
+    margin-left: 10px;
+    font-family: "Calibri Light", Calibri;
+    font-size: 20px!important;
+    font-weight: 300;
+}
+
+.firstNav {
+    background-color: #f2f2f2!important;
+    border-right: 1px solid #f2f2f2!important
+}
+
+.navItemsCls li {
+    background-color: #e4e4e4!important;
+    height: 60px;
+    border-bottom: 1px solid #e4e4e4!important;
+}
+
+.navItemsCls li:hover,
+.navItemsCls li.sapTntNavLIItemSelected {
+    border-bottom: 1px solid #363636!important;
+}
+
+.navItemsCls li>div {
+    background-color: #0070AD!important;
+    height: 59px!important;
+    border-bottom: 0px solid #f2f2f2!important;
+}
+
+.navItemsCls li>div:hover,
+.navItemsCls li.sapTntNavLIItemSelected>div {
+    background-color: #e4e4e4!important;
+}
+
+.navItemsCls li>div:hover span,
+.navItemsCls li.sapTntNavLIItemSelected>div span {
+    color: #427CAC!important
+}
+
+.detailBg {
+    background-color: #e4e4e4!important;
+}
+
+.detailHeader1 {
+    font-family: "Calibri Light", "Calibri Regular", Calibri!important;
+    font-size: 28px!important;
+    font-weight: 300!important;
+}
+
+.dtlHead {
+    display: block!important;
+    border-bottom: 0px solid #cccccc!important;
+}
+
+.rightAlignText {
+    text-align: right!important;
+    position: relative!important;
+    right: 5px!important;
+    display: block!important;
+    top: -15px!important;
+}
+
+.bgwhite .sapMPanelBGTranslucent.sapMPanelContent {
+    background-color: #fff!important;
+}
+
+.bgWhite2 .sapUiFormContainerTitle.sapUiRGLContainer {
+    padding: 10px!important;
+    background-color: #fff!important;
+}
+
+.dtlHead .sapMPanelBGTranslucent.sapMPanelContent {
+    border: 0px solid #fff!important;
+}
+
+.noBorder div.sapMPanelBGTranslucent.sapMPanelContent {
+    border: 0px solid #fff!important;
+    padding: 0px!important;
+    margin: 0px!important;
+}
+
+.noBorder div.sapUiFormContainerTitle.sapUiRGLContainer {
+    padding: 15px!important;
+    background-color: #fff;
+}
+
+.noBorder .sapUiFormResGrid.sapUiFormBackgrTranslucent>div {
+    padding: 0px;
+}
+
+.checkboxBg {
+    padding: 10px!important;
+    padding-left: 20px!important;
+    background-color: #fff;
+}
+
+.checkboxBg .sapMLabel.sapMLabelMaxWidth.sapUiSelectable {
+    line-height: 33px;
+}
+
+.paddingRmv>div {
+    padding: 0px;
+    margin: -10px;
+}
+
+.bgwhite1 div.sapUiSimpleForm {
+    background-color: #fff!important;
+    margin-bottom: 25px!important;
+}
+
+.bgPanel .sapMPanelBGTranslucent.sapMPanelContent,
+.bgPanel .sapUiFormResGridMain.sapUiRespGrid {
+    padding: 0px!important;
+    border-bottom: 0px solid #fff!important;
+}
+
+.bgPanel .sapUiFormContainerTitle.sapUiRGLContainer {
+    padding: 10px!important;
+    background-color: #fff!important;
+    margin: 10px 0px!important;
+}
+
+.RemoveGap .sapMTitle.sapMTitleMaxWidth {
+    line-height: 32px!important;
+    margin-right: 10px!important;
+}
+
+.bgWhiteImd > div {
+    background-color: #ffffff!important;
+}
+
+.bgWhiteImd > div.scopeCheckbx {
+    margin: 0px!important;
+    margin-top: 20px!important;
+    background: transparent!important;
+}
+
+.bgWhiteImd > div.scopeCheckbx > div {
+    background: #fff!important;
+    padding: 10px !important;
+}
+
+.bgWhiteImd .sapMFlexBoxBGTransparent.sapMFlexItem.sapMFlexItemAlignAuto {
+    margin-top: 10px;
+}
+
+.backBtn,
+.nextBtn {
+    background: #c9c9c9!important;
+    width: 100px!important;
+    height: 40px Important;
+    margin: 10px 25px!important;
+}
+
+.backBtn span ,.nextBtn span{
+    color: #000!important;
+    border: 0px solid #fff!important;
+    text-shadow: 0px!important;
+    background: #c9c9c9!important;
+}
+
+.backBtn span bdi {
+    text-shadow: 0px!important;
+}
+.next{
+	position:relative!important;
+	top:0px!important;
+	right:0px!important;
+	
+}
+
+
+
+
+
+
+
+
+
+
