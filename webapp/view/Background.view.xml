@@ -100,16 +100,16 @@
 						<Title text="Areas of Interest"/>
 						<HBox class="sapUiMediumMarginStart sapUiTinyMarginTop sapUiMediumMarginBottom">
 							<VBox>
-								<CheckBox text="SAP S/4 New/Greenfield"/>
-								<CheckBox text="Ariba/IBP"/>
+								<CheckBox id="sap_check1" text="SAP S/4 New/Greenfield"/>
+								<CheckBox id="sap_check2"  text="Ariba/IBP"/>
 							</VBox>
 							<VBox>
-								<CheckBox text="Success Factors"/>
-								<CheckBox text="SAP S/4 Conversion"/>
+								<CheckBox id="ns_check1"  text="Success Factors"/>
+								<CheckBox id="ns_check2"  text="SAP S/4 Conversion"/>
 							</VBox>
 							<VBox>
-								<CheckBox text="C/4H"/>
-								<CheckBox text="Other – Analytics, Infra, Digital, Etc"/>
+								<CheckBox id="ns_check3"  text="C/4H"/>
+								<CheckBox id="ns_check4"  text="Other – Analytics, Infra, Digital, Etc"/>
 							</VBox>
 						</HBox>
 					</VBox>
