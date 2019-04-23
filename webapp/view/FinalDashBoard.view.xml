@@ -13,18 +13,19 @@
 						</headerToolbar>
 						<content>
 							<VBox>
+								<Title text="Typical S4/HANA System Conversion" class="sapUiSmallMargin"/>
 								<HBox>
 									<VBox>
-										<Title text="As Short as"/>
-										<Title id="short" text="{init_data>/estimate/LowPersonMonths}"/>
+										<Title text="As Short as" class="sapUiSmallMargin"/>
+										<Title id="short" text="{init_data>/estimate/LowPersonMonths}" class="sapUiSmallMargin"/>
 									</VBox>
 									<VBox>
-										<Title text="As Long as"/>
-										<Title id="long" text="{init_data>/estimate/HighPersonMonths}"/>
+										<Title text="As Long as" class="sapUiSmallMargin"/>
+										<Title id="long" text="{init_data>/estimate/HighPersonMonths}" class="sapUiSmallMargin"/>
 									</VBox>
 									<VBox>
-										<Title text="Average"/>
-										<Title id="avg" text="{init_data>/estimate/PersonMonths}"/>
+										<Title text="Average" class="sapUiSmallMargin"/>
+										<Title id="avg" text="{init_data>/estimate/PersonMonths}" class="sapUiSmallMargin"/>
 									</VBox>
 								</HBox>
 								<Text
