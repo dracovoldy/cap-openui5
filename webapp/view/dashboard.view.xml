@@ -17,7 +17,7 @@
 						<OverflowToolbarLayoutData priority="NeverOverflow" minWidth="20px"/>
 					</layoutData>
 				</ToolbarSpacer>
-				<Button text="Abhishek Mallik" type="Transparent" press="handleUserNamePress">
+				<Button text="Capgemini User" type="Transparent" press="handleUserNamePress">
 					<layoutData>
 						<OverflowToolbarLayoutData priority="NeverOverflow"/>
 					</layoutData>
