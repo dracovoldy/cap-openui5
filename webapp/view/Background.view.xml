@@ -5,7 +5,7 @@
 			<Panel width="auto" class="sapUiResponsiveMargin noBorder">
 				<headerToolbar >
 					<Toolbar height="3rem" class="dtlHead">
-						<Title text="Background"/>
+						<Title text="Background"  class="detailHeader1"/>
 					</Toolbar>
 				</headerToolbar>
 				<content>
