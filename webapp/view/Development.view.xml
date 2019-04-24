@@ -72,8 +72,9 @@
 							</VBox>-->
 						</content>
 					</Panel>
-					<Panel width="auto" class="sapUiResponsiveMargin noBorder">
-						<Button text="Previous" type="Emphasized" class="backBtn"/>
+					<Panel width="auto" class="sapUiResponsiveMargin noBorder boxMdl">
+						<Button text="Previous" type="Emphasized" class="backBtn" press="nextPress"/>
+						<ToolbarSpacer/>
 						<Button text="Next" type="Emphasized" class="nextBtn" press="nextPress"/>
 					</Panel>
 				</content>

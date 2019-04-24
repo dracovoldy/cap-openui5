@@ -9,7 +9,7 @@
 					</layoutData>
 				</Button>
 				<ToolbarSpacer width="20px"/>
-				<Image src="./images/logo.gif" width="125px" height="30px" class="logoImage"/>
+				<Image src="./images/logo.svg" densityAware="true" class="logoImage"/>
 				<Text Class="toolbarHeading" text="Renewable Enterprise Assessment Tool"/>
 				<tnt:ToolHeaderUtilitySeparator/>
 				<ToolbarSpacer>
