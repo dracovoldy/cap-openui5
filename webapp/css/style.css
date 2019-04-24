@@ -225,7 +225,7 @@ html.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
     background: #c9c9c9!important;
     width: 100px!important;
     height: 40px Important;
-    margin: 10px 25px!important;
+    margin1: 10px 25px!important;
 }
 
 .backBtn span ,.nextBtn span{
@@ -236,14 +236,23 @@ html.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
 }
 
 .backBtn span bdi {
-    text-shadow: 0px!important;
+    text-shadow:0 0 0rem #ffffff!important;
 }
-.next{
-	position:relative!important;
-	top:0px!important;
-	right:0px!important;
+.boxMdl>div{
+	display:-webkit-box !important;
+	width:100%;
+}
+.nextBtn{
+background-color:#00CBF8!important;
 	
 }
+.nextBtn span{
+	Color:#fff!important;
+	background: #00CBF8!important;
+}
+
+
+
 
 
 

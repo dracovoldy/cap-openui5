@@ -1,12 +1,14 @@
 <mvc:View controllerName="cap.estimate.controller.Customer" displayBlock="true" height="100%" xmlns="sap.m" xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc" xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
-	<Page id="customerPage" showHeader="false">
+	<!--<Page id="customerPage" showHeader="false">-->
+	<Page id="page2" showHeader="false" class="sapUiSizeCompact detailBg">
 		<content>
-			<Panel width="auto" class="sapUiTinyMargin">
+			<!--	<VBox>-->
+			<Panel width="auto" class="sapUiResponsiveMargin bgwhite">
 				<headerToolbar>
-					<Toolbar height="2rem">
-						<Title text="Company Details"/>
-						<ToolbarSpacer/>
+					<Toolbar height="3rem" class="dtlHead">
+						<Title text="Company Details" class="detailHeader1"/>
+						<!--<Text text="Description 250 characters" class="rightAlignText"/>-->
 					</Toolbar>
 				</headerToolbar>
 				<content>
@@ -39,17 +41,17 @@
 							<TextArea id="client_name" value="{/posting/client_name}" growing="true" growingMaxLines="7" required="true" width="100%" maxLength="250"/>
 							<!--<core:Title text="" emphasized="true"/>-->
 							<Label text="Contact Details (Email)" design="Bold" required="true"/>
-							<TextArea id="client_contact" value="{/posting/client_contact}" growing="true" growingMaxLines="7" required="true" width="100%" maxLength="250"/>
+							<TextArea id="client_contact" value="{/posting/client_contact}" growing="true" growingMaxLines="7" required="true" width="100%"
+								maxLength="250"/>
 							<core:Title text=""/>
 						</f:content>
 					</f:SimpleForm>
 				</content>
 			</Panel>
-			<Panel width="auto" class="sapUiTinyMargin">
+			<Panel width="auto" class="sapUiResponsiveMargin bgwhite">
 				<headerToolbar>
-					<Toolbar height="2rem">
-						<Title text="Capgemini Contact Details"/>
-						<ToolbarSpacer/>
+					<Toolbar height="3rem" class="dtlHead">
+						<Title text="Capgemini Contact Details" class="detailHeader1"/>
 					</Toolbar>
 				</headerToolbar>
 				<content>
@@ -77,7 +79,24 @@
 					</f:SimpleForm>
 				</content>
 			</Panel>
-			<Button text="Next" type="Emphasized" press="nextPress" class=""/>
+			<!--	<HBox>-->
+			<!--	<Panel width="auto" class="sapUiResponsiveMargin">
+								<headerToolbar>
+									<Toolbar height="3rem">
+										<Title text="Contact Details (Email)"/>
+										<ToolbarSpacer/>
+									</Toolbar>
+								</headerToolbar>
+								<content>
+									<TextArea value="" growingMaxLines="7" width="100%"/>
+								</content>
+							</Panel>
+						</HBox>-->
+			<!--	</VBox>-->
+			<Panel width="auto" class="sapUiResponsiveMargin noBorder boxMdl">
+				<ToolbarSpacer/>
+				<Button text="Next" type="Emphasized" class="nextBtn" press="nextPress"/>
+			</Panel>
 		</content>
 		<footer>
 			<Toolbar height="1.5em">
@@ -88,8 +107,8 @@
 					</layoutData>
 				</Label>
 				<ToolbarSpacer/>
-				<!--<Button text="Next" type="Emphasized" press="nextPress"/>-->
 			</Toolbar>
 		</footer>
 	</Page>
+	<!--</pages>-->
 </mvc:View>

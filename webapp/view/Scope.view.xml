@@ -228,8 +228,11 @@
 					</VBox>
 				</content>
 			</Panel>
-			<Button text="Previous" type="Emphasized" press="nextPress"/>
-			<Button text="Next" type="Emphasized" press="nextPress"/>
+			<Panel width="auto" class="sapUiResponsiveMargin noBorder boxMdl">
+				<Button text="Previous" type="Emphasized" class="backBtn"/>
+				<ToolbarSpacer/>
+				<Button text="Next" type="Emphasized" class="nextBtn" press="nextPress"/>
+			</Panel>
 		</content>
 		<footer>
 			<Toolbar height="1.5em">

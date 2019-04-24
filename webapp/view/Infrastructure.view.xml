@@ -1,11 +1,11 @@
 <mvc:View controllerName="cap.estimate.controller.Infrastructure" displayBlock="true" height="100%" xmlns="sap.m" xmlns:core="sap.ui.core"
 	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
-	<Page id="page2" showHeader="false" class="sapUiSizeCompact">
+	<Page id="page2" showHeader="false" class="sapUiSizeCompact detailBg">
 		<content>
-			<Panel width="auto" class="sapUiTinyMargin">
+			<Panel width="auto" class="sapUiResponsiveMargin bgwhite1 noBorder">
 				<headerToolbar>
-					<Toolbar height="2rem">
-						<Title text="Infrastructure"/>
+					<Toolbar height="2rem" class="dtlHead">
+						<Title text="Infrastructure" class="detailHeader1"/>
 						<ToolbarSpacer/>
 					</Toolbar>
 				</headerToolbar>
@@ -64,8 +64,11 @@
 					</f:SimpleForm>
 				</content>
 			</Panel>
-			<Button text="Previous" type="Emphasized" press="nextPress"/>
-			<Button text="Next" type="Emphasized" press="nextPress"/>
+			<Panel width="auto" class="sapUiResponsiveMargin noBorder boxMdl">
+				<Button text="Previous" type="Emphasized" class="backBtn"/>
+				<ToolbarSpacer/>
+				<Button text="Next" type="Emphasized" class="nextBtn" press="nextPress"/>
+			</Panel>
 		</content>
 		<footer>
 			<Toolbar height="1.5em">
