@@ -7,7 +7,7 @@
 					<Panel width="auto" class="sapUiTinyMargin">
 						<headerToolbar>
 							<Toolbar height="2rem">
-								<Title text="Estimation Dashboard"/>
+								<Title text="Estimation dashboard"/>
 								<ToolbarSpacer/>
 							</Toolbar>
 						</headerToolbar>
@@ -18,11 +18,11 @@
 										<Title text="Typical S4/HANA System Conversion" class="sapUiSmallMargin"/>
 										<HBox>
 											<VBox>
-												<Title text="As Short as" class="sapUiSmallMargin"/>
+												<Title text="As short as" class="sapUiSmallMargin"/>
 												<Title id="short" text="{init_data>/estimate/LowPersonMonths}" class="sapUiSmallMargin"/>
 											</VBox>
 											<VBox>
-												<Title text="As Long as" class="sapUiSmallMargin"/>
+												<Title text="As long as" class="sapUiSmallMargin"/>
 												<Title id="long" text="{init_data>/estimate/HighPersonMonths}" class="sapUiSmallMargin"/>
 											</VBox>
 											<VBox>

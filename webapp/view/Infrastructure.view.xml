@@ -14,8 +14,8 @@
 						adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
 						singleContainerFullSize="false">
 						<f:content>
-							<core:Title text="SAP Landscape"/>
-							<Label text="Number of Productive SAP instances" design="Bold" required="true"/>
+							<core:Title text="SAP landscape"/>
+							<Label text="Number of productive SAP instances" design="Bold" required="true"/>
 							<Select id="Instance_Select" selectedKey="1">
 								<items>
 									<core:Item text="1" key="1"/>
@@ -25,14 +25,14 @@
 									<core:Item text="5" key="5"/>
 								</items>
 							</Select>
-							<Label text="Current SAP Enhancement Pack level" design="Bold" required="true"/>
+							<Label text="Current SAP enhancement pack level" design="Bold" required="true"/>
 							<Select id="Enhancement_Select" selectedKey="1">
 								<items>
 									<core:Item text="Lesser than / Equal to 6" key="1"/>
 									<core:Item text="7 or 8" key="2"/>
 								</items>
 							</Select>
-							<Label text="Number of Connected Systems" design="Bold" required="true"/>
+							<Label text="Number of connected systems" design="Bold" required="true"/>
 							<Select id="Systems_Select" selectedKey="1">
 								<items>
 									<core:Item text="Lesser than / Equal to 10" key="1"/>
@@ -42,11 +42,11 @@
 								</items>
 							</Select>
 							<core:Title/>
-							<Label text="Key SAP Applications in Landscape" design="Bold" required="true"/>
+							<Label text="Key SAP applications in landscape" design="Bold" required="true"/>
 							<MultiComboBox id="KeySap_Multi" selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" items="{/KeySAP}">
 								<core:Item key="{key}" text="{desc}"/>
 							</MultiComboBox>
-							<Label text="Size of Primary SAP ECC in TB" design="Bold" required="true"/>
+							<Label text="Size of primary SAP ECC in TB" design="Bold" required="true"/>
 							<Select id="Size_Select" selectedKey="1">
 								<items>
 									<core:Item text="Less than 1TB" key="1"/>
@@ -57,8 +57,8 @@
 									<core:Item text="Greater than 20TB" key="20"/>
 								</items>
 							</Select>
-							<core:Title text="Non-SAP Landscape"/>
-							<Label text="List out Key Non-SAP Appplications" design="Bold" required="true"/>
+							<core:Title text="Non-SAP landscape"/>
+							<Label text="List out key non-SAP appplications" design="Bold" required="true"/>
 							<TextArea id="non_sap" value="" growing="true" growingMaxLines="7" width="100%"/>
 						</f:content>
 					</f:SimpleForm>

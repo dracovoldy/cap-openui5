@@ -7,7 +7,7 @@
 			<Panel width="auto" class="sapUiResponsiveMargin bgwhite">
 				<headerToolbar>
 					<Toolbar height="3rem" class="dtlHead">
-						<Title text="Company Details" class="detailHeader1"/>
+						<Title text="Company details" class="detailHeader1"/>
 						<!--<Text text="Description 250 characters" class="rightAlignText"/>-->
 					</Toolbar>
 				</headerToolbar>
@@ -15,7 +15,7 @@
 					<f:SimpleForm id="CompanyForm_1" editable="true" layout="ColumnLayout" columnsM="1" columnsL="3" columnsXL="3">
 						<f:content>
 							<!--<core:Title/>-->
-							<Label text="Company Name" design="Bold" required="true"/>
+							<Label text="Company name" design="Bold" required="true"/>
 							<Input id="name" value="{/posting/comp_name}"/>
 							<!--<core:Title/>-->
 							<Label text="Sector / Market Unit" design="Bold" required="true"/>
@@ -25,7 +25,7 @@
 								</items>
 							</Select>
 							<!--<core:Title/>-->
-							<Label text="Primary Region" design="Bold" required="true"/>
+							<Label text="Primary region" design="Bold" required="true"/>
 							<Select id="Region_Select" selectedKey="NA" items="{/RegionCollection}">
 								<items>
 									<core:Item text="{desc}" key="{key}"/>
@@ -37,10 +37,10 @@
 						singleContainerFullSize="false">
 						<f:content>
 							<!--<core:Title text="" emphasized="true"/>-->
-							<Label text="Client Contact Name(s)" design="Bold" required="true"/>
+							<Label text="Client contact name(s)" design="Bold" required="true"/>
 							<TextArea id="client_name" value="{/posting/client_name}" growing="true" growingMaxLines="7" required="true" width="100%" maxLength="250"/>
 							<!--<core:Title text="" emphasized="true"/>-->
-							<Label text="Contact Details (Email)" design="Bold" required="true"/>
+							<Label text="Contact (email)" design="Bold" required="true"/>
 							<TextArea id="client_contact" value="{/posting/client_contact}" growing="true" growingMaxLines="7" required="true" width="100%"
 								maxLength="250"/>
 							<core:Title text=""/>
@@ -51,7 +51,7 @@
 			<Panel width="auto" class="sapUiResponsiveMargin bgwhite">
 				<headerToolbar>
 					<Toolbar height="3rem" class="dtlHead">
-						<Title text="Capgemini Contact Details" class="detailHeader1"/>
+						<Title text="Capgemini contact details" class="detailHeader1"/>
 					</Toolbar>
 				</headerToolbar>
 				<content>

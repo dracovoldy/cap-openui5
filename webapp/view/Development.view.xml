@@ -52,7 +52,7 @@
 							</f:SimpleForm>
 							<f:SimpleForm>
 								<f:content>
-									<core:Title text="Key Applications in Landscape (SAP, SAP Bolt-ons)"/>
+									<core:Title text="Additonal development comments"/>
 									<TextArea id="dev_comments" value="{/posting/if_dev_comm}" growing="true" growingMaxLines="7" width="100%"/>
 								</f:content>
 							</f:SimpleForm>

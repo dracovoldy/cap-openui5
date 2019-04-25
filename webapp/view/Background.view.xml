@@ -14,7 +14,7 @@
 							<RadioButton groupName="GroupA" text="New Customer (No SAP ECC Today)" selected="true"/>
 							<RadioButton groupName="GroupA" text="Existing SAP ECC Customer"/>
 						</HBox>
-						<Title text="Areas of Interest"/>
+						<Title text="Areas of interest"/>
 						<HBox class="sapUiMediumMarginStart sapUiTinyMarginTop sapUiMediumMarginBottom">
 							<VBox>
 								<CheckBox id="sap_check1" text="SAP S/4 New/Greenfield"/>
@@ -34,9 +34,9 @@
 						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1"
 						singleContainerFullSize="false">
 						<f:content>
-							<core:Title text="Program Objective"/>
+							<core:Title text="Program objective"/>
 							<TextArea id="prog" value="{/posting/bg_prog_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250"></TextArea>
-							<core:Title text="Business Drivers"/>
+							<core:Title text="Business drivers"/>
 							<TextArea id="biz" value="{/posting/bg_bizd_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250"/>
 						</f:content>
 					</f:SimpleForm>
@@ -48,7 +48,7 @@
 						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
 						singleContainerFullSize="false">
 						<f:content>
-							<core:Title text="IT Drivers"/>
+							<core:Title text="IT drivers"/>
 							<TextArea id="drive" value="{/posting/bg_itdr_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">
 								<dependents>
 									<ResponsivePopover id="popover_it" title="Information" class="sapUiPopupWithPadding" placement="Bottom">
@@ -59,7 +59,7 @@
 									</ResponsivePopover>
 								</dependents>
 							</TextArea>
-							<core:Title text="Key Business Pain Points"/>
+							<core:Title text="Key business pain points"/>
 							<TextArea id="pain" value="{/posting/bg_bizp_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">
 								<dependents>
 									<ResponsivePopover id="popover_pain" title="Information" class="sapUiPopupWithPadding" placement="Bottom">
@@ -80,7 +80,7 @@
 						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
 						singleContainerFullSize="false">
 						<f:content>
-							<core:Title text="Business Case status and Additional Capabilities Required"/>
+							<core:Title text="Business case status and additional capabilities required"/>
 							<TextArea id="case" value="{/posting/bg_bcad_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250"/>
 						</f:content>
 					</f:SimpleForm>

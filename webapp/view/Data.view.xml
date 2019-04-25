@@ -64,7 +64,7 @@
 						<f:content>
 							<core:Title text="Data Quality Comments"/>
 							<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
-							<core:Title text="Other Data Considerations"/>
+							<core:Title text="Other data considerations"/>
 							<TextArea value="" growingMaxLines="7" width="100%"/>
 						</f:content>
 					</f:SimpleForm>
@@ -72,16 +72,20 @@
 						adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
 						singleContainerFullSize="false">
 						<f:content>
-							<core:Title text="Have you done any Data Archiving?"/>
+							<core:Title text="Have you done any data archiving?"/>
 							<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
-							<core:Title text="Additional Comments on Data"/>
+							<core:Title text="Additional comments on data"/>
 							<TextArea value="" growingMaxLines="7" width="100%"/>
 						</f:content>
 					</f:SimpleForm>
 				</content>
 			</Panel>
-			<Button text="Previous" type="Emphasized" press="nextPress"/>
-			<Button text="Next" type="Emphasized" press="nextPress"/>
+			<Panel width="auto" class="sapUiResponsiveMargin noBorder boxMdl">
+				<Button text="Previous" type="Emphasized" class="backBtn"/>
+				<ToolbarSpacer/>
+				<Button text="Next" type="Emphasized" class="nextBtn" press="nextPress"/>
+			</Panel>
+	
 		</content>
 		<footer>
 			<Toolbar height="1.5em">
