@@ -51,7 +51,7 @@ sap.ui.define([
 					that.getView().getModel().setProperty("/posting/if_key_mdg_v", 1);
 				}else if(key === "13"){
 					that.getView().getModel().setProperty("/posting/if_key_optx_v", 1);
-				}else if(key === "14"){
+				}else if(key === "17"){
 					that.getView().getModel().setProperty("/posting/if_key_others_v", 1);
 				}
 			});

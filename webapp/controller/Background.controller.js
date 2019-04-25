@@ -112,7 +112,7 @@ sap.ui.define([
 			} else if (nsCount >= 0 && sapCount > 0) {
 				return true;
 			} else if (nsCount === 0 && sapCount === 0) {
-				MessageBox.information("Please select Areas of interest", {
+				MessageBox.information("Please select \u201CAreas of interest\u201D", {
 					title: "Information", // default
 					onClose: null, // default
 					styleClass: "", // default

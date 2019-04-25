@@ -170,7 +170,7 @@
 		"desc": "GTS"
 	}, {
 		"key": "8",
-		"desc": "ATTP"
+		"desc": "ATTP (Pharma)"
 	}, {
 		"key": "9",
 		"desc": "TMS"
@@ -182,12 +182,21 @@
 		"desc": "Vistex"
 	}, {
 		"key": "12",
-		"desc": "MDG"
+		"desc": "SAP MDG / MDG Hub"
 	}, {
 		"key": "13",
 		"desc": "OpenText"
 	}, {
 		"key": "14",
+		"desc": "BPC"
+	}, {
+		"key": "15",
+		"desc": "SAP BW"
+	}, {
+		"key": "16",
+		"desc": "GRC"
+	}, {
+		"key": "17",
 		"desc": "Others"
 	}],
 	"DevMiddleware": [{
@@ -205,6 +214,9 @@
 	}, {
 		"key": "5",
 		"desc": "Other"
+	}, {
+		"key": "6",
+		"desc": "Dell Boomi"
 	}],
 	"posting": {
 
