@@ -1,4 +1,43 @@
 {
+	"BackgroundCheck": {
+		"sapCheck1": true,
+		"sapCheck2": true,
+		"nsCheck1": false,
+		"nsCheck2": false,
+		"nsCheck3": false,
+		"nsCheck4": false
+	},
+	"YearCollection": [{
+		"year": "2010 or prior"
+		
+	},{
+		"year": "2011"
+
+	},{
+		"year": "2012"
+
+	},{
+		"year": "2013"
+
+	},{
+		"year": "2014"
+
+	},{
+		"year": "2015"
+
+	},{
+		"year": "2016"
+
+	},{
+		"year": "2017"
+
+	},{
+		"year": "2018"
+
+	},{
+		"year": "2019"
+
+	}],
 	"estimateId": "",
 	"estimate": {},
 
@@ -108,7 +147,7 @@
 	"KeySAP": [{
 		"key": "0",
 		"desc": "SAP ECC"
-	},{
+	}, {
 		"key": "1",
 		"desc": "Ariba"
 	}, {

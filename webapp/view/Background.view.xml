@@ -5,28 +5,35 @@
 			<Panel width="auto" class="sapUiResponsiveMargin noBorder">
 				<headerToolbar >
 					<Toolbar height="3rem" class="dtlHead">
-						<Title text="Background"  class="detailHeader1"/>
+						<Title text="Background" class="detailHeader1"/>
 					</Toolbar>
 				</headerToolbar>
 				<content>
 					<VBox class="sapUiTinyMarginBegin sapUiTinyMarginEnd">
 						<HBox class="sapUiTinyMargin">
 							<RadioButton groupName="GroupA" text="New Customer (No SAP ECC Today)" selected="true"/>
-							<RadioButton groupName="GroupA" text="Existing SAP ECC Customer"/>
+							<RadioButton groupName="GroupA" text="Existing SAP ECC Customer" select="isExisting"/>
+						</HBox>
+						<HBox id="bg_hbox" class="sapUiTinyMargin" visible="false">
+							<Text text="Date of Implementation" class="sapUiTinyMarginTop sapUiTinyMarginEnd"/>
+							<ComboBox items="{ path: '/YearCollection', sorter: { path: 'year' } }">
+								<core:Item key="{key}" text="{text}"/>
+							</ComboBox>
 						</HBox>
 						<Title text="Areas of interest"/>
 						<HBox class="sapUiMediumMarginStart sapUiTinyMarginTop sapUiMediumMarginBottom">
 							<VBox>
-								<CheckBox id="sap_check1" text="SAP S/4 New/Greenfield"/>
-								<CheckBox id="sap_check2" text="Ariba/IBP"/>
+								<CheckBox id="sap_check1" text="SAP S/4 New/Greenfield" selected="{/BackgroundCheck/sapCheck1}" select="selectChange"/>
+								<CheckBox id="ns_check1" text="Success Factors" selected="{/BackgroundCheck/nsCheck1}" select="selectChange"/>
 							</VBox>
 							<VBox>
-								<CheckBox id="ns_check1" text="Success Factors"/>
-								<CheckBox id="ns_check2" text="SAP S/4 Conversion"/>
+								<CheckBox id="sap_check2" text="SAP S/4 Conversion" selected="{/BackgroundCheck/sapCheck2}" select="selectChange"/>
+								<CheckBox id="ns_check2" text="Ariba/IBP" selected="{/BackgroundCheck/nsCheck2}" select="selectChange"/>
 							</VBox>
 							<VBox>
-								<CheckBox id="ns_check3" text="C/4H"/>
-								<CheckBox id="ns_check4" text="Other – Analytics, Infra, Digital, Etc"/>
+								<CheckBox id="ns_check3" text="C/4H" selected="{/BackgroundCheck/nsCheck3}" select="selectChange"/>
+								<CheckBox id="ns_check4" text="Other – Analytics, Infra, Digital, Innovation, Etc" selected="{/BackgroundCheck/nsCheck4}"
+									select="selectChange"/>
 							</VBox>
 						</HBox>
 					</VBox>

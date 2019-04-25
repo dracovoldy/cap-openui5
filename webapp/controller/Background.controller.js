@@ -2,8 +2,9 @@ sap.ui.define([
 	'jquery.sap.global',
 	'sap/ui/core/mvc/Controller',
 	'sap/m/Popover',
-	'sap/m/Button'
-], function (jQuery, Controller, Popover, Button) {
+	'sap/m/Button',
+	"sap/m/MessageBox"
+], function (jQuery, Controller, Popover, Button, MessageBox) {
 	"use strict";
 
 	return Controller.extend("cap.estimate.controller.Background", {
@@ -18,7 +19,16 @@ sap.ui.define([
 			this.attachPopoverOnMouseover(this.byId("drive"), this.byId("popover_it"));
 			this.attachPopoverOnMouseover(this.byId("pain"), this.byId("popover_pain"));
 		},
+		isExisting: function (oEvent) {
+			var data = oEvent.getParameters("selected");
+			console.log(data);
 
+			if (data.selected) {
+				this.getView().byId("bg_hbox").setVisible(true);
+			} else {
+				this.getView().byId("bg_hbox").setVisible(false);
+			}
+		},
 		attachPopoverOnMouseover: function (targetControl, popover) {
 			targetControl.addEventDelegate({
 				onmouseover: this._showPopover.bind(this, targetControl, popover),
@@ -36,19 +46,83 @@ sap.ui.define([
 			clearTimeout(this._timeId) || popover.close();
 		},
 		nextPress: function () {
+
 			if (this.validate()) {
-				this.router.navTo("Scope");
-				
-				// // var navList = $( "div[id$='navListItems']" );
-				// var navListFinal = sap.ui.getCore().byId("navListItems");
-				
-				// // var navItem = $( "div[id$='nav_scope']" );
-				// var navItemFinal = sap.ui.getCore().byId("nav_scope");
-				
-				// navListFinal.setSelectedItem(navItemFinal);
-				
+				if (this.checkArea()) {
+					this.router.navTo("Scope");
+				}
+
 			}
 
+		},
+		selectChange: function (oEvent) {
+			if (oEvent.getParameters("selected").selected === true) {
+				oEvent.getSource().setSelected(true);
+			} else {
+				oEvent.getSource().setSelected(false);
+			}
+		},
+		checkArea: function () {
+			var sapCheck1 = this.getView().getModel().getProperty("/BackgroundCheck/sapCheck1");
+			var sapCheck2 = this.getView().getModel().getProperty("/BackgroundCheck/sapCheck2");
+
+			var nsCheck1 = this.getView().getModel().getProperty("/BackgroundCheck/nsCheck1");
+			var nsCheck2 = this.getView().getModel().getProperty("/BackgroundCheck/nsCheck2");
+			var nsCheck3 = this.getView().getModel().getProperty("/BackgroundCheck/nsCheck3");
+			var nsCheck4 = this.getView().getModel().getProperty("/BackgroundCheck/nsCheck4");
+
+			var nsCount = 0;
+			var sapCount = 0;
+
+			if (nsCheck1) {
+				nsCount++;
+			}
+			if (nsCheck2) {
+				nsCount++;
+			}
+			if (nsCheck3) {
+				nsCount++;
+			}
+			if (nsCheck4) {
+				nsCount++;
+			}
+
+			if (sapCheck1) {
+				sapCount++;
+			}
+			if (sapCheck2) {
+				sapCount++;
+			}
+
+			if (nsCount > 0 && sapCount === 0) {
+				//Then post and complete 
+
+				MessageBox.information("Response has been recorded", {
+					title: "Information", // default
+					onClose: function (oAction) {
+						location.reload();
+					}, // default
+					styleClass: "", // default
+					initialFocus: null, // default
+					textDirection: sap.ui.core.TextDirection.Inherit // default
+				});
+
+				return false;
+
+			} else if (nsCount >= 0 && sapCount > 0) {
+				return true;
+			} else if (nsCount === 0 && sapCount === 0) {
+				MessageBox.information("Please select Areas of interest", {
+					title: "Information", // default
+					onClose: null, // default
+					styleClass: "", // default
+					initialFocus: null, // default
+					textDirection: sap.ui.core.TextDirection.Inherit // default
+				});
+
+				return false;
+			}
+			return false;
 		},
 		validate: function () {
 			//validate
@@ -88,8 +162,8 @@ sap.ui.define([
 				count++;
 				// return false;
 			}
-			
-			if(count > 0){
+
+			if (count > 0) {
 				return false;
 			}
 			this.getView().byId("prog").setValueState("None");
@@ -97,8 +171,7 @@ sap.ui.define([
 			this.getView().byId("drive").setValueState("None");
 			this.getView().byId("pain").setValueState("None");
 			this.getView().byId("case").setValueState("None");
-			
-			
+
 			return true;
 		}
 
