@@ -42,7 +42,10 @@
 							</Carousel>
 						</content>
 					</Panel>
-					<Button text="Back" type="Emphasized" press="onBack"/>
+					<Panel width="auto" class="sapUiResponsiveMargin noBorder boxMdl">
+						<ToolbarSpacer/>
+						<Button text="Back" type="Emphasized" press="startOver" class="backBtn"/>
+					</Panel>
 				</content>
 			</Page>
 		</pages>

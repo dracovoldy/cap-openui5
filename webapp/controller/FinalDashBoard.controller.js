@@ -35,6 +35,9 @@ sap.ui.define([
 					console.log(e);
 				}
 			});
+		},
+		startOver: function (oEvent){
+			location.reload();
 		}
 
 	});
