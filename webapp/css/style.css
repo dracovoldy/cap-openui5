@@ -1,19 +1,23 @@
 /* Set fullscreen */
+
 html.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
     width: 100%;
-    margin-left: 0;    
+    margin-left: 0;
     left: 0;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
+
 /* Remove Scrolling on main app */
+
 #content {
     overflow: hidden;
 }
 
+
 /* LoginBox CSS*/
+
 .shellCustom {
-    
     width: 350px;
     margin: 5px;
     padding: 1em;
@@ -25,39 +29,56 @@ html.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
 /* LoginBox-BG CSS*/
+
 .shellCustom-BG {
-    display: flex;              /* establish flex container */
-    flex-direction: column;     /* stack flex items vertically */
-    justify-content: center;    /* center items vertically, in this case */
-    align-items: center;        /* center items horizontally, in this case */
+    display: flex;
+    /* establish flex container */
+    flex-direction: column;
+    /* stack flex items vertically */
+    justify-content: center;
+    /* center items vertically, in this case */
+    align-items: center;
+    /* center items horizontally, in this case */
     height: 100%;
     border: 1px solid black;
-    background: #000046;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: #41295a;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2F0743, #41295a);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2F0743, #41295a);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+
 /* LoginBox Button CSS*/
+
 .buttonLoginBox {
     padding-right: 1em;
     border-radius: 0.4em;
-    
 }
+
+
 /* LoginBox Header */
+
 .loginHeader {
     color: black;
     font-size: 1.5em;
 }
+
+
 /* LoginBox Footer */
+
 .footerLoginBox {
     color: #000046;
     padding-top: 15px;
 }
 
-.labelFont{
-	font-size:10px !important;
+.labelFont {
+    font-size: 10px !important;
 }
+
 
 /******************* css for header****************/
 
@@ -228,116 +249,113 @@ html.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
     margin1: 10px 25px!important;
 }
 
-.backBtn span ,.nextBtn span{
-    color: #000!important;
+.backBtn span,
+.nextBtn span {
+    color: #000000!important;
     border: 0px solid #fff!important;
     text-shadow: 0px!important;
     background: #c9c9c9!important;
 }
 
 .backBtn span bdi {
-    text-shadow:0 0 0rem #ffffff!important;
-}
-.boxMdl>div{
-	display:-webkit-box !important;
-	width:100%;
-}
-.nextBtn{
-background-color:#00CBF8!important;
-	
-}
-.nextBtn span{
-	Color:#fff!important;
-	background: #00CBF8!important;
-}
-.bgWhiteBox{
-	
-	background:#fff!important;
-	padding:10px!important;
+    text-shadow: 0 0 0rem #ffffff!important;
 }
 
-.divide3, .divide4{
-	display:table!important;
-
+.boxMdl>div {
+    display: -webkit-box !important;
+    width: 100%;
 }
+
+.nextBtn {
+    background-color: #00CBF8!important;
+}
+
+.nextBtn span {
+    Color: #ffffff!important;
+    background: #00CBF8!important;
+}
+
+.bgWhiteBox {
+    background: #fff!important;
+    padding: 10px!important;
+}
+
+.divide3,
+.divide4 {
+    display: table!important;
+}
+
 .divide3>div {
     display: table-cell!important;
     background-color: #ada454!important;
     border: 10px solid #fff!important;
     height: 160px!important;
 }
-.divide4>div{
-	display: table-cell!important;
-}
-.divide4>div *{
-	margin:0px !important;
-}
-.divide4>div span{
-	font-size:14px!important;
-}
-.divide4 .subSection span{
-	font-weight:bold!important;
-}
-.divide3 .div2{
-	 background-color: #6b9a89!important;
-	
+
+.divide4>div {
+    display: table-cell!important;
 }
 
-.divide3 .div3{
-	 background-color: #431060!important;
-	
+.divide4>div * {
+    margin: 0px !important;
 }
-.divide3>div> *{
-	text-align:center!important;
-    color:#FFF!important;
+
+.divide4>div span {
+    font-size: 14px!important;
 }
-   .divide3>div span{ color: #fff;
+
+.divide4 .subSection span {
+    font-weight: bold!important;
+}
+
+.divide3 .div2 {
+    background-color: #6b9a89!important;
+}
+
+.divide3 .div3 {
+    background-color: #431060!important;
+}
+
+.divide3>div> * {
+    text-align: center!important;
+    color: #FFF!important;
+}
+
+.divide3>div span {
+    color: #fff;
     text-shadow: 0 0 0 #fff;
-   }
-   .divide3>div .monthsCnt span:after{
-   	    content: "months";
+}
+
+.divide3>div .monthsCnt span:after {
+    content: "months";
     color: #fff;
     font-size: 16px;
     font-weight: normal;
     position: relative;
     vertical-align: baseline;
     line-height: 0;
-    margin:3px;
-    
-   }
-   .divide3>div .monthsCnt{
-   	margin-bottom:40px!important;
-   	margin-top:0px!important;
-   }
-.divide3>div .monthsCnt span{
-	font-size:45px;
-	font-weight: bold;
-}
-.removeBorder .sapMPanelBGTranslucent.sapMPanelContent{
-	border:0px solid #fff!important;
+    margin: 3px;
 }
 
-.givemargin{
-	margin: 20px 30px!important;
+.divide3>div .monthsCnt {
+    margin-bottom: 40px!important;
+    margin-top: 0px!important;
 }
 
+.divide3>div .monthsCnt span {
+    font-size: 45px;
+    font-weight: bold;
+}
 
+.removeBorder .sapMPanelBGTranslucent.sapMPanelContent {
+    border: 0px solid #fff!important;
+}
 
-
+.givemargin {
+    margin: 20px 30px!important;
+}
 
 .custFooter {
-	background-color: #939393!important;
+    background-color: #939393!important;
     border-top: 1px solid #c3c7ca!important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
