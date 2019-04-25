@@ -29,7 +29,7 @@
 				<tnt:NavigationList id="navListItems" class="navItemsCls">
 					<tnt:items>
 						<tnt:NavigationListItem id="nav_comp" text="Company" icon="sap-icon://account" key="Customer"/>
-						<tnt:NavigationListItem id="nav_back" text="Backgound" icon="sap-icon://idea-wall" key="Background"/>
+						<tnt:NavigationListItem id="nav_back" text="Background" icon="sap-icon://idea-wall" key="Background"/>
 						<tnt:NavigationListItem id="nav_scope" text="Scope" icon="sap-icon://co" key="Scope"/>
 						<tnt:NavigationListItem id="nav_infra" text="Infrastructure" icon="sap-icon://building" key="Infrastructure"/>
 						<tnt:NavigationListItem id="nav_dev" text="Development" icon="sap-icon://developer-settings" key="Development"/>

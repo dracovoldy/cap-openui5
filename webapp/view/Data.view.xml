@@ -56,6 +56,39 @@
 									<core:Item text="500,000+" key="4"/>
 								</items>
 							</Select>
+							<Label text="GL accounts"/>
+							<Select id="Data_Gl_Select" selectedKey="1">
+								<items>
+									<core:Item text="Less than 50" key="1"/>
+									<core:Item text="50 - 125" key="3"/>
+									<core:Item text="126 - 200" key="4"/>
+									<core:Item text="201 - 300" key="5"/>
+									<core:Item text="301 - 500" key="7"/>
+									<core:Item text="Greater than 500" key="8"/>
+								</items>
+							</Select>
+							<Label text="Cost centers"/>
+							<Select id="Data_cost_Select" selectedKey="1">
+								<items>
+									<core:Item text="Less than 50" key="1"/>
+									<core:Item text="50 - 125" key="3"/>
+									<core:Item text="126 - 200" key="4"/>
+									<core:Item text="201 - 300" key="5"/>
+									<core:Item text="301 - 500" key="7"/>
+									<core:Item text="Greater than 500" key="8"/>
+								</items>
+							</Select>
+							<Label text="Profit centers"/>
+							<Select id="Data_profit_Select" selectedKey="1">
+								<items>
+									<core:Item text="Less than 50" key="1"/>
+									<core:Item text="50 - 125" key="3"/>
+									<core:Item text="126 - 200" key="4"/>
+									<core:Item text="201 - 300" key="5"/>
+									<core:Item text="301 - 500" key="7"/>
+									<core:Item text="Greater than 500" key="8"/>
+								</items>
+							</Select>
 						</f:content>
 					</f:SimpleForm>
 					<f:SimpleForm id="DataForm2" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"
