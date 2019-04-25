@@ -9,20 +9,19 @@
 					</Toolbar>
 				</headerToolbar>
 				<content>
-					<VBox class="sapUiTinyMarginBegin sapUiTinyMarginEnd">
-						<HBox class="sapUiTinyMargin">
+					<VBox class="">
+						<HBox class="sapUiTinyMarginTop sapUiTinyMarginBottom bgWhiteBox">
 							<RadioButton groupName="GroupA" text="New Customer (No SAP ECC Today)" selected="true"/>
 							<RadioButton groupName="GroupA" text="Existing SAP ECC Customer" select="isExisting"/>
 							<HBox id="bg_hbox" visible="false">
-							<Text text="Year of Implementation" class="sapUiTinyMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd"/>
-							<ComboBox items="{/YearCollection}" >
-								<core:Item key="{year}" text="{year}"/>
-							</ComboBox>
+								<Text text="Year of Implementation" class="sapUiTinyMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd"/>
+								<ComboBox items="{/YearCollection}">
+									<core:Item key="{year}" text="{year}"/>
+								</ComboBox>
+							</HBox>
 						</HBox>
-						</HBox>
-						
-						<Title text="Areas of interest"/>
-						<HBox class="sapUiMediumMarginStart sapUiTinyMarginTop sapUiMediumMarginBottom">
+						<Title text="Areas of interest" titleStyle="H4" class="sapUiSmallMarginStart sapUiTinyMarginTop"/>
+						<HBox class="sapUiMediumMarginStart sapUiTinyMarginTop sapUiMediumMarginBottom bgWhiteBox">
 							<VBox>
 								<CheckBox id="sap_check1" text="SAP S/4 New/Greenfield" selected="{/BackgroundCheck/sapCheck1}" select="selectChange"/>
 								<CheckBox id="ns_check1" text="Success Factors" selected="{/BackgroundCheck/nsCheck1}" select="selectChange"/>
@@ -59,10 +58,15 @@
 							<core:Title text="IT drivers"/>
 							<TextArea id="drive" value="{/posting/bg_itdr_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">
 								<dependents>
-									<ResponsivePopover id="popover_it" title="Information" class="sapUiPopupWithPadding" placement="Bottom">
+									<ResponsivePopover id="popover_it" title="Help" class="sapUiPopupWithPadding" placement="Bottom">
 										<content>
-											<MessageStrip text="Information with default icon." type="Information" showIcon="true" class="sapUiMediumMarginBottom"></MessageStrip>
-											<Text text="Hover Text"></Text>
+											<VBox>
+												<Text text="Support innovative business models and products" class="sapUiTinyMarginBottom"></Text>
+												<Text text="Grow revenue and reduce costs" class="sapUiTinyMarginBottom"></Text>
+												<Text text="Simplify business processes" class="sapUiTinyMarginBottom"></Text>
+												<Text text="Enhance business agility and productivity" class="sapUiTinyMarginBottom"></Text>
+												<Text text="Optimize operations and supply chain" class="sapUiTinyMarginBottom"></Text>
+											</VBox>
 										</content>
 									</ResponsivePopover>
 								</dependents>
@@ -70,10 +74,15 @@
 							<core:Title text="Key business pain points"/>
 							<TextArea id="pain" value="{/posting/bg_bizp_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">
 								<dependents>
-									<ResponsivePopover id="popover_pain" title="Information" class="sapUiPopupWithPadding" placement="Bottom">
+									<ResponsivePopover id="popover_pain" title="Help" class="sapUiPopupWithPadding" placement="Bottom">
 										<content>
-											<MessageStrip text="Information with default icon." type="Information" showIcon="true" class="sapUiMediumMarginBottom"></MessageStrip>
-											<Text text="Hover Text"></Text>
+											<VBox>
+												<Text text="Gain strategic advantage with a digital core" class="sapUiTinyMarginBottom"></Text>
+												<Text text="Reduce disruptions, time and costs to support changes" class="sapUiTinyMarginBottom"></Text>
+												<Text text="Simplify architecture and enable real time integration" class="sapUiTinyMarginBottom"></Text>
+												<Text text="Harness and drive IoT for better visibility" class="sapUiTinyMarginBottom"></Text>
+												<Text text="Benefit from open architecture" class="sapUiTinyMarginBottom"></Text>
+											</VBox>
 										</content>
 									</ResponsivePopover>
 								</dependents>
