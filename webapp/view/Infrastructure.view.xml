@@ -2,9 +2,9 @@
 	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
 	<Page id="page2" showHeader="false" class="sapUiSizeCompact detailBg">
 		<content>
-			<Panel width="auto" class="sapUiResponsiveMargin bgwhite1 noBorder">
+			<Panel width="auto" class="sapUiResponsiveMargin bgPanel">
 				<headerToolbar>
-					<Toolbar height="2rem" class="dtlHead">
+					<Toolbar height="3rem" class="dtlHead">
 						<Title text="Infrastructure" class="detailHeader1"/>
 						<ToolbarSpacer/>
 					</Toolbar>
@@ -41,7 +41,7 @@
 									<core:Item text="Greater than 50" key="5"/>
 								</items>
 							</Select>
-							<core:Title/>
+						
 							<Label text="Key SAP applications in landscape" design="Bold" required="true"/>
 							<MultiComboBox id="KeySap_Multi" selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" items="{/KeySAP}">
 								<core:Item key="{key}" text="{desc}"/>
@@ -57,9 +57,11 @@
 									<core:Item text="Greater than 20TB" key="20"/>
 								</items>
 							</Select>
+							
 							<core:Title text="Non-SAP landscape"/>
 							<Label text="List out key non-SAP appplications" design="Bold" required="true"/>
 							<TextArea id="non_sap" value="" growing="true" growingMaxLines="7" width="100%"/>
+							
 						</f:content>
 					</f:SimpleForm>
 				</content>

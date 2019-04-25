@@ -13,13 +13,14 @@
 						<HBox class="sapUiTinyMargin">
 							<RadioButton groupName="GroupA" text="New Customer (No SAP ECC Today)" selected="true"/>
 							<RadioButton groupName="GroupA" text="Existing SAP ECC Customer" select="isExisting"/>
-						</HBox>
-						<HBox id="bg_hbox" class="sapUiTinyMargin" visible="false">
-							<Text text="Date of Implementation" class="sapUiTinyMarginTop sapUiTinyMarginEnd"/>
-							<ComboBox items="{ path: '/YearCollection' }" >
+							<HBox id="bg_hbox" visible="false">
+							<Text text="Year of Implementation" class="sapUiTinyMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd"/>
+							<ComboBox items="{/YearCollection}" >
 								<core:Item key="{year}" text="{year}"/>
 							</ComboBox>
 						</HBox>
+						</HBox>
+						
 						<Title text="Areas of interest"/>
 						<HBox class="sapUiMediumMarginStart sapUiTinyMarginTop sapUiMediumMarginBottom">
 							<VBox>
