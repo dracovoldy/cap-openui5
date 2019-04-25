@@ -97,7 +97,7 @@ sap.ui.define([
 			if (nsCount > 0 && sapCount === 0) {
 				//Then post and complete 
 
-				MessageBox.information("Response has been recorded", {
+				MessageBox.information("Response has been sucessfully recorded", {
 					title: "Information", // default
 					onClose: function (oAction) {
 						location.reload();
