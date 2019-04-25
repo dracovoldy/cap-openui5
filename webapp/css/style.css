@@ -63,7 +63,6 @@ html.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
 
 .headerBG {
     background-color: rgba(149, 230, 22, 1)!important;
-    border: 1px solid #89d316 !important;
 }
 
 .headerBG * {
@@ -73,7 +72,6 @@ html.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
 
 .logoImage {
     margin-top: 6px !important;
-    
 }
 
 .headerBG .sapMBarChild.sapMText.sapMTextMaxWidth.sapUiSelectable {
@@ -252,7 +250,81 @@ background-color:#00CBF8!important;
 	Color:#fff!important;
 	background: #00CBF8!important;
 }
- 
+.bgWhiteBox{
+	
+	background:#fff!important;
+	padding:10px!important;
+}
+
+.divide3, .divide4{
+	display:table!important;
+
+}
+.divide3>div {
+    display: table-cell!important;
+    background-color: #ada454!important;
+    border: 10px solid #fff!important;
+    height: 160px!important;
+}
+.divide4>div{
+	display: table-cell!important;
+}
+.divide4>div *{
+	margin:0px !important;
+}
+.divide4>div span{
+	font-size:14px!important;
+}
+.divide4 .subSection span{
+	font-weight:bold!important;
+}
+.divide3 .div2{
+	 background-color: #6b9a89!important;
+	
+}
+
+.divide3 .div3{
+	 background-color: #431060!important;
+	
+}
+.divide3>div> *{
+	text-align:center!important;
+    color:#FFF!important;
+}
+   .divide3>div span{ color: #fff;
+    text-shadow: 0 0 0 #fff;
+   }
+   .divide3>div .monthsCnt span:after{
+   	    content: "months";
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    position: relative;
+    vertical-align: baseline;
+    line-height: 0;
+    margin:3px;
+    
+   }
+   .divide3>div .monthsCnt{
+   	margin-bottom:40px!important;
+   	margin-top:0px!important;
+   }
+.divide3>div .monthsCnt span{
+	font-size:45px;
+	font-weight: bold;
+}
+.removeBorder .sapMPanelBGTranslucent.sapMPanelContent{
+	border:0px solid #fff!important;
+}
+
+.givemargin{
+	margin: 20px 30px!important;
+}
+
+
+
+
+
 .custFooter {
 	background-color: #939393!important;
     border-top: 1px solid #c3c7ca!important;

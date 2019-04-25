@@ -4,30 +4,30 @@
 		<pages>
 			<Page showHeader="false" class="sapUiSizeCompact detailBg">
 				<content>
-					<Panel width="auto" class="sapUiTinyMargin">
+					<Panel width="auto" class="sapUiTinyMargin bgWhite removeBorder">
 						<headerToolbar>
-							<Toolbar height="2rem">
-								<Title text="Estimation dashboard"/>
+							<Toolbar height="2rem" class="dtlHead">
+								<Title text="Estimation dashboard" class="detailHeader1"/>
 								<ToolbarSpacer/>
 							</Toolbar>
 						</headerToolbar>
 						<content>
 							<Carousel class="sapUiContentPadding" loop="true">
 								<pages>
-									<VBox>
-										<Title text="Typical S4/HANA System Conversion" class="sapUiSmallMargin"/>
-										<HBox>
-											<VBox>
-												<Title text="As short as" class="sapUiSmallMargin"/>
-												<Title id="short" text="{init_data>/estimate/LowPersonMonths}" class="sapUiSmallMargin"/>
+									<VBox class="bgWhiteBox">
+										<Text text="Typical S4/HANA System Conversion"/>
+										<HBox width="100%" class="divide3">
+											<VBox class="div1">
+												<Title text="As Short as" class="sapUiSmallMargin subSection"/>
+												<Title id="short" text="15" class="sapUiSmallMargin monthsCnt"/>
 											</VBox>
-											<VBox>
-												<Title text="As long as" class="sapUiSmallMargin"/>
-												<Title id="long" text="{init_data>/estimate/HighPersonMonths}" class="sapUiSmallMargin"/>
+											<VBox class="div2">
+												<Title text="As Long as" class="sapUiSmallMargin subSection"/>
+												<Title id="long" text=" 20" class="sapUiSmallMargin monthsCnt"/>
 											</VBox>
-											<VBox>
-												<Title text="Average" class="sapUiSmallMargin"/>
-												<Title id="avg" text="{init_data>/estimate/PersonMonths}" class="sapUiSmallMargin"/>
+											<VBox class="div3">
+												<Title text="Average" class="sapUiSmallMargin subSection"/>
+												<Title id="avg" text="03" class="sapUiSmallMargin monthsCnt"/>
 											</VBox>
 										</HBox>
 										<Text
