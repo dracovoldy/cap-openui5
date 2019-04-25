@@ -40,7 +40,7 @@
 							<Label text="Client contact name(s)" design="Bold" required="true"/>
 							<TextArea id="client_name" value="{/posting/client_name}" growing="true" growingMaxLines="7" required="true" width="100%" maxLength="250"/>
 							<!--<core:Title text="" emphasized="true"/>-->
-							<Label text="Title / Designation" design="Bold" required="true"/>
+							<Label text="Title / Designation / Role" design="Bold" required="true"/>
 							<TextArea id="client_desg" growing="true" growingMaxLines="7" required="true" width="100%"
 								maxLength="250"/>
 							<Label text="Contact (email)" design="Bold" required="true"/>

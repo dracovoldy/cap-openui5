@@ -16,8 +16,8 @@
 						</HBox>
 						<HBox id="bg_hbox" class="sapUiTinyMargin" visible="false">
 							<Text text="Date of Implementation" class="sapUiTinyMarginTop sapUiTinyMarginEnd"/>
-							<ComboBox items="{ path: '/YearCollection', sorter: { path: 'year' } }">
-								<core:Item key="{key}" text="{text}"/>
+							<ComboBox items="{ path: '/YearCollection' }" >
+								<core:Item key="{year}" text="{year}"/>
 							</ComboBox>
 						</HBox>
 						<Title text="Areas of interest"/>

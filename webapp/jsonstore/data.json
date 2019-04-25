@@ -1,7 +1,7 @@
 {
 	"BackgroundCheck": {
-		"sapCheck1": true,
-		"sapCheck2": true,
+		"sapCheck1": false,
+		"sapCheck2": false,
 		"nsCheck1": false,
 		"nsCheck2": false,
 		"nsCheck3": false,

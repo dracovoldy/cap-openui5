@@ -19,15 +19,15 @@
 										<HBox width="100%" class="divide3">
 											<VBox class="div1">
 												<Title text="As Short as" class="sapUiSmallMargin subSection"/>
-												<Title id="short" text="15" class="sapUiSmallMargin monthsCnt"/>
+												<Title id="short" text="{/estimate/LowPersonMonths}" class="sapUiSmallMargin monthsCnt"/>
 											</VBox>
 											<VBox class="div2">
 												<Title text="As Long as" class="sapUiSmallMargin subSection"/>
-												<Title id="long" text=" 20" class="sapUiSmallMargin monthsCnt"/>
+												<Title id="long"text="{/estimate/HighPersonMonths}" class="sapUiSmallMargin monthsCnt"/>
 											</VBox>
 											<VBox class="div3">
 												<Title text="Average" class="sapUiSmallMargin subSection"/>
-												<Title id="avg" text="03" class="sapUiSmallMargin monthsCnt"/>
+												<Title id="avg" text="{/estimate/PersonMonths}" class="sapUiSmallMargin monthsCnt"/>
 											</VBox>
 										</HBox>
 										<Text
