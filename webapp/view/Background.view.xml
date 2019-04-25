@@ -93,7 +93,7 @@
 			</Panel>
 		</content>
 		<footer>
-			<Toolbar height="1.5em">
+			<Toolbar height="1.5em" class="custFooter">
 				<ToolbarSpacer/>
 				<Label text="The information contained in this document is proprietary. Copyright © 2019 Capgemini. All rights reserved." class="labelFont">
 					<layoutData>

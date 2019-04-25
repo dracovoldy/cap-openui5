@@ -40,12 +40,12 @@
 									<Label text="RICEFW matrix"/>
 									<Select id="RICEFW_Select" selectedKey="1">
 										<items>
-											<core:Item text="Less than 50" key="1"/>
-											<core:Item text="50 - 125" key="3"/>
-											<core:Item text="126 - 200" key="4"/>
-											<core:Item text="201 - 300" key="5"/>
-											<core:Item text="301 - 500" key="7"/>
-											<core:Item text="Greater than 500" key="8"/>
+											<core:Item text="Less than 50" key="50"/>
+											<core:Item text="50 - 125" key="125"/>
+											<core:Item text="126 - 200" key="200"/>
+											<core:Item text="201 - 300" key="300"/>
+											<core:Item text="301 - 500" key="500"/>
+											<core:Item text="Greater than 500" key="600"/>
 										</items>
 									</Select>
 								</f:content>
@@ -79,7 +79,7 @@
 					</Panel>
 				</content>
 				<footer>
-					<Toolbar height="1.5em">
+					<Toolbar height="1.5em" class="custFooter">
 						<ToolbarSpacer/>
 						<Label text="The information contained in this document is proprietary. Copyright © 2019 Capgemini. All rights reserved." class="labelFont">
 							<layoutData>
