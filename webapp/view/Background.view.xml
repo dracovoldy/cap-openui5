@@ -58,7 +58,7 @@
 							<core:Title text="IT drivers"/>
 							<TextArea id="drive" value="{/posting/bg_itdr_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">
 								<dependents>
-									<ResponsivePopover id="popover_it" title="Help" class="sapUiPopupWithPadding" placement="Bottom">
+									<ResponsivePopover id="popover_it" title="Help" class="sapUiPopupWithPadding" placement="Top">
 										<content>
 											<VBox>
 												<Text text="Support innovative business models and products" class="sapUiTinyMarginBottom"></Text>
@@ -74,7 +74,7 @@
 							<core:Title text="Key business pain points"/>
 							<TextArea id="pain" value="{/posting/bg_bizp_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">
 								<dependents>
-									<ResponsivePopover id="popover_pain" title="Help" class="sapUiPopupWithPadding" placement="Bottom">
+									<ResponsivePopover id="popover_pain" title="Help" class="sapUiPopupWithPadding" placement="Top">
 										<content>
 											<VBox>
 												<Text text="Gain strategic advantage with a digital core" class="sapUiTinyMarginBottom"></Text>
