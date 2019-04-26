@@ -4,7 +4,7 @@
 		<pages>
 			<Page showHeader="false" class="sapUiSizeCompact detailBg">
 				<content>
-					<Panel width="auto" class="sapUiTinyMargin bgWhite removeBorder estHeight">
+					<Panel width="auto" class="sapUiTinyMargin bgWhite removeBorder">
 						<headerToolbar>
 							<Toolbar height="2rem" class="dtlHead">
 								<Title text="Estimation dashboard" class="detailHeader1"/>
