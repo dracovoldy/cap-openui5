@@ -14,6 +14,8 @@ sap.ui.define([
 
 			var globalModel = this.getOwnerComponent().getModel("init_data");
 			this.getView().setModel(globalModel);
+			
+			this.getView().getModel().setProperty("/Visited/" + "Customer" + "/status", 1);
 		},
 		nextPress: function () {
 			// console.log(this.getView().getModel().getProperty("/Customer"));
@@ -26,6 +28,9 @@ sap.ui.define([
 			this.getView().getModel().setProperty("/posting/comp_region", region);
 
 			if (this.validate()) {
+				this.getView().getModel().setProperty("/Visited/" + "Customer" + "/status", 2);
+				this.getView().getModel().setProperty("/Visited/" + "Background" + "/status", 1);
+				this.getView().getModel().setProperty("/navSelectedKey", "Background");
 				this.router.navTo("Background");
 			}
 

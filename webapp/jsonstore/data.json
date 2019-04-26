@@ -1,4 +1,39 @@
 {
+	"navSelectedKey": "Customer",
+	"Visited": {
+		"Customer": {
+			"status": 0,
+			"name": "Company"
+		},
+		"Background": {
+			"status": 0,
+			"name": "Background"
+		},
+		"Scope": {
+			"status": 0,
+			"name": "Scope"
+		},
+		"Infrastructure": {
+			"status": 0,
+			"name": "Infrastructure"
+		},
+		"Development": {
+			"status": 0,
+			"name": "Development"
+		},
+		"Data": {
+			"status": 0,
+			"name": "Data"
+		},
+		"POCM": {
+			"status": 0,
+			"name": "Management"
+		},
+		"Others": {
+			"status": 0,
+			"name": "Others"
+		}
+	},
 	"BackgroundCheck": {
 		"sapCheck1": false,
 		"sapCheck2": false,

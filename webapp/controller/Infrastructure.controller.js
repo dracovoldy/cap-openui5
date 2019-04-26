@@ -62,6 +62,9 @@ sap.ui.define([
 			// console.log(this.getView().getModel().getProperty("/posting"));
 			
 			if (this.validate()) {
+				this.getView().getModel().setProperty("/Visited/" + "Infrastructure" + "/status", 2);
+				this.getView().getModel().setProperty("/Visited/" + "Development" + "/status", 1);
+				this.getView().getModel().setProperty("/navSelectedKey", "Development");
 				this.router.navTo("Development");
 				
 			}

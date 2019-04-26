@@ -22,42 +22,42 @@ sap.ui.define([
 			that.getOwnerComponent().getRouter().navTo("Dashboard", { itemId: "devLogin" });
 
 			// var context  = oEvent.getSource().getBindingContext();
-			var oView = this.getView();
-			var user = oView.byId("inUser").getValue(),
-				pass = oView.byId("inPass").getValue(),
-				someurl = "https://abhi4api.herokuapp.com/authentication",
-				somedata = {};
+			// var oView = this.getView();
+			// var user = oView.byId("inUser").getValue(),
+			// 	pass = oView.byId("inPass").getValue(),
+			// 	someurl = "https://abhi4api.herokuapp.com/authentication",
+			// 	somedata = {};
 
-			somedata.strategy = "local";
-			somedata.email = user;
-			somedata.password = pass;
+			// somedata.strategy = "local";
+			// somedata.email = user;
+			// somedata.password = pass;
 
-			var weHaveSuccess = false;
-			this.accessToken = "";
+			// var weHaveSuccess = false;
+			// this.accessToken = "";
 
-			$.ajax({
-				type: "POST",
-				url: someurl,
-				dataType: "json",
-				crossDomain: true,
-				data: somedata,
+			// $.ajax({
+			// 	type: "POST",
+			// 	url: someurl,
+			// 	dataType: "json",
+			// 	crossDomain: true,
+			// 	data: somedata,
 				
-				success: function (result) {
-					that.accessToken = result.accessToken;
-					MessageToast.show(that.accessToken);
-					weHaveSuccess = true;
-					that.getOwnerComponent().getRouter().navTo("Dashboard", { itemId: that.accessToken });
+			// 	success: function (result) {
+			// 		that.accessToken = result.accessToken;
+			// 		MessageToast.show(that.accessToken);
+			// 		weHaveSuccess = true;
+			// 		that.getOwnerComponent().getRouter().navTo("Dashboard", { itemId: that.accessToken });
 					
-				},
-				error: function (response) {
-					MessageToast.show("Error!  " + response.status);
-				},
-				complete: function () {
-					if (!weHaveSuccess) {
-						MessageToast.show("Your username/password seems to be incorrect!");
-					}
-				}
-			});
+			// 	},
+			// 	error: function (response) {
+			// 		MessageToast.show("Error!  " + response.status);
+			// 	},
+			// 	complete: function () {
+			// 		if (!weHaveSuccess) {
+			// 			MessageToast.show("Your username/password seems to be incorrect!");
+			// 		}
+			// 	}
+			// });
 		},
 		toDashboard: function () {
 			this.getOwnerComponent().getRouter().navTo("Dashboard");

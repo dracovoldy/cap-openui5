@@ -49,11 +49,28 @@ sap.ui.define([
 
 			if (this.validate()) {
 				if (this.checkArea()) {
+					this.getView().getModel().setProperty("/Visited/" + "Background" + "/status", 2);
+					this.getView().getModel().setProperty("/Visited/" + "Scope" + "/status", 1);
+					this.getView().getModel().setProperty("/navSelectedKey", "Scope");
 					this.router.navTo("Scope");
 				}
 
 			}
 
+		},
+		showBusyIndicator : function (iDuration, iDelay) {
+			sap.ui.core.BusyIndicator.show(iDelay);
+
+			if (iDuration && iDuration > 0) {
+				if (this._sTimeoutId) {
+					jQuery.sap.clearDelayedCall(this._sTimeoutId);
+					this._sTimeoutId = null;
+				}
+
+				this._sTimeoutId = jQuery.sap.delayedCall(iDuration, this, function() {
+					this.hideBusyIndicator();
+				});
+			}
 		},
 		selectChange: function (oEvent) {
 			if (oEvent.getParameters("selected").selected === true) {
@@ -63,6 +80,7 @@ sap.ui.define([
 			}
 		},
 		checkArea: function () {
+			var that = this;
 			var sapCheck1 = this.getView().getModel().getProperty("/BackgroundCheck/sapCheck1");
 			var sapCheck2 = this.getView().getModel().getProperty("/BackgroundCheck/sapCheck2");
 
@@ -100,6 +118,7 @@ sap.ui.define([
 				MessageBox.information("Response has been sucessfully recorded", {
 					title: "Information", // default
 					onClose: function (oAction) {
+						that.showBusyIndicator(10000, 0);
 						location.reload();
 					}, // default
 					styleClass: "", // default

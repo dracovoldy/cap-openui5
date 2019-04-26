@@ -109,7 +109,7 @@ sap.ui.define([
 					initialFocus: null, // default
 					textDirection: sap.ui.core.TextDirection.Inherit // default
 				});
-				
+
 				return;
 			}
 
@@ -124,7 +124,10 @@ sap.ui.define([
 
 			var Lang_Select = parseInt(this.getView().byId("Lang_Select").getSelectedKey(), 10);
 			this.getView().getModel().setProperty("/posting/sc_lang_v", Lang_Select);
-			
+
+			this.getView().getModel().setProperty("/Visited/" + "Scope" + "/status", 2);
+			this.getView().getModel().setProperty("/Visited/" + "Infrastructure" + "/status", 1);
+			this.getView().getModel().setProperty("/navSelectedKey", "Infrastructure");
 			this.router.navTo("Infrastructure");
 		}
 

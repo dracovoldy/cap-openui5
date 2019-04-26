@@ -20,17 +20,34 @@ sap.ui.define([
 			var route = sap.ui.core.UIComponent.getRouterFor(this).getRoute("Dashboard");
 			route.attachPatternMatched(this.onPatternMatched, this);
 			this._setToggleButtonTooltip(!sap.ui.Device.system.desktop);
+
+			var globalModel = this.getOwnerComponent().getModel("init_data");
+			this.getView().setModel(globalModel);
+		
 		},
 		onPatternMatched: function (event) {
 			// const model = this.getModel("odata");
-			this.accessToken = event.getParameter("arguments").itemId                         ;
+			this.accessToken = event.getParameter("arguments").itemId;
 			MessageToast.show(this.accessToken);
 		},
 		onAfterRendering: function () {
 			this.router.navTo("Customer");
 		},
 		onItemSelect: function (oEvent) {
-			this.router.navTo(oEvent.getParameter("item").getKey());
+			var navKey = oEvent.getParameter("item").getKey();
+			var oVisited = this.getView().getModel().getProperty("/Visited/" + navKey + "/status");
+			// var oName = this.getView().getModel().getProperty("/Visited/" + navKey + "/name");
+
+			if (oVisited === 0) {
+				//Do nothing
+				MessageToast.show("Please complete current step before proceeding");
+			} else if (oVisited === 1) {
+				this.router.navTo(navKey);
+
+			} else if (oVisited === 2) {
+				this.router.navTo(navKey);
+			}
+
 		},
 		handleUserNamePress: function (event) {
 			var self = this;
