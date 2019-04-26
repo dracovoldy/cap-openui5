@@ -12,7 +12,7 @@
 							</Toolbar>
 						</headerToolbar>
 						<content>
-							<Carousel class="sapUiContentPadding" loop="true">
+							<Carousel class="sapUiContentPadding" loop="true" height="90%">
 								<pages>
 									<VBox class="bgWhiteBox">
 										<Text text="Typical S4/HANA System Conversion"/>
