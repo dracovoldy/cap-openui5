@@ -360,3 +360,6 @@ html.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
     border-top: 1px solid #c3c7ca!important;
 }
 
+.estHeight {
+	height: 600px;
+}
