@@ -37,6 +37,7 @@ sap.ui.define([
 			});
 		},
 		startOver: function (oEvent){
+			this.router.navTo("Customer");
 			location.reload();
 		}
 
