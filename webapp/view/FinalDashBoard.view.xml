@@ -34,11 +34,11 @@
 											<Text
 												text="Duration of projects is largely determined by customer complexity (degree of change) and implementing partner preferences / tools / methodologies "></Text>
 										</VBox>
-										<Image src="./images/slides/1.png" alt="S/4 Hana Journey"/>
-										<Image src="./images/slides/2.png" alt="S/4 Hana Conversion Objects"/>
-										<Image src="./images/slides/3.png" alt="S/4 Hana Assessment Approach"/>
-										<Image src="./images/slides/4.png" alt="Ecc Conversion S/4 hana"/>
-										<Image src="./images/slides/5.png" alt="S/4 Hana Range Scenarios"/>
+										<Image src="./images/slides/1.png" alt="S/4 Hana Journey" height="600px"/>
+										<Image src="./images/slides/2.png" alt="S/4 Hana Conversion Objects" height="600px"/>
+										<Image src="./images/slides/3.png" alt="S/4 Hana Assessment Approach" height="600px"/>
+										<Image src="./images/slides/4.png" alt="Ecc Conversion S/4 hana" height="600px"/>
+										<Image src="./images/slides/5.png" alt="S/4 Hana Range Scenarios" height="600px"/>
 									</pages>
 								</Carousel>
 							</VBox>
