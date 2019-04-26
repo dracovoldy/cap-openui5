@@ -23,7 +23,7 @@
 											</VBox>
 											<VBox class="div2">
 												<Title text="As Long as" class="sapUiSmallMargin subSection"/>
-												<Title id="long"text="{/estimate/HighPersonMonths}" class="sapUiSmallMargin monthsCnt"/>
+												<Title id="long" text="{/estimate/HighPersonMonths}" class="sapUiSmallMargin monthsCnt"/>
 											</VBox>
 											<VBox class="div3">
 												<Title text="Average" class="sapUiSmallMargin subSection"/>
