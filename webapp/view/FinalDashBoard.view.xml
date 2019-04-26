@@ -4,7 +4,7 @@
 		<pages>
 			<Page showHeader="false" class="sapUiSizeCompact detailBg">
 				<content>
-					<Panel width="auto" class="sapUiTinyMargin bgWhite removeBorder">
+					<Panel width="auto" class="sapUiTinyMargin bgWhite removeBorder estHeight">
 						<headerToolbar>
 							<Toolbar height="2rem" class="dtlHead">
 								<Title text="Estimation dashboard" class="detailHeader1"/>
@@ -12,7 +12,7 @@
 							</Toolbar>
 						</headerToolbar>
 						<content>
-							<Carousel class="sapUiContentPadding" loop="true" height="90%">
+							<Carousel class="sapUiContentPadding" loop="true" height="100%">
 								<pages>
 									<VBox class="bgWhiteBox">
 										<Text text="Typical S4/HANA System Conversion"/>

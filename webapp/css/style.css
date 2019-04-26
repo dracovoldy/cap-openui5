@@ -359,3 +359,7 @@ html.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
     background-color: #939393!important;
     border-top: 1px solid #c3c7ca!important;
 }
+
+.estHeight {
+	height: 600px;
+}
