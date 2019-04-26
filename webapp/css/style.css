@@ -361,5 +361,5 @@ html.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
 }
 
 .estHeight {
-	height: 600px;
+	height: 400px!important;
 }
