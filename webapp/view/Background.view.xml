@@ -15,7 +15,7 @@
 							<RadioButton groupName="GroupA" text="Existing SAP ECC Customer" select="isExisting"/>
 							<HBox id="bg_hbox" visible="false">
 								<Text text="Year of Implementation" class="sapUiTinyMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd"/>
-								<ComboBox id="impYear" items="{/YearCollection}">
+								<ComboBox id="impYear" items="{/YearCollection}" selectedKey="0000">
 									<core:Item key="{key}" text="{year}"/>
 								</ComboBox>
 							</HBox>

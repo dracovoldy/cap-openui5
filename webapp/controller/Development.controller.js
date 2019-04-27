@@ -20,7 +20,7 @@ sap.ui.define([
 			
 			var middleware_desc = "";
 			aMiddlewares.map(function (item){
-				middleware_desc = item.getKey() + ",";	
+				middleware_desc = middleware_desc +item.getKey() + ",";	
 			});
 			middleware_desc = middleware_desc.slice(0, -1);
 			this.getView().getModel().setProperty("/posting/if_dev_mdlw_desc", middleware_desc);
