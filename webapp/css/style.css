@@ -84,6 +84,7 @@ html.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
 
 .headerBG {
     background-color: rgba(149, 230, 22, 1)!important;
+    border-color: #9ad937!important;
 }
 
 .headerBG * {
@@ -361,5 +362,26 @@ html.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
 }
 
 .estHeight {
-	height: 700px!important;
+    height: 700px!important;
+}
+
+#__title2::before, 
+#__title3::before{
+    content: "*" !important;
+    color: #c14646!important;
+    font-size: 1.25rem!important;
+    font-weight: bold!important;
+    position: relative!important;
+    vertical-align: middle!important;
+    line-height: 0!important;
+}
+
+.cssReq::before {
+    content: "*" !important;
+    color: #c14646!important;
+    font-size: 1.25rem!important;
+    font-weight: bold!important;
+    position: relative!important;
+    vertical-align: middle!important;
+    line-height: 0!important;
 }

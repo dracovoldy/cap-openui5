@@ -18,21 +18,27 @@ sap.ui.define([
 
 			this.attachPopoverOnMouseover(this.byId("drive"), this.byId("popover_it"));
 			this.attachPopoverOnMouseover(this.byId("pain"), this.byId("popover_pain"));
+			
 		},
 		isExisting: function (oEvent) {
 			var data = oEvent.getParameters("selected");
-			console.log(data);
+			// console.log(data);
 
 			if (data.selected) {
 				this.getView().byId("bg_hbox").setVisible(true);
+				this.getView().getModel().setProperty("/posting/bg_newcust", "N");
+				var iYear = this.getView().byId("impYear").getSelectedKey();
+				this.getView().getModel().setProperty("/posting/bg_impyear", iYear);
 			} else {
 				this.getView().byId("bg_hbox").setVisible(false);
+				this.getView().getModel().setProperty("/posting/bg_newcust", "Y");
+				this.getView().getModel().setProperty("/posting/bg_impyear", "0000");
 			}
 		},
 		attachPopoverOnMouseover: function (targetControl, popover) {
 			targetControl.addEventDelegate({
 				onmouseover: this._showPopover.bind(this, targetControl, popover),
-				onmouseout: this._clearPopover.bind(this, popover),
+				onmouseout: this._clearPopover.bind(this, popover)
 			}, this);
 		},
 
@@ -94,22 +100,28 @@ sap.ui.define([
 
 			if (nsCheck1) {
 				nsCount++;
+				this.getView().getModel().setProperty("/posting/bg_othinterest1", "Y");
 			}
 			if (nsCheck2) {
 				nsCount++;
+				this.getView().getModel().setProperty("/posting/bg_othinterest2", "Y");
 			}
 			if (nsCheck3) {
 				nsCount++;
+				this.getView().getModel().setProperty("/posting/bg_othinterest2", "Y");
 			}
 			if (nsCheck4) {
 				nsCount++;
+				this.getView().getModel().setProperty("/posting/bg_othinterest3", "Y");
 			}
 
 			if (sapCheck1) {
 				sapCount++;
+				this.getView().getModel().setProperty("/posting/bg_sapinterest1", "Y");
 			}
 			if (sapCheck2) {
 				sapCount++;
+				this.getView().getModel().setProperty("/posting/bg_sapinterest2", "Y");
 			}
 
 			if (nsCount > 0 && sapCount === 0) {

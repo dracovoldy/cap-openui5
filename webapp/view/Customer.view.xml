@@ -19,14 +19,14 @@
 							<Input id="name" value="{/posting/comp_name}"/>
 							<!--<core:Title/>-->
 							<Label text="Sector / Market Unit" design="Bold" required="true"/>
-							<Select id="Sector_Select" selectedKey="CPRD" items="{/SectorCollection}">
+							<Select id="Sector_Select" selectedKey="X" items="{/SectorCollection}">
 								<items>
 									<core:Item text="{desc}" key="{key}"/>
 								</items>
 							</Select>
 							<!--<core:Title/>-->
 							<Label text="Primary region" design="Bold" required="true"/>
-							<Select id="Region_Select" selectedKey="NA" items="{/RegionCollection}">
+							<Select id="Region_Select" selectedKey="X" items="{/RegionCollection}">
 								<items>
 									<core:Item text="{desc}" key="{key}"/>
 								</items>
@@ -41,7 +41,7 @@
 							<TextArea id="client_name" value="{/posting/client_name}" growing="true" growingMaxLines="7" required="true" width="100%" maxLength="250"/>
 							<!--<core:Title text="" emphasized="true"/>-->
 							<Label text="Title / Designation / Role" design="Bold" required="true"/>
-							<TextArea id="client_desg" growing="true" growingMaxLines="7" required="true" width="100%"
+							<TextArea id="client_title"  value="{/posting/client_title}"  growing="true" growingMaxLines="7" required="true" width="100%"
 								maxLength="250"/>
 							<Label text="Contact (email)" design="Bold" required="true"/>
 							<TextArea id="client_contact" value="{/posting/client_contact}" growing="true" growingMaxLines="7" required="true" width="100%"
@@ -66,7 +66,7 @@
 							<Input id="capg_name" value="{/posting/cap_name}"/>
 							<!--<core:Title/>-->
 							<Label text="Email" design="Bold" required="true"/>
-							<Input id="capg_email" value="{/posting/cap_email}" type="Text">
+							<Input id="capg_email" type="Text">
 								<layoutData>
 									<f:ColumnElementData cellsSmall="6" cellsLarge="6"/>
 								</layoutData>

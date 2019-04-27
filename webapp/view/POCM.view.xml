@@ -15,9 +15,9 @@
 						singleContainerFullSize="false">
 						<f:content>
 							<core:Title text="Key change management considerations"/>
-							<TextArea value="" growingMaxLines="7" width="100%"/>
+							<TextArea value="{/posting/mgmt_comm_1}" growingMaxLines="7" width="100%"/>
 							<core:Title text="Key Inputs such as timeline constraints etc."/>
-							<TextArea value="" growingMaxLines="7" width="100%"/>
+							<TextArea value="{/posting/mgmt_comm_2}" growingMaxLines="7" width="100%"/>
 						</f:content>
 					</f:SimpleForm>
 					<f:SimpleForm id="SimpleFormChange480_Trial1" editable="true" layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="4" labelSpanM="12"
@@ -25,7 +25,7 @@
 						singleContainerFullSize="false">
 						<f:content>
 							<core:Title text="Other key programs in progress, to be taken up"/>
-							<TextArea value="" growingMaxLines="7" width="100%"/>
+							<TextArea value="{/posting/mgmt_comm_3}" growingMaxLines="7" width="100%"/>
 						</f:content>
 					</f:SimpleForm>
 				</content>

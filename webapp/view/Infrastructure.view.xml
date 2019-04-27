@@ -41,9 +41,8 @@
 									<core:Item text="Greater than 50" key="5"/>
 								</items>
 							</Select>
-						
 							<Label text="Key SAP applications in landscape" design="Bold" required="true"/>
-							<MultiComboBox id="KeySap_Multi" selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" items="{/KeySAP}">
+							<MultiComboBox id="KeySap_Multi" items="{/KeySAP}">
 								<core:Item key="{key}" text="{desc}"/>
 							</MultiComboBox>
 							<Label text="Size of primary SAP ECC in TB" design="Bold" required="true"/>
@@ -57,11 +56,9 @@
 									<core:Item text="Greater than 20TB" key="20"/>
 								</items>
 							</Select>
-							
 							<core:Title text="Non-SAP landscape"/>
 							<Label text="List out key non-SAP appplications" design="Bold" required="true"/>
-							<TextArea id="non_sap" value="" growing="true" growingMaxLines="7" width="100%"/>
-							
+							<TextArea id="non_sap" value="{/posting/if_nonsap_desc}" growing="true" growingMaxLines="7" width="100%"/>
 						</f:content>
 					</f:SimpleForm>
 				</content>

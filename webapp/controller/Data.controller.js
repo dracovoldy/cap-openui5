@@ -12,6 +12,26 @@ sap.ui.define([
 		},
 		nextPress: function (oEvent) {
 			// var that = this;
+			var Data_Material_Select = parseInt(this.getView().byId("Data_Material_Select").getSelectedKey(), 10);
+			this.getView().getModel().setProperty("/posting/data_matl", Data_Material_Select);
+			
+			var Data_Assets_Select = parseInt(this.getView().byId("Data_Assets_Select").getSelectedKey(), 10);
+			this.getView().getModel().setProperty("/posting/data_asst", Data_Assets_Select);
+			
+			var Data_cost_Select = parseInt(this.getView().byId("Data_cost_Select").getSelectedKey(), 10);
+			this.getView().getModel().setProperty("/posting/data_cost", Data_cost_Select);
+			
+			var Data_Cust_Select = parseInt(this.getView().byId("Data_Cust_Select").getSelectedKey(), 10);
+			this.getView().getModel().setProperty("/posting/data_cust", Data_Cust_Select);
+			
+			var Data_Gl_Select = parseInt(this.getView().byId("Data_Gl_Select").getSelectedKey(), 10);
+			this.getView().getModel().setProperty("/posting/data_glac", Data_Gl_Select);
+			
+			var Data_profit_Select = parseInt(this.getView().byId("Data_profit_Select").getSelectedKey(), 10);
+			this.getView().getModel().setProperty("/posting/data_prof", Data_profit_Select);
+			
+			var Data_Vendor_Select = parseInt(this.getView().byId("Data_Vendor_Select").getSelectedKey(), 10);
+			this.getView().getModel().setProperty("/posting/data_vend", Data_Vendor_Select);
 
 			// console.log(this.getView().getModel().getProperty("/posting"));
 			if (this.validate()) {

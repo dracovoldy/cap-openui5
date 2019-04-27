@@ -16,77 +16,77 @@
 							<Label text="Materials"/>
 							<Select id="Data_Material_Select" selectedKey="1">
 								<items>
-									<core:Item text="Less than 5000" key="1"/>
-									<core:Item text="5001 - 50,000" key="2"/>
-									<core:Item text="50,001 - 500,000" key="3"/>
-									<core:Item text="500,000+" key="4"/>
+									<core:Item text="Less than 5000" key="5000"/>
+									<core:Item text="5001 - 50,000" key="50000"/>
+									<core:Item text="50,001 - 500,000" key="500000"/>
+									<core:Item text="500,000+" key="600000"/>
 								</items>
 							</Select>
 							<!--<core:Title/>-->
 							<Label text="Customers"/>
 							<Select id="Data_Cust_Select" selectedKey="1">
 								<items>
-									<core:Item text="Less than 50" key="1"/>
-									<core:Item text="50 - 125" key="3"/>
-									<core:Item text="126 - 200" key="4"/>
-									<core:Item text="201 - 300" key="5"/>
-									<core:Item text="301 - 500" key="7"/>
-									<core:Item text="Greater than 500" key="8"/>
+									<core:Item text="Less than 50" key="50"/>
+									<core:Item text="50 - 125" key="125"/>
+									<core:Item text="126 - 200" key="200"/>
+									<core:Item text="201 - 300" key="300"/>
+									<core:Item text="301 - 500" key="500"/>
+									<core:Item text="Greater than 500" key="600"/>
 								</items>
 							</Select>
 							<!--<core:Title/>-->
 							<Label text="Vendors"/>
 							<Select id="Data_Vendor_Select" selectedKey="1">
 								<items>
-									<core:Item text="Less than 50" key="1"/>
-									<core:Item text="50 - 125" key="3"/>
-									<core:Item text="126 - 200" key="4"/>
-									<core:Item text="201 - 300" key="5"/>
-									<core:Item text="301 - 500" key="7"/>
-									<core:Item text="Greater than 500" key="8"/>
+									<core:Item text="Less than 50" key="50"/>
+									<core:Item text="50 - 125" key="125"/>
+									<core:Item text="126 - 200" key="200"/>
+									<core:Item text="201 - 300" key="300"/>
+									<core:Item text="301 - 500" key="500"/>
+									<core:Item text="Greater than 500" key="600"/>
 								</items>
 							</Select>
 							<!--<core:Title/>-->
 							<Label text="Assets"/>
 							<Select id="Data_Assets_Select" selectedKey="1">
 								<items>
-									<core:Item text="Less than 5000" key="1"/>
-									<core:Item text="5001 - 50,000" key="2"/>
-									<core:Item text="50,001 - 500,000" key="3"/>
-									<core:Item text="500,000+" key="4"/>
+									<core:Item text="Less than 5000" key="5000"/>
+									<core:Item text="5001 - 50,000" key="50000"/>
+									<core:Item text="50,001 - 500,000" key="500000"/>
+									<core:Item text="500,000+" key="600000"/>
 								</items>
 							</Select>
 							<Label text="GL accounts"/>
 							<Select id="Data_Gl_Select" selectedKey="1">
 								<items>
-									<core:Item text="Less than 50" key="1"/>
-									<core:Item text="50 - 125" key="3"/>
-									<core:Item text="126 - 200" key="4"/>
-									<core:Item text="201 - 300" key="5"/>
-									<core:Item text="301 - 500" key="7"/>
-									<core:Item text="Greater than 500" key="8"/>
+									<core:Item text="Less than 50" key="50"/>
+									<core:Item text="50 - 125" key="125"/>
+									<core:Item text="126 - 200" key="200"/>
+									<core:Item text="201 - 300" key="300"/>
+									<core:Item text="301 - 500" key="500"/>
+									<core:Item text="Greater than 500" key="600"/>
 								</items>
 							</Select>
 							<Label text="Cost centers"/>
 							<Select id="Data_cost_Select" selectedKey="1">
 								<items>
-									<core:Item text="Less than 50" key="1"/>
-									<core:Item text="50 - 125" key="3"/>
-									<core:Item text="126 - 200" key="4"/>
-									<core:Item text="201 - 300" key="5"/>
-									<core:Item text="301 - 500" key="7"/>
-									<core:Item text="Greater than 500" key="8"/>
+									<core:Item text="Less than 50" key="50"/>
+									<core:Item text="50 - 125" key="125"/>
+									<core:Item text="126 - 200" key="200"/>
+									<core:Item text="201 - 300" key="300"/>
+									<core:Item text="301 - 500" key="500"/>
+									<core:Item text="Greater than 500" key="600"/>
 								</items>
 							</Select>
 							<Label text="Profit centers"/>
 							<Select id="Data_profit_Select" selectedKey="1">
 								<items>
-									<core:Item text="Less than 50" key="1"/>
-									<core:Item text="50 - 125" key="3"/>
-									<core:Item text="126 - 200" key="4"/>
-									<core:Item text="201 - 300" key="5"/>
-									<core:Item text="301 - 500" key="7"/>
-									<core:Item text="Greater than 500" key="8"/>
+									<core:Item text="Less than 50" key="50"/>
+									<core:Item text="50 - 125" key="125"/>
+									<core:Item text="126 - 200" key="200"/>
+									<core:Item text="201 - 300" key="300"/>
+									<core:Item text="301 - 500" key="500"/>
+									<core:Item text="Greater than 500" key="600"/>
 								</items>
 							</Select>
 						</f:content>
@@ -100,9 +100,9 @@
 						singleContainerFullSize="false">
 						<f:content>
 							<core:Title text="Data Quality Comments"/>
-							<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+							<TextArea value="{/posting/data_comm_qual}" growing="true" growingMaxLines="7" width="100%"/>
 							<core:Title text="Other data considerations"/>
-							<TextArea value="" growingMaxLines="7" width="100%"/>
+							<TextArea value="{/posting/data_comm_other}" growingMaxLines="7" width="100%"/>
 						</f:content>
 					</f:SimpleForm>
 					<f:SimpleForm id="DataForm3" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"
@@ -110,9 +110,9 @@
 						singleContainerFullSize="false">
 						<f:content>
 							<core:Title text="Have you done any data archiving?"/>
-							<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
+							<TextArea value="{/posting/data_comm_arch}" growing="true" growingMaxLines="7" width="100%"/>
 							<core:Title text="Additional comments on data"/>
-							<TextArea value="" growingMaxLines="7" width="100%"/>
+							<TextArea value="{/posting/data_comm_add}" growingMaxLines="7" width="100%"/>
 						</f:content>
 					</f:SimpleForm>
 				</content>

@@ -10,7 +10,7 @@
 					</Toolbar>
 				</headerToolbar>
 				<content>
-					<VBox class="bgWhiteImd sapUiMaediumMargin">
+					<VBox class="bgWhiteImd">
 						<Carousel class="sapUiNoContentPadding" arrowsPlacement="PageIndicator" pageIndicatorPlacement="Bottom">
 							<pages>
 								<VBox class="sapUiTinyMarginBegin sapUiTinyMarginEnd">
@@ -153,7 +153,7 @@
 						</Carousel>
 						<HBox width="100%" class="sapUiLargeMarginTop sapUiMediumMarginBegin scopeCheckbx ">
 							<VBox alignItems="Start" width="50%" class="sapUiSmallMarginEnd">
-								<Title text="In scope business process"/>
+								<Title text="In scope business process" class="cssReq" />
 								<HBox id="bp_box" width="100%" alignItems="Center">
 									<VBox alignItems="Start" width="50%">
 										<CheckBox id="FIN_Check" text="Finance"/>

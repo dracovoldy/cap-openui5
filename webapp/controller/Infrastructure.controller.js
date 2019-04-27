@@ -25,7 +25,9 @@ sap.ui.define([
 			
 			var aSapKeys = this.getView().byId("KeySap_Multi").getSelectedKeys();
 			aSapKeys.map(function(key){
-				if(key === "1"){
+				if(key === "0"){
+					that.getView().getModel().setProperty("/posting/if_key_ecc_v", 1);
+				}else if(key === "1"){
 					that.getView().getModel().setProperty("/posting/if_key_arib_v", 1);
 				}else if(key === "2"){
 					that.getView().getModel().setProperty("/posting/if_key_conc_v", 1);
@@ -51,6 +53,12 @@ sap.ui.define([
 					that.getView().getModel().setProperty("/posting/if_key_mdg_v", 1);
 				}else if(key === "13"){
 					that.getView().getModel().setProperty("/posting/if_key_optx_v", 1);
+				}else if(key === "14"){
+					that.getView().getModel().setProperty("/posting/if_key_bpc_v", 1);
+				}else if(key === "15"){
+					that.getView().getModel().setProperty("/posting/if_key_bw_v", 1);
+				}else if(key === "16"){
+					that.getView().getModel().setProperty("/posting/if_key_grc_v", 1);
 				}else if(key === "17"){
 					that.getView().getModel().setProperty("/posting/if_key_others_v", 1);
 				}
@@ -66,7 +74,6 @@ sap.ui.define([
 				this.getView().getModel().setProperty("/Visited/" + "Development" + "/status", 1);
 				this.getView().getModel().setProperty("/navSelectedKey", "Development");
 				this.router.navTo("Development");
-				
 			}
 		},
 		validate: function () {
@@ -78,6 +85,8 @@ sap.ui.define([
 				this.getView().byId("KeySap_Multi").focus();
 				count++;
 				// return false;
+			}else{
+				this.getView().byId("KeySap_Multi").setValueState("None");
 			}
 			if (this.getView().byId("non_sap").getValue().trim() === "") {
 				this.getView().byId("non_sap").setValueState("Information");
@@ -85,8 +94,9 @@ sap.ui.define([
 				this.getView().byId("non_sap").focus();
 				count++;
 				// return false;
+			}else{
+				this.getView().byId("non_sap").setValueState("None");
 			}
-			
 			
 			if(count > 0){
 				return false;
