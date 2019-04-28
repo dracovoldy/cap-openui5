@@ -108,11 +108,11 @@ sap.ui.define([
 			}
 			if (nsCheck3) {
 				nsCount++;
-				this.getView().getModel().setProperty("/posting/bg_othinterest2", "Y");
+				this.getView().getModel().setProperty("/posting/bg_othinterest3", "Y");
 			}
 			if (nsCheck4) {
 				nsCount++;
-				this.getView().getModel().setProperty("/posting/bg_othinterest3", "Y");
+				this.getView().getModel().setProperty("/posting/bg_othinterest4", "Y");
 			}
 
 			if (sapCheck1) {
