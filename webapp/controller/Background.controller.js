@@ -18,7 +18,7 @@ sap.ui.define([
 
 			this.attachPopoverOnMouseover(this.byId("drive"), this.byId("popover_it"));
 			this.attachPopoverOnMouseover(this.byId("pain"), this.byId("popover_pain"));
-			
+
 		},
 		isExisting: function (oEvent) {
 			var data = oEvent.getParameters("selected");
@@ -26,12 +26,11 @@ sap.ui.define([
 
 			if (data.selected) {
 				this.getView().byId("bg_hbox").setVisible(true);
-				this.getView().getModel().setProperty("/posting/bg_newcust", "N");
-				var iYear = this.getView().byId("impYear").getSelectedKey();
-				this.getView().getModel().setProperty("/posting/bg_impyear", iYear);
+				this.getView().getModel().setProperty("/posting/bg_newcust", "Y");
+
 			} else {
 				this.getView().byId("bg_hbox").setVisible(false);
-				this.getView().getModel().setProperty("/posting/bg_newcust", "Y");
+				this.getView().getModel().setProperty("/posting/bg_newcust", "N");
 				this.getView().getModel().setProperty("/posting/bg_impyear", "0000");
 			}
 		},
@@ -65,7 +64,7 @@ sap.ui.define([
 			}
 
 		},
-		showBusyIndicator : function (iDuration, iDelay) {
+		showBusyIndicator: function (iDuration, iDelay) {
 			sap.ui.core.BusyIndicator.show(iDelay);
 
 			if (iDuration && iDuration > 0) {
@@ -74,7 +73,7 @@ sap.ui.define([
 					this._sTimeoutId = null;
 				}
 
-				this._sTimeoutId = jQuery.sap.delayedCall(iDuration, this, function() {
+				this._sTimeoutId = jQuery.sap.delayedCall(iDuration, this, function () {
 					this.hideBusyIndicator();
 				});
 			}
