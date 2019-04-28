@@ -58,6 +58,7 @@ sap.ui.define([
 					this.getView().getModel().setProperty("/Visited/" + "Background" + "/status", 2);
 					this.getView().getModel().setProperty("/Visited/" + "Scope" + "/status", 1);
 					this.getView().getModel().setProperty("/navSelectedKey", "Scope");
+					console.log(this.getView().getModel().getProperty("/posting"));
 					this.router.navTo("Scope");
 				}
 
