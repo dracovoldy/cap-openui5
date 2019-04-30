@@ -36,8 +36,8 @@ sap.ui.define([
 			}
 		},
 		changeYear: function (oEvent){
-			console.log(oEvent.getParameters("selectedItem"));
-			this.getView().getModel().setProperty("/posting/bg_impyear", "0000");
+			var iYear = this.getView().byId("impYear").getSelectedKey();
+			this.getView().getModel().setProperty("/posting/bg_impyear", iYear);
 		},
 		attachPopoverOnMouseover: function (targetControl, popover) {
 			targetControl.addEventDelegate({
