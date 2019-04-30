@@ -27,12 +27,17 @@ sap.ui.define([
 			if (data.selected) {
 				this.getView().byId("bg_hbox").setVisible(true);
 				this.getView().getModel().setProperty("/posting/bg_newcust", "Y");
+				this.getView().getModel().setProperty("/posting/bg_impyear", "0000");
 
 			} else {
 				this.getView().byId("bg_hbox").setVisible(false);
 				this.getView().getModel().setProperty("/posting/bg_newcust", "N");
 				this.getView().getModel().setProperty("/posting/bg_impyear", "0000");
 			}
+		},
+		changeYear: function (oEvent){
+			console.log(oEvent.getParameters("selectedItem"));
+			this.getView().getModel().setProperty("/posting/bg_impyear", "0000");
 		},
 		attachPopoverOnMouseover: function (targetControl, popover) {
 			targetControl.addEventDelegate({
