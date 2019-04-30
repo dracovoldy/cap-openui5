@@ -61,6 +61,15 @@
 							<TextArea id="non_sap" value="{/posting/if_nonsap_desc}" growing="true" growingMaxLines="7" width="100%"/>
 						</f:content>
 					</f:SimpleForm>
+					<f:SimpleForm id="InfraForm2" editable="false" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="8" labelSpanS="12"
+							adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
+							singleContainerFullSize="false">
+							<f:content>
+								<core:Title text="Number of languages"/>
+								<Label text="Comments"/>
+								<TextArea id="infra_comm" value="{/posting/infra_comm}" growing="true" growingMaxLines="7" width="100%"/>
+							</f:content>
+						</f:SimpleForm>
 				</content>
 			</Panel>
 			<Panel width="auto" class="sapUiResponsiveMargin noBorder boxMdl">

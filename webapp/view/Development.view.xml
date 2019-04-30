@@ -56,20 +56,7 @@
 									<TextArea id="dev_comments" value="{/posting/if_dev_comm}" growing="true" growingMaxLines="7" width="100%"/>
 								</f:content>
 							</f:SimpleForm>
-							<!--	</content>
-								</Panel>-->
-							<!--	<Panel width="auto" class="sapUiResponsiveMargin">
-									<headerToolbar>
-										<Toolbar height="3rem">
-											<Title text="Key Applications in Landscape (SAP, SAP Bolt-ons)"/>
-											<ToolbarSpacer/>
-										</Toolbar>
-									</headerToolbar>
-									<content>
-										<TextArea value="" growing="true" growingMaxLines="7" width="100%"/>
-									</content>
-								</Panel>
-							</VBox>-->
+							
 						</content>
 					</Panel>
 					<Panel width="auto" class="sapUiResponsiveMargin noBorder boxMdl">
