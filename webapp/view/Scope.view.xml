@@ -186,7 +186,7 @@
 										<Label text="Number of unit test scripts" class="sapUiTinyMarginEnd sapUiTinyMarginTop"/>
 									</VBox>
 									<VBox alignItems="Start" width="100%" height="3em">
-										<Select id="Scenarios2" selectedKey="0" items="{/ScopeITS}">
+										<Select id="Scenarios2" selectedKey="0" items="{/ScopeUNTS}">
 											<items>
 												<core:Item text="{desc}" key="{key}"/>
 											</items>
