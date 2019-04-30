@@ -78,7 +78,7 @@ sap.ui.define([
 			if (this.getView().getModel().getProperty("/posting/sc_reg_eu_x") !== "X" && this.getView().getModel().getProperty(
 					"/posting/sc_reg_apac_x") !== "X" && this.getView().getModel().getProperty("/posting/sc_reg_latam_x") !== "X" && this.getView().getModel()
 				.getProperty("/posting/sc_reg_na_x") !== "X") {
-				MessageBox.information("Please input at least a single region", {
+				MessageBox.information("Please input values at least for a single region", {
 					title: "Information", // default
 					onClose: null, // default
 					styleClass: "", // default
