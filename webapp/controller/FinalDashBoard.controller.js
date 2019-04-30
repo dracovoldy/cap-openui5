@@ -10,31 +10,30 @@ sap.ui.define([
 			this.router = this.getOwnerComponent().getRouter();
 			var globalModel = this.getOwnerComponent().getModel("init_data");
 			this.getView().setModel(globalModel);
-			
+
 			this.router.attachRouteMatched(this.handleRouteMatched, this);
-			
+
 			var that = this;
-				var estimateId = this.getView().getModel().getProperty("/estimateId");
+			var estimateId = this.getView().getModel().getProperty("/estimateId");
 
-				var url = "http://10.154.52.73:3000/api/data/" + estimateId;
+			var url = "http://10.154.52.73:3000/api/data/" + estimateId;
 
-				$.ajax({
-					url: url,
-					type: 'GET',
-					dataType: 'json',
-					success: function (data) {
-						console.log(data);
+			$.ajax({
+				url: url,
+				type: 'GET',
+				dataType: 'json',
+				success: function (data) {
+					console.log(data);
 
-						console.log(that.getView().getModel().setProperty("/estimate/LowPersonMonths", data.LowPersonMonths));
-						console.log(that.getView().getModel().setProperty("/estimate/HighPersonMonths", data.HighPersonMonths));
-						console.log(that.getView().getModel().setProperty("/estimate/PersonMonths", data.PersonMonths));
+					console.log(that.getView().getModel().setProperty("/estimate/LowPersonMonths", data.LowPersonMonths));
+					console.log(that.getView().getModel().setProperty("/estimate/HighPersonMonths", data.HighPersonMonths));
+					console.log(that.getView().getModel().setProperty("/estimate/PersonMonths", data.PersonMonths));
 
-					},
-					error: function (e) {
-						console.log(e);
-					}
-				});
-			}
+				},
+				error: function (e) {
+					console.log(e);
+				}
+			});
 		},
 		showBusyIndicator: function (iDuration, iDelay) {
 			sap.ui.core.BusyIndicator.show(iDelay);
