@@ -56,7 +56,7 @@ sap.ui.define([
 			clearTimeout(this._timeId) || popover.close();
 		},
 		nextPress: function () {
-
+			console.log(this.getView().getModel().getProperty("/posting"));
 			if (this.validate()) {
 				if (this.checkArea()) {
 					this.getView().getModel().setProperty("/Visited/" + "Background" + "/status", 2);
