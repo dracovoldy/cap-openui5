@@ -209,6 +209,9 @@ sap.ui.define([
 			this.getView().byId("case").setValueState("None");
 
 			return true;
+		},
+		backPress: function (oEvent){
+			this.router.navTo("Customer");
 		}
 
 	});

@@ -105,6 +105,9 @@ sap.ui.define([
 			this.getView().byId("non_sap").setValueState("None");
 			
 			return true;
+		},
+		backPress: function (oEvent){
+			this.router.navTo("Scope");
 		}
 
 	

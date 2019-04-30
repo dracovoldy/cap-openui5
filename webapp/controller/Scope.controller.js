@@ -143,6 +143,9 @@ sap.ui.define([
 			this.getView().getModel().setProperty("/Visited/" + "Infrastructure" + "/status", 1);
 			this.getView().getModel().setProperty("/navSelectedKey", "Infrastructure");
 			this.router.navTo("Infrastructure");
+		},
+		backPress: function (oEvent){
+			this.router.navTo("Background");
 		}
 
 	});

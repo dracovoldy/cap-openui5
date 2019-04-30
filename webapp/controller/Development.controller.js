@@ -65,6 +65,9 @@ sap.ui.define([
 			this.getView().byId("dev_comments").setValueState("None");
 			
 			return true;
+		},
+		backPress: function (oEvent){
+			this.router.navTo("Infrastructure");
 		}
 	});
 
