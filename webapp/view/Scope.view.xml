@@ -153,7 +153,7 @@
 						</Carousel>
 						<HBox width="100%" class="sapUiLargeMarginTop sapUiMediumMarginBegin scopeCheckbx ">
 							<VBox alignItems="Start" width="50%" class="sapUiSmallMarginEnd">
-								<Title text="In scope business process" class="cssReq" />
+								<Title text="In scope business process" class="cssReq"/>
 								<HBox id="bp_box" width="100%" alignItems="Center">
 									<VBox alignItems="Start" width="50%">
 										<CheckBox id="FIN_Check" text="Finance"/>
@@ -225,16 +225,19 @@
 								</Select>
 							</f:content>
 						</f:SimpleForm>
-						<f:SimpleForm id="ScopeForm4" editable="false" layout="ResponsiveGridLayout" labelSpanXL="8" labelSpanL="8" labelSpanM="8" labelSpanS="12"
-							adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
-							singleContainerFullSize="false">
-							<f:content>
-								<core:Title text="Number of languages"/>
-								<Label text="Comments"/>
-								<TextArea id="scope_comm" value="{/posting/scope_comm}" growing="true" growingMaxLines="7" width="100%"/>
-							</f:content>
-						</f:SimpleForm>
 					</VBox>
+				</content>
+			</Panel>
+			<Panel width="auto" class="sapUiResponsiveMargin noBorder">
+				<content>
+					<f:SimpleForm id="ScopeForm4" editable="true" layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12" labelSpanS="12"
+						adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+						singleContainerFullSize="false">
+						<f:content>
+							<core:Title text="Comments"/>
+							<TextArea id="scope_comm" value="{/posting/scope_comm}" growing="true" growingMaxLines="7" width="100%"/>
+						</f:content>
+					</f:SimpleForm>
 				</content>
 			</Panel>
 			<Panel width="auto" class="sapUiResponsiveMargin noBorder boxMdl">
