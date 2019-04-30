@@ -75,6 +75,20 @@ sap.ui.define([
 				this.getView().getModel().setProperty("/posting/sc_reg_eu_x", "X");
 			}
 
+			if (this.getView().getModel().getProperty("/posting/sc_reg_eu_x") !== "X" && this.getView().getModel().getProperty(
+					"/posting/sc_reg_apac_x") !== "X" && this.getView().getModel().getProperty("/posting/sc_reg_latam_x") !== "X" && this.getView().getModel()
+				.getProperty("/posting/sc_reg_na_x") !== "X") {
+				MessageBox.information("Please input at least a single region", {
+					title: "Information", // default
+					onClose: null, // default
+					styleClass: "", // default
+					initialFocus: null, // default
+					textDirection: sap.ui.core.TextDirection.Inherit // default
+				});
+
+				return;
+			}
+
 			//LOB Checkboxes
 			var selected = 0;
 			if (this.getView().byId("FIN_Check").getSelected()) {
@@ -102,7 +116,7 @@ sap.ui.define([
 				selected++;
 			}
 			if (selected === 0) {
-				MessageBox.information("Please Select Business Process", {
+				MessageBox.information("Please select Business Process", {
 					title: "Information", // default
 					onClose: null, // default
 					styleClass: "", // default
