@@ -66,7 +66,7 @@ sap.ui.define([
 
 			/* LoginPage */
 			var loginFooter = this.getView().byId("loginFooter");
-			loginFooter.setText("Content best viewed in modern browsers\n like Chrome, Firefox.");
+			loginFooter.setText("Content best viewed in modern browsers\nlike Chrome, Firefox.");
 		},
 		addAllCSS: function () {
 			/* UI references */
