@@ -13,7 +13,7 @@
 				<Button id="signButton" text="Sign in" width="100%" type="Emphasized" press="_tryLogin"/>
 				<Button id="noSignButton" text="Can't Sign in?" width="100%" type="Reject"/>
 			</HBox>
-			<Label id="loginFooter" text=""></Label>
+			<Label id="loginFooter" text="" wrapping="true"></Label>
 			<Label id="loginFooterVersion" text="v0.1"></Label>
 		</VBox>
 	</VBox>

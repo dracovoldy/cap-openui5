@@ -11,8 +11,8 @@
 				<content>
 					<VBox>
 						<HBox class="sapUiTinyMarginTop sapUiTinyMarginBottom bgWhiteBox">
-							<RadioButton groupName="GroupA" text="New Customer (No SAP ECC Today)" selected="true"/>
-							<RadioButton groupName="GroupA" text="Existing SAP ECC Customer" select="isExisting"/>
+							<RadioButton id="grpA1" groupName="GroupA" text="New Customer (No SAP ECC Today)" selected="true"/>
+							<RadioButton id="grpA2" groupName="GroupA" text="Existing SAP ECC Customer" select="isExisting"/>
 							<HBox id="bg_hbox" visible="false">
 								<Text text="Year of Implementation" class="sapUiTinyMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd"/>
 								<ComboBox id="impYear" items="{/YearCollection}" selectionChange="changeYear" selectedKey="0000">
@@ -37,44 +37,30 @@
 							</VBox>
 						</HBox>
 					</VBox>
-					<f:SimpleForm id="BackForm1" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
-						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1"
+					<f:SimpleForm id="BackForm1" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"
+						adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1"
 						singleContainerFullSize="false">
 						<f:content>
-							<core:Title text="Program objective" />
+							<core:Title text="Program objective"/>
 							<TextArea id="prog" value="{/posting/bg_prog_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250"></TextArea>
-							<core:Title text="Business drivers"/>
-							<TextArea id="biz" value="{/posting/bg_bizd_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250"/>
+							<core:Title text="Key business pain points"/>
+							<TextArea id="pain" value="{/posting/bg_bizp_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">
+								
+							</TextArea>
 						</f:content>
 					</f:SimpleForm>
 				</content>
 			</Panel>
 			<Panel width="auto" class="sapUiResponsiveMargin noBorder">
 				<content>
-					<f:SimpleForm id="BackForm2" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4"
-						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
+					<f:SimpleForm id="BackForm2" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12"
+						adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2"
 						singleContainerFullSize="false">
 						<f:content>
 							<core:Title text="IT drivers"/>
 							<TextArea id="drive" value="{/posting/bg_itdr_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">
 								<dependents>
 									<ResponsivePopover id="popover_it" title="Help" class="sapUiPopupWithPadding" placement="Top">
-										<content>
-											<VBox>
-												<Text text="Support innovative business models and products" class="sapUiTinyMarginBottom"></Text>
-												<Text text="Grow revenue and reduce costs" class="sapUiTinyMarginBottom"></Text>
-												<Text text="Simplify business processes" class="sapUiTinyMarginBottom"></Text>
-												<Text text="Enhance business agility and productivity" class="sapUiTinyMarginBottom"></Text>
-												<Text text="Optimize operations and supply chain" class="sapUiTinyMarginBottom"></Text>
-											</VBox>
-										</content>
-									</ResponsivePopover>
-								</dependents>
-							</TextArea>
-							<core:Title text="Key business pain points"/>
-							<TextArea id="pain" value="{/posting/bg_bizp_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">
-								<dependents>
-									<ResponsivePopover id="popover_pain" title="Help" class="sapUiPopupWithPadding" placement="Top">
 										<content>
 											<VBox>
 												<Text text="Gain strategic advantage with a digital core" class="sapUiTinyMarginBottom"></Text>
@@ -87,14 +73,30 @@
 									</ResponsivePopover>
 								</dependents>
 							</TextArea>
+							<core:Title text="Business drivers"/>
+							<TextArea id="biz" value="{/posting/bg_bizd_desc}" growing="true" growingMaxLines="7" width="100%" maxLength="250">
+								<dependents>
+									<ResponsivePopover id="popover_biz" title="Help" class="sapUiPopupWithPadding" placement="Top">
+										<content>
+											<VBox>
+												<Text text="Support innovative business models and products" class="sapUiTinyMarginBottom"></Text>
+												<Text text="Grow revenue and reduce costs" class="sapUiTinyMarginBottom"></Text>
+												<Text text="Simplify business processes" class="sapUiTinyMarginBottom"></Text>
+												<Text text="Enhance business agility and productivity" class="sapUiTinyMarginBottom"></Text>
+												<Text text="Optimize operations and supply chain" class="sapUiTinyMarginBottom"></Text>
+											</VBox>
+										</content>
+									</ResponsivePopover>
+								</dependents>
+							</TextArea>
 						</f:content>
 					</f:SimpleForm>
 				</content>
 			</Panel>
 			<Panel width="auto" class="sapUiResponsiveMargin noBorder">
 				<content>
-					<f:SimpleForm id="BackForm3" editable="true" layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12"
-						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+					<f:SimpleForm id="BackForm3" editable="true" layout="ResponsiveGridLayout" labelSpanXL="12" labelSpanL="12" labelSpanM="12" labelSpanS="12"
+						adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
 						singleContainerFullSize="false">
 						<f:content>
 							<core:Title text="Business case status and additional capabilities required"/>

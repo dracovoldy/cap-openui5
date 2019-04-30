@@ -17,7 +17,7 @@ sap.ui.define([
 			this.getView().setModel(globalModel);
 
 			this.attachPopoverOnMouseover(this.byId("drive"), this.byId("popover_it"));
-			this.attachPopoverOnMouseover(this.byId("pain"), this.byId("popover_pain"));
+			this.attachPopoverOnMouseover(this.byId("biz"), this.byId("popover_biz"));
 
 		},
 		isExisting: function (oEvent) {

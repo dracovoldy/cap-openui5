@@ -33,7 +33,7 @@
 			<Panel width="auto" class="sapUiResponsiveMargin noBorder boxMdl">
 				<Button text="Previous" type="Emphasized" class="backBtn" press="backPress" />
 				<ToolbarSpacer/>
-				<Button text="Next" type="Emphasized" class="nextBtn" press="nextPress"/>
+				<Button text="Submit" type="Emphasized" class="nextBtn" press="nextPress"/>
 			</Panel>
 		</content>
 		<footer>
