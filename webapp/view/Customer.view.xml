@@ -99,6 +99,7 @@
 			<!--	</VBox>-->
 			<Panel width="auto" class="sapUiResponsiveMargin noBorder boxMdl">
 				<ToolbarSpacer/>
+				<Button text="Start over" type="Emphasized" press="startOver" class="backBtn sapUiSmallMarginEnd"/>
 				<Button text="Next" type="Emphasized" class="nextBtn" press="nextPress"/>
 			</Panel>
 		</content>

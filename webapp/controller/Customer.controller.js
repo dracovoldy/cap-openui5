@@ -2,8 +2,9 @@ sap.ui.define([
 	'jquery.sap.global',
 	'sap/ui/core/mvc/Controller',
 	'sap/m/Popover',
-	'sap/m/Button'
-], function (jQuery, Controller, Popover, Button) {
+	'sap/m/Button',
+	'sap/m/MessageBox'
+], function (jQuery, Controller, Popover, Button, MessageBox) {
 	"use strict";
 
 	return Controller.extend("cap.estimate.controller.Customer", {
@@ -47,7 +48,7 @@ sap.ui.define([
 				this.getView().byId("name").focus();
 				count++;
 				// return false;
-			}else{
+			} else {
 				this.getView().byId("name").setValueState("None");
 			}
 
@@ -57,7 +58,7 @@ sap.ui.define([
 				this.getView().byId("Sector_Select").focus();
 				count++;
 				// return false;
-			}else{
+			} else {
 				this.getView().byId("Sector_Select").setValueState("None");
 			}
 
@@ -67,7 +68,7 @@ sap.ui.define([
 				this.getView().byId("Region_Select").focus();
 				count++;
 				// return false;
-			}else{
+			} else {
 				this.getView().byId("Region_Select").setValueState("None");
 			}
 
@@ -77,60 +78,60 @@ sap.ui.define([
 				this.getView().byId("client_name").focus();
 				count++;
 				// return false;
-			}else{
+			} else {
 				this.getView().byId("client_name").setValueState("None");
 			}
-			
+
 			if (this.getView().byId("client_contact").getValue().trim() === "") {
 				this.getView().byId("client_contact").setValueState("Information");
 				this.getView().byId("client_contact").setValueStateText("Input Required");
 				this.getView().byId("client_contact").focus();
 				count++;
 				// return false;
-			}else{
+			} else {
 				this.getView().byId("client_contact").setValueState("None");
 			}
-			
+
 			if (this.getView().byId("client_title").getValue().trim() === "") {
 				this.getView().byId("client_title").setValueState("Information");
 				this.getView().byId("client_title").setValueStateText("Input Required");
 				this.getView().byId("client_title").focus();
 				count++;
 				// return false;
-			}else{
+			} else {
 				this.getView().byId("client_title").setValueState("None");
 			}
-			
+
 			if (this.getView().byId("capg_name").getValue().trim() === "") {
 				this.getView().byId("capg_name").setValueState("Information");
 				this.getView().byId("capg_name").setValueStateText("Input Required");
 				this.getView().byId("capg_name").focus();
 				count++;
 				// return false;
-			}else{
+			} else {
 				this.getView().byId("capg_name").setValueState("None");
 			}
-			
+
 			if (this.getView().byId("capg_email").getValue().trim() === "") {
 				this.getView().byId("capg_email").setValueState("Information");
 				this.getView().byId("capg_email").setValueStateText("Input Required");
 				this.getView().byId("capg_email").focus();
 				count++;
 				// return false;
-			}else{
+			} else {
 				this.getView().byId("capg_email").setValueState("None");
 			}
-			
+
 			if (this.getView().byId("capg_phone").getValue().trim() === "") {
 				this.getView().byId("capg_phone").setValueState("Information");
 				this.getView().byId("capg_phone").setValueStateText("Input Required");
 				this.getView().byId("capg_phone").focus();
 				count++;
 				// return false;
-			}else{
+			} else {
 				this.getView().byId("capg_phone").setValueState("None");
 			}
-			
+
 			if (count > 0) {
 				return false;
 			}
@@ -146,6 +147,36 @@ sap.ui.define([
 			this.getView().byId("capg_phone").setValueState("None");
 
 			return true;
+		},
+		showBusyIndicator: function (iDuration, iDelay) {
+			sap.ui.core.BusyIndicator.show(iDelay);
+
+			if (iDuration && iDuration > 0) {
+				if (this._sTimeoutId) {
+					jQuery.sap.clearDelayedCall(this._sTimeoutId);
+					this._sTimeoutId = null;
+				}
+
+				this._sTimeoutId = jQuery.sap.delayedCall(iDuration, this, function () {
+					this.hideBusyIndicator();
+				});
+			}
+		},
+		startOver: function (oEvent) {
+			var that = this;
+			MessageBox.confirm(
+				"Page will reload, temporary data will be lost\nDo you wish to continue?", {
+					onClose: function (oAction) {
+						if (oAction === "OK") {
+							that.showBusyIndicator(10000, 0);
+							location.reload();
+						} else if (oAction === "CANCEL") {
+							//Do Nothing
+						} else {
+							//Nothing
+						}
+					}
+				});
 		}
 
 	});

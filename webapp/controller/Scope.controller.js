@@ -144,8 +144,38 @@ sap.ui.define([
 			this.getView().getModel().setProperty("/navSelectedKey", "Infrastructure");
 			this.router.navTo("Infrastructure");
 		},
-		backPress: function (oEvent){
+		backPress: function (oEvent) {
 			this.router.navTo("Background");
+		},
+		showBusyIndicator: function (iDuration, iDelay) {
+			sap.ui.core.BusyIndicator.show(iDelay);
+
+			if (iDuration && iDuration > 0) {
+				if (this._sTimeoutId) {
+					jQuery.sap.clearDelayedCall(this._sTimeoutId);
+					this._sTimeoutId = null;
+				}
+
+				this._sTimeoutId = jQuery.sap.delayedCall(iDuration, this, function () {
+					this.hideBusyIndicator();
+				});
+			}
+		},
+		startOver: function (oEvent) {
+			var that = this;
+			MessageBox.confirm(
+				"Page will reload, temporary data will be lost\nDo you wish to continue?", {
+					onClose: function (oAction) {
+						if (oAction === "OK") {
+							that.showBusyIndicator(10000, 0);
+							location.reload();
+						} else if (oAction === "CANCEL") {
+							//Do Nothing
+						} else {
+							//Nothing
+						}
+					}
+				});
 		}
 
 	});

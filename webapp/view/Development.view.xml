@@ -62,6 +62,7 @@
 					<Panel width="auto" class="sapUiResponsiveMargin noBorder boxMdl">
 						<Button text="Previous" type="Emphasized" class="backBtn" press="backPress"/>
 						<ToolbarSpacer/>
+						<Button text="Start over" type="Emphasized" press="startOver" class="backBtn sapUiSmallMarginEnd"/>
 						<Button text="Next" type="Emphasized" class="nextBtn" press="nextPress"/>
 					</Panel>
 				</content>

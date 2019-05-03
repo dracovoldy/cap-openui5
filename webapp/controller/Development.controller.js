@@ -1,6 +1,7 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+	"sap/ui/core/mvc/Controller",
+	"sap/m/MessageBox"
+], function (Controller, MessageBox) {
 	"use strict";
 
 	return Controller.extend("cap.estimate.controller.Development", {
@@ -68,6 +69,36 @@ sap.ui.define([
 		},
 		backPress: function (oEvent){
 			this.router.navTo("Infrastructure");
+		},
+		showBusyIndicator: function (iDuration, iDelay) {
+			sap.ui.core.BusyIndicator.show(iDelay);
+
+			if (iDuration && iDuration > 0) {
+				if (this._sTimeoutId) {
+					jQuery.sap.clearDelayedCall(this._sTimeoutId);
+					this._sTimeoutId = null;
+				}
+
+				this._sTimeoutId = jQuery.sap.delayedCall(iDuration, this, function () {
+					this.hideBusyIndicator();
+				});
+			}
+		},
+		startOver: function (oEvent) {
+			var that = this;
+			MessageBox.confirm(
+				"Page will reload, temporary data will be lost\nDo you wish to continue?", {
+					onClose: function (oAction) {
+						if (oAction === "OK") {
+							that.showBusyIndicator(10000, 0);
+							location.reload();
+						} else if (oAction === "CANCEL") {
+							//Do Nothing
+						} else {
+							//Nothing
+						}
+					}
+				});
 		}
 	});
 
